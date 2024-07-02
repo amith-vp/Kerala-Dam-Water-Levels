@@ -111,9 +111,6 @@ async function fetchDamDetails() {
     for (const file of files) {
       if (file.endsWith('.json')) {
         const damName = file.replace('historic_data_', '').replace('.json', '').replace(/_/g, ' ');
-        console.log(damName);
-        console.log(folderName);
-        console.log(file);
         const data = JSON.parse(await fs.readFile(`${folderName}/${file}`, 'utf8'));
         existingData[damName] = data;
       }
