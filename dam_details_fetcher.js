@@ -21,12 +21,34 @@ const fetchMostRecentUpdate = async () => {
   }
 };
 
+const damCoordinates = {
+    'idukki': { latitude: 9.8496, longitude: 77.0496 },
+    'idamalayar': { latitude: 10.2700, longitude: 76.7972 },
+    'kakki (anathode )': { latitude: 9.6538, longitude: 77.1249 },
+    'banasurasagar(k a scheme)': { latitude: 11.6737, longitude: 75.9782 },
+    'sholayar': { latitude: 10.2984, longitude: 76.6910 },
+    'madupetty': { latitude: 10.1105, longitude: 77.1352 },
+    'anayirankal': { latitude: 10.1053, longitude: 77.1543 },
+    'ponmudi': { latitude: 8.7195, longitude: 77.1227 },
+    'kuttiyadi(kakkayam)': { latitude: 11.4998, longitude: 75.9537 },
+    'pamba': { latitude: 9.4686, longitude: 76.9628 },
+    'poringalkuthu': { latitude: 10.2977, longitude: 76.5984 },
+    'kundala': { latitude: 10.1536, longitude: 77.1282 },
+    'kallarkutty': { latitude: 9.9641, longitude: 77.1186 },
+    'erattayar': { latitude: 9.7998, longitude: 77.0103 },
+    'lower periyar': { latitude: 9.9736, longitude: 76.9025 },
+    'moozhiyar': { latitude: 9.7482, longitude: 77.1471 },
+    'kallar': { latitude: 8.6849, longitude: 77.1053 },
+    'sengulam (pumping storage dam)': { latitude: 9.9256, longitude: 78.0767 },
+  };
+  
+
 const convertFeetToMeters = (value) => {
   if (typeof value === 'string' && value.trim().endsWith('ft')) {
     const feet = parseFloat(value.trim().replace('ft', ''));
-    return `${(feet * 0.3048).toFixed(2)}`;
+    return `${(feet * 0.3048).toFixed(2)} m`;
   }
-  return `${(value * 0.3048).toFixed(2)}`;
+  return `${(value * 0.3048).toFixed(2)} m`;
 };
 
 async function extractDamDetails(url) {
@@ -38,6 +60,7 @@ async function extractDamDetails(url) {
     $('table tr').slice(2, 20).each((index, row) => {
       const columns = $(row).find('td');
       if (columns.length > 21) {
+
         const dam = {
           id: $(columns[0]).text().trim(),
           name: $(columns[1]).text().trim(),
@@ -48,6 +71,8 @@ async function extractDamDetails(url) {
           blueLevel: $(columns[8]).text().trim(),
           orangeLevel: $(columns[9]).text().trim(),
           redLevel: $(columns[10]).text().trim(),
+          latitude: damCoordinates[$(columns[1]).text().trim().toLowerCase()] ? damCoordinates[$(columns[1]).text().trim().toLowerCase()].latitude : null,
+          longitude: damCoordinates[$(columns[1]).text().trim().toLowerCase()] ? damCoordinates[$(columns[1]).text().trim().toLowerCase()].longitude : null,
           data: [{
             date: $('h1.entry-title').text().trim(),
             waterLevel: $(columns[11]).text().trim(),
@@ -62,7 +87,7 @@ async function extractDamDetails(url) {
         };
 
         //Entharo entho.... for some reason kseb wont convert the data for idukki and sholayar from ft to meters.
-        if (dam.name.toLowerCase() === 'idukki'||dam.name.toLowerCase() === 'sholayar') {
+        if (dam.name.toLowerCase() === 'idukki' || dam.name.toLowerCase() === 'sholayar') {
           dam.MWL = convertFeetToMeters(dam.MWL);
           dam.FRL = convertFeetToMeters(dam.FRL);
           dam.ruleLevel = convertFeetToMeters(dam.ruleLevel);
@@ -138,6 +163,13 @@ async function fetchDamDetails() {
         await fs.writeFile(filename, JSON.stringify(damData, null, 4));
         console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
       }
+
+      const liveData = {
+        lastUpdate: page.date,
+        dams
+      };
+      await fs.writeFile('live.json', JSON.stringify(liveData, null, 4));
+      console.log('Live dam data saved successfully in live.json.');
     }
   } catch (error) {
     console.error('Error:', error);
