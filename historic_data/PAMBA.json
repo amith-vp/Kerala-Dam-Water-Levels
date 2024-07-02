@@ -1,0 +1,24 @@
+{
+    "id": "10",
+    "name": "PAMBA",
+    "MWL": "986.330",
+    "FRL": "986.330",
+    "liveStorageAtFRL": "31.15",
+    "ruleLevel": "",
+    "blueLevel": "982.00",
+    "orangeLevel": "983.50",
+    "redLevel": "984.50",
+    "data": [
+        {
+            "date": "02.07.2024",
+            "waterLevel": "966.85",
+            "liveStorage": "3.03",
+            "storagePercentage": "9.73%",
+            "inflow": "32.35",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "0.00",
+            "rainfall": "2.00"
+        }
+    ]
+}

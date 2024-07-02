@@ -1,0 +1,24 @@
+{
+    "id": "2",
+    "name": "IDAMALAYAR",
+    "MWL": "171.00",
+    "FRL": "169.00",
+    "liveStorageAtFRL": "1017.80",
+    "ruleLevel": "161.50",
+    "blueLevel": "160.00",
+    "orangeLevel": "160.50",
+    "redLevel": "161.00",
+    "data": [
+        {
+            "date": "02.07.2024",
+            "waterLevel": "141.23",
+            "liveStorage": "333.000",
+            "storagePercentage": "32.72%",
+            "inflow": "93.22",
+            "powerHouseDischarge": "21.26",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "21.26",
+            "rainfall": "7.20"
+        }
+    ]
+}

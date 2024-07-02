@@ -1,0 +1,24 @@
+{
+    "id": "5",
+    "name": "SHOLAYAR",
+    "MWL": "2663 ft",
+    "FRL": "2663 ft",
+    "liveStorageAtFRL": "149.09",
+    "ruleLevel": "",
+    "blueLevel": "2658.00",
+    "orangeLevel": "2660.00",
+    "redLevel": "2661.00",
+    "data": [
+        {
+            "date": "02.07.2024",
+            "waterLevel": "2591.80ft",
+            "liveStorage": "21.190",
+            "storagePercentage": "14.21%",
+            "inflow": "11.48",
+            "powerHouseDischarge": "3.91",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "3.91",
+            "rainfall": "22.00"
+        }
+    ]
+}

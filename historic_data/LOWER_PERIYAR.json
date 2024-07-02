@@ -1,0 +1,24 @@
+{
+    "id": "15",
+    "name": "LOWER PERIYAR",
+    "MWL": "256.00",
+    "FRL": "253.00",
+    "liveStorageAtFRL": "4.55",
+    "ruleLevel": "",
+    "blueLevel": "",
+    "orangeLevel": "",
+    "redLevel": "252.00",
+    "data": [
+        {
+            "date": "02.07.2024",
+            "waterLevel": "247.00",
+            "liveStorage": "2.200",
+            "storagePercentage": "48.35%",
+            "inflow": "76.26",
+            "powerHouseDischarge": "78.41",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "78.41",
+            "rainfall": "6.00"
+        }
+    ]
+}
