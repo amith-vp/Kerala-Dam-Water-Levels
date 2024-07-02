@@ -4,7 +4,6 @@ const fs = require('fs').promises;
 
 const baseUrl = 'https://dams.kseb.in/?page_id=45';
 
-
 const fetchMostRecentUpdate = async () => {
   try {
     const response = await axios.get(baseUrl);
@@ -22,11 +21,19 @@ const fetchMostRecentUpdate = async () => {
   }
 };
 
+const convertFeetToMeters = (value) => {
+  if (typeof value === 'string' && value.trim().endsWith('ft')) {
+    const feet = parseFloat(value.trim().replace('ft', ''));
+    return `${(feet * 0.3048).toFixed(2)}`;
+  }
+  return `${(value * 0.3048).toFixed(2)}`;
+};
+
 async function extractDamDetails(url) {
   try {
     const { data } = await axios.get(url);
     const $ = cheerio.load(data);
-    const dams = []; 
+    const dams = [];
 
     $('table tr').slice(2, 20).each((index, row) => {
       const columns = $(row).find('td');
@@ -53,6 +60,22 @@ async function extractDamDetails(url) {
             rainfall: $(columns[20]).text().trim(),
           }]
         };
+
+        //Entharo entho.... for some reason kseb wont convert the data for idukki and sholayar from ft to meters.
+        if (dam.name.toLowerCase() === 'idukki'||dam.name.toLowerCase() === 'sholayar') {
+          dam.MWL = convertFeetToMeters(dam.MWL);
+          dam.FRL = convertFeetToMeters(dam.FRL);
+          dam.ruleLevel = convertFeetToMeters(dam.ruleLevel);
+          dam.blueLevel = convertFeetToMeters(dam.blueLevel);
+          dam.orangeLevel = convertFeetToMeters(dam.orangeLevel);
+          dam.redLevel = convertFeetToMeters(dam.redLevel);
+
+          dam.data = dam.data.map(entry => ({
+            ...entry,
+            waterLevel: convertFeetToMeters(entry.waterLevel)
+          }));
+        }
+
         dams.push(dam);
       }
     });
@@ -67,58 +90,58 @@ async function extractDamDetails(url) {
 const folderName = 'historic_data';
 
 async function fetchDamDetails() {
+  try {
     try {
-      try {
-        await fs.access(folderName);
-      } catch (error) {
-        await fs.mkdir(folderName);
+      await fs.access(folderName);
+    } catch (error) {
+      await fs.mkdir(folderName);
+    }
+
+    const page = await fetchMostRecentUpdate();
+    if (!page) {
+      console.log('No recent page found.');
+      return;
+    }
+
+    console.log(`Processing page: ${page.date}`);
+    const { dams } = await extractDamDetails(page.link);
+
+    const existingData = {};
+    const files = await fs.readdir(folderName);
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        const damName = file.replace('historic_data_', '').replace('.json', '').replace(/_/g, ' ');
+        const data = JSON.parse(await fs.readFile(`${folderName}/${file}`, 'utf8'));
+        existingData[damName] = data;
       }
-  
-      const page = await fetchMostRecentUpdate();
-      if (!page) {
-        console.log('No recent page found.');
-        return;
-      }
-  
-      console.log(`Processing page: ${page.date}`);
-      const { dams } = await extractDamDetails(page.link);
-  
-      const existingData = {};
-      const files = await fs.readdir(folderName);
-      for (const file of files) {
-        if (file.endsWith('.json')) {
-          const damName = file.replace('historic_data_', '').replace('.json', '').replace(/_/g, ' ');
-          const data = JSON.parse(await fs.readFile(`${folderName}/${file}`, 'utf8'));
-          existingData[damName] = data;
-        }
-      }
-  
-      let dataChanged = false;
-  
-      // Merge new data with existing data
-      for (const newDam of dams) {
-        const formattedDamName = newDam.name.replace(/\s+/g, '_');
-        if (existingData[newDam.name]) {
-          const dateExists = existingData[newDam.name].data.some(d => d.date === newDam.data[0].date);
-          if (!dateExists) {
-            existingData[newDam.name].data.unshift(newDam.data[0]);
-            dataChanged = true;
-          }
-        } else {
-          existingData[newDam.name] = newDam;
+    }
+
+    let dataChanged = false;
+
+    for (const newDam of dams) {
+      const formattedDamName = newDam.name.replace(/\s+/g, '_');
+      if (existingData[newDam.name]) {
+        const dateExists = existingData[newDam.name].data.some(d => d.date === newDam.data[0].date);
+        if (!dateExists) {
+          existingData[newDam.name].data.unshift(newDam.data[0]);
           dataChanged = true;
         }
+      } else {
+        existingData[newDam.name] = newDam;
+        dataChanged = true;
       }
-  
-      if (dataChanged) {
-        for (const [damName, damData] of Object.entries(existingData)) {
-          const filename = `${folderName}/${damName.replace(/\s+/g, '_')}.json`;
-          await fs.writeFile(filename, JSON.stringify(damData, null, 4));
-          console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
-        }
-      }
-    } catch (error) {
-      console.error('Error:', error);
     }
+
+    if (dataChanged) {
+      for (const [damName, damData] of Object.entries(existingData)) {
+        const filename = `${folderName}/${damName.replace(/\s+/g, '_')}.json`;
+        await fs.writeFile(filename, JSON.stringify(damData, null, 4));
+        console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
+      }
+    }
+  } catch (error) {
+    console.error('Error:', error);
   }
-  fetchDamDetails();
+}
+
+fetchDamDetails();
