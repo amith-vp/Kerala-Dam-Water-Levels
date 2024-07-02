@@ -23,17 +23,17 @@ const fetchMostRecentUpdate = async () => {
 
 const damCoordinates = {
     'idukki': { latitude: 9.8436, longitude: 76.9762 },
-    'idamalayar': { latitude: 10.214722, longitude: 76.877056 },
+    'idamalayar': { latitude: 10.221867602366947,  longitude: 76.70603684268934 },
     'kakki (anathode )': { latitude: 9.341667, longitude: 77.15 },
     'banasurasagar(k a scheme)': { latitude: 11.6709, longitude: 75.9504 },
     'sholayar': { latitude: 10.3178, longitude: 76.7342 },
     'madupetty': { latitude: 10.1063, longitude: 77.1238 },
-    'anayirankal': { latitude: 10.0167, longitude: 77.2067 },
+    'anayirankal': { latitude: 10.009515341318457,  longitude: 77.20724298186308 },
     'ponmudi': { latitude: 9.9604, longitude: 77.0565 },
     'kuttiyadi(kakkayam)': { latitude: 11.551, longitude: 75.925 },
     'pamba': { latitude: 9.3906, longitude: 77.1598 },
     'poringalkuthu': { latitude: 10.3152, longitude: 76.6344 },
-    'kundala': { latitude: 10.143611, longitude: 77.1875 },
+    'kundala': { latitude: 10.14358754366575, longitude: 77.19868256414041 },
     'kallarkutty': { latitude: 9.98, longitude: 77.001389 },
     'erattayar': { latitude: 9.8103, longitude: 77.106 },
     'lower periyar': { latitude: 9.9620, longitude: 76.9568 },
@@ -41,6 +41,7 @@ const damCoordinates = {
     'kallar': { latitude: 9.8255, longitude: 77.1562 },
     'sengulam (pumping storage dam)': { latitude: 10.010833, longitude: 77.0325 },
   };
+  
   
 
 const convertFeetToMeters = (value) => {
