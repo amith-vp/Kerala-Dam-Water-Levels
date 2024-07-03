@@ -1,6 +1,7 @@
 {
     "id": "1",
-    "name": "IDUKKI",
+    "name": "Idukki",
+    "officialName": "IDUKKI",
     "MWL": "734.11",
     "FRL": "732.43",
     "liveStorageAtFRL": "1459.49",
@@ -8,10 +9,12 @@
     "blueLevel": "721.56",
     "orangeLevel": "723.39",
     "redLevel": "723.70",
+    "latitude": 9.8436,
+    "longitude": 76.9762,
     "data": [
         {
             "date": "03.07.2024",
-            "waterLevel": "713.31 m",
+            "waterLevel": "713.31",
             "liveStorage": "549.682",
             "storagePercentage": "37.66%",
             "inflow": "101.88",

@@ -1,6 +1,7 @@
 {
     "id": "10",
-    "name": "PAMBA",
+    "name": "Pamba",
+    "officialName": "PAMBA",
     "MWL": "986.330",
     "FRL": "986.330",
     "liveStorageAtFRL": "31.15",
@@ -8,6 +9,8 @@
     "blueLevel": "982.00",
     "orangeLevel": "983.50",
     "redLevel": "984.50",
+    "latitude": 9.3906,
+    "longitude": 77.1598,
     "data": [
         {
             "date": "03.07.2024",
