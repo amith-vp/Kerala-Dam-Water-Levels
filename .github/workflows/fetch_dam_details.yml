@@ -2,9 +2,10 @@ name: Fetch Dam Details
 
 on:
   schedule:
-    - cron: '30 7 * * *'
-    - cron: '0 8 * * *'
-    - cron: '0 10 * * *'
+    - cron: '0 2 * * *'    # 7:30 AM IST
+    - cron: '30 2 * * *'   # 8:00 AM IST
+    - cron: '30 4 * * *'   # 10:00 AM IST
+
   workflow_dispatch:  # Allow manual triggers
 
 jobs:
