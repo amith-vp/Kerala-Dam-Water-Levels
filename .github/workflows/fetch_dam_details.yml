@@ -2,10 +2,18 @@ name: Fetch Dam Details
 
 on:
   schedule:
-    - cron: '0 2 * * *'    # 7:30 AM IST
-    - cron: '30 2 * * *'   # 8:00 AM IST 
-    - cron: '30 4 * * *'   # 10:00 AM IST
-    - cron: '0 12 * * *'   # 5:00 PM IST
+  - cron: '30 23 * * *'  # 5:00 AM IST
+  - cron: '0 2 * * *'    # 7:30 AM IST
+  - cron: '30 2 * * *'   # 8:00 AM IST
+  - cron: '30 4 * * *'   # 10:00 AM IST
+  - cron: '30 5 * * *'   # 11:00 AM IST
+  - cron: '30 7 * * *'   # 1:00 PM IST
+  - cron: '0 12 * * *'   # 5:00 PM IST
+  - cron: '30 23 * * *'  # 11:00 PM IST
+
+# Why so many cron jobs for a once-a-day update ?
+# Because its KSEB, trust their servers? hell no
+
 
 
   workflow_dispatch:  # Allow manual triggers
