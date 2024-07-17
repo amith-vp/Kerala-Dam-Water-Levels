@@ -15,6 +15,7 @@ const fetchMostRecentUpdate = async () => {
     const date = pageElement.find('.elementor-post__title a').text().trim();
     const link = pageElement.find('.elementor-post__title a').attr('href');
 
+   
     return { date, link };
   } catch (error) {
     console.error('Error fetching the most recent page:', error);
