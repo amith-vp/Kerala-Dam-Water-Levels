@@ -6,6 +6,11 @@ on:
   - cron: '0 2 * * *'    # 7:30 AM IST
   - cron: '30 2 * * *'   # 8:00 AM IST
   - cron: '30 4 * * *'   # 10:00 AM IST
+  - cron: '02 5 * * *'   # 10:00 AM IST
+  - cron: '03 5 * * *'   # 10:00 AM IST
+  - cron: '04 5 * * *'   # 10:00 AM IST
+  - cron: '05 5 * * *'   # 10:00 AM IST
+  - cron: '06 5 * * *'   # 10:00 AM IST
   - cron: '30 5 * * *'   # 11:00 AM IST
   - cron: '30 7 * * *'   # 1:00 PM IST
   - cron: '0 12 * * *'   # 5:00 PM IST
