@@ -20,7 +20,7 @@ The `live.json` file contains the most recent data for all dams. Its structure i
 
 ```json
 {
-  "lastUpdate": "DD-MM-YYYY",
+  "lastUpdate": "DD.MM.YYYY",
   "dams": [
     {
       "id": "string",
@@ -37,7 +37,7 @@ The `live.json` file contains the most recent data for all dams. Its structure i
       "longitude": number,
       "data": [
         {
-          "date": "DD-MM-YYYY",
+          "date": "DD.MM.YYYY",
           "waterLevel": "string",
           "liveStorage": "string",
           "storagePercentage": "string",
@@ -84,7 +84,7 @@ Each dam has its own JSON file in the `historic_data` folder, containing all his
 
 ## API
 
-- **Live Data**: Access the most recent data for all dams at `/live.json`
+- **Live Data**: Access the most recent data for all dams at `https://github.com/amith-vp/Kerala-Dam-Water-Levels/blob/main/live.json`
 - **Historical Data**: Access historical data for a specific dam at `/historic_data/{dam_name}.json`
 
 ## Workflow
