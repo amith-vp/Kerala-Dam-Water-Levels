@@ -2,6 +2,8 @@
 
 This repository contains live and historical data / API of water levels for major dams in Kerala, India. The data is automatically updated daily using GitHub Actions.
 
+## LIVE DASHBOARD - https://damstats.amithv.xyz
+
 ## Overview
 
 This project scrapes data from [KSEB Limted Dam Safety Organisation](https://dams.kseb.in/?page_id=45) website and stores it in JSON format. It provides both live data and historical data for various dams in Kerala.
