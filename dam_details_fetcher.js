@@ -69,7 +69,7 @@ const Names = {
 
 // Convert feet to meters
 const convertFeetToMeters = (value) => {
-  if (typeof value === 'string' && value.trim().endsWith('ft')) {
+  if (typeof value === 'string' && value.trim().toLowerCase().endsWith('ft')) {
     const feet = parseFloat(value.trim().replace('ft', ''));
     return `${(feet * 0.3048).toFixed(2)}`;
   }
