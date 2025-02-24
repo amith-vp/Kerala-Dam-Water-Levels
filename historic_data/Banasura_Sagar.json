@@ -3,7 +3,7 @@
     "name": "Banasura Sagar",
     "officialName": "BANASURASAGAR(K A SCHEME)",
     "MWL": "775.600",
-    "FRL": "775.600",
+    "FRL": "775.60",
     "liveStorageAtFRL": "201.00",
     "ruleLevel": "775.60",
     "blueLevel": "774.10",
@@ -12,6 +12,17 @@
     "latitude": 11.6709,
     "longitude": 75.9504,
     "data": [
+        {
+            "date": "24.02.2025",
+            "waterLevel": "765.20",
+            "liveStorage": "86.750",
+            "storagePercentage": "43.16%",
+            "inflow": "0.00",
+            "powerHouseDischarge": "9.03",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "9.03",
+            "rainfall": "0.00"
+        },
         {
             "date": "23.02.2025",
             "waterLevel": "765.30",
