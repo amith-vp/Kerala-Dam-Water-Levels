@@ -4,21 +4,23 @@ const fs = require('fs').promises;
 
 const baseUrl = 'https://dams.kseb.in/?page_id=45';
 
-// Fetch the most recent update from the base URL
-const fetchMostRecentUpdate = async () => {
+// Fetch the most recent update from the base URL and previous 5 dates
+const fetchMostRecentUpdateWithHistory = async () => {
   try {
     const response = await axios.get(baseUrl);
     const html = response.data;
     const $ = cheerio.load(html);
 
-    const pageElement = $('.elementor-post').first();
-    const date = pageElement.find('.elementor-post__title a').text().trim();
-    const link = pageElement.find('.elementor-post__title a').attr('href');
+    const pages = [];
+    $('.elementor-post').slice(0, 6).each((index, element) => {
+      const date = $(element).find('.elementor-post__title a').text().trim();
+      const link = $(element).find('.elementor-post__title a').attr('href');
+      pages.push({ date, link });
+    });
 
-   
-    return { date, link };
+    return pages.length > 0 ? pages : [{ date:"22.02.2025", link:"https://dams.kseb.in/?p=5127" }];
   } catch (error) {
-    console.error('Error fetching the most recent page:', error);
+    console.error('Error fetching the recent pages:', error);
     return null;
   }
 };
@@ -76,6 +78,32 @@ const convertFeetToMeters = (value) => {
   return `${(value * 0.3048).toFixed(2)}`;
 };
 
+// Helper function to parse dates in different formats
+const parseDateString = (dateStr) => {
+  // Remove any leading/trailing whitespace
+  dateStr = dateStr.trim();
+  // Replace both . and / with - for consistent format
+  const normalized = dateStr.replace(/[./]/g, '-');
+  // Split and reverse to get YYYY-MM-DD format for Date constructor
+  const parts = normalized.split('-');
+  if (parts.length === 3) {
+    return new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+  }
+  return null;
+};
+
+// Helper function to standardize date format to DD.MM.YYYY
+const standardizeDateFormat = (dateStr) => {
+  const date = parseDateString(dateStr);
+  if (!date) return dateStr; // Return original if parsing fails
+  
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const year = date.getFullYear();
+  
+  return `${day}.${month}.${year}`;
+};
+
 // Extract dam details from the given URL
 async function extractDamDetails(url) {
   try {
@@ -102,7 +130,7 @@ async function extractDamDetails(url) {
           latitude: damCoordinates[damKey] ? damCoordinates[damKey].latitude : null,
           longitude: damCoordinates[damKey] ? damCoordinates[damKey].longitude : null,
           data: [{
-            date: $('h1.entry-title').text().trim(),
+            date: standardizeDateFormat($('h1.entry-title').text().trim()),
             waterLevel: $(columns[11]).text().trim(),
             liveStorage: $(columns[12]).text().trim(),
             storagePercentage: $(columns[13]).text().trim(),
@@ -151,20 +179,17 @@ async function fetchDamDetails() {
       await fs.mkdir(folderName);
     }
 
-    const page = await fetchMostRecentUpdate();
-    if (!page) {
-      console.log('No recent page found.');
+    const pages = await fetchMostRecentUpdateWithHistory();
+    if (!pages || pages.length === 0) {
+      console.log('No pages found.');
       return;
     }
-
-    console.log(`Processing page: ${page.date}`);
-    const { dams } = await extractDamDetails(page.link);
 
     const existingData = {};
     const files = await fs.readdir(folderName);
     for (const file of files) {
       if (file.endsWith('.json')) {
-        const damName = file.replace('historic_data_', '').replace('.json', '').replace(/_/g, ' ');
+        const damName = file.replace('.json', '');
         const data = JSON.parse(await fs.readFile(`${folderName}/${file}`, 'utf8'));
         existingData[damName] = data;
       }
@@ -172,15 +197,38 @@ async function fetchDamDetails() {
 
     let dataChanged = false;
 
-    for (const newDam of dams) {
+    // Get the most recent data first (before reversing pages)
+    const mostRecentPage = pages[0];
+    const { dams: mostRecentDams } = await extractDamDetails(mostRecentPage.link);
+
+    // Process pages in chronological order (oldest to newest)
+    const sortedPages = pages.reverse();
+    for (const page of sortedPages) {
+      console.log(`Processing page: ${standardizeDateFormat(page.date)}`);
+      const { dams } = await extractDamDetails(page.link);
+
+      for (const newDam of dams) {
         const formattedDamName = newDam.name.replace(/\s+/g, '_');
         const existingDam = existingData[newDam.name];
-  
+
         if (existingDam) {
-          const dateExists = existingDam.data.some(d => d.date === newDam.data[0].date);
-  
+          const dateExists = existingDam.data.some(d => d.date === standardizeDateFormat(newDam.data[0].date));
+
           if (!dateExists) {
-            existingDam.data.unshift(newDam.data[0]);
+            // Find the correct position to insert the new data using the new date parser
+            const insertIndex = existingDam.data.findIndex(d => {
+              const entryDate = parseDateString(d.date);
+              const newDate = parseDateString(newDam.data[0].date);
+              return entryDate < newDate;
+            });
+
+            if (insertIndex === -1) {
+              existingDam.data.push(newDam.data[0]);
+            } else {
+              existingDam.data.splice(insertIndex, 0, newDam.data[0]);
+            }
+
+            // Update dam metadata
             existingDam.id = newDam.id;
             existingDam.officialName = newDam.officialName;
             existingDam.MWL = newDam.MWL;
@@ -199,26 +247,45 @@ async function fetchDamDetails() {
           dataChanged = true;
         }
       }
-  
-      if (dataChanged) {
-        for (const [damName, damData] of Object.entries(existingData)) {
-          const filename = `${folderName}/${damName.replace(/\s+/g, '_')}.json`;
-          await fs.writeFile(filename, JSON.stringify(damData, null, 4));
-          console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
-        }
-  
-        // Save live JSON file with most recent data
-        const liveData = {
-          lastUpdate: page.date,
-          dams
-        };
-        await fs.writeFile('live.json', JSON.stringify(liveData, null, 4));
-        console.log('Live dam data saved successfully in live.json.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
     }
+
+    if (dataChanged) {
+      for (const [damName, damData] of Object.entries(existingData)) {
+        // Sort data by date in descending order before saving using the new date parser
+        damData.data.sort((a, b) => {
+          const dateA = parseDateString(a.date);
+          const dateB = parseDateString(b.date);
+          return dateB - dateA;
+        });
+
+        // Ensure all dates in the data array are in DD.MM.YYYY format
+        damData.data = damData.data.map(entry => ({
+          ...entry,
+          date: standardizeDateFormat(entry.date)
+        }));
+
+        const filename = `${folderName}/${damName.replace(/\s+/g, '_')}.json`;
+        await fs.writeFile(filename, JSON.stringify(damData, null, 4));
+        console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
+      }
+
+      // Save live JSON file with the first (most recent) table's data
+      const liveData = {
+        lastUpdate: standardizeDateFormat(mostRecentPage.date),
+        dams: mostRecentDams.map(dam => ({
+          ...dam,
+          data: dam.data.map(entry => ({
+            ...entry,
+            date: standardizeDateFormat(entry.date)
+          }))
+        }))
+      };
+      await fs.writeFile('live.json', JSON.stringify(liveData, null, 4));
+      console.log('Live dam data saved successfully in live.json.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
   }
-  
-  fetchDamDetails();
-  
+}
+
+fetchDamDetails();
