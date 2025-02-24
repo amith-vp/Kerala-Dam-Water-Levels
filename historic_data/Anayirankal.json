@@ -3478,17 +3478,6 @@
             "rainfall": "0.00"
         },
         {
-            "date": "10.042024",
-            "waterLevel": "1201.28",
-            "liveStorage": "26.9882",
-            "storagePercentage": "54.16%",
-            "inflow": "3.83",
-            "powerHouseDischarge": "0.00",
-            "spillwayRelease": "0.00",
-            "totalOutflow": "0.00",
-            "rainfall": "0.00"
-        },
-        {
             "date": "09.04.2024",
             "waterLevel": "1201.49",
             "liveStorage": "27.6569",
@@ -5975,17 +5964,6 @@
             "rainfall": "0.00"
         },
         {
-            "date": "20.08.2023",
-            "waterLevel": "1196.96",
-            "liveStorage": "13.4342",
-            "storagePercentage": "26.96%",
-            "inflow": "0.40",
-            "powerHouseDischarge": "0.00",
-            "spillwayRelease": "0.00",
-            "totalOutflow": "0.00",
-            "rainfall": "0.00"
-        },
-        {
             "date": "22.08.2023",
             "waterLevel": "1196.99",
             "liveStorage": "13.4862",
@@ -6002,6 +5980,17 @@
             "liveStorage": "13.4515",
             "storagePercentage": "26.99%",
             "inflow": "0.20",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "20.08.2023",
+            "waterLevel": "1196.96",
+            "liveStorage": "13.4342",
+            "storagePercentage": "26.96%",
+            "inflow": "0.40",
             "powerHouseDischarge": "0.00",
             "spillwayRelease": "0.00",
             "totalOutflow": "0.00",
@@ -6063,22 +6052,22 @@
             "rainfall": "0.00"
         },
         {
-            "date": "13.08.2023",
-            "waterLevel": "1196.85",
-            "liveStorage": "13.2434",
-            "storagePercentage": "26.58%",
-            "inflow": "1.00",
+            "date": "14.08.2023",
+            "waterLevel": "1196.89",
+            "liveStorage": "13.3128",
+            "storagePercentage": "26.72%",
+            "inflow": "0.80",
             "powerHouseDischarge": "0.00",
             "spillwayRelease": "0.00",
             "totalOutflow": "0.00",
             "rainfall": "0.00"
         },
         {
-            "date": "14.08.2023",
-            "waterLevel": "1196.89",
-            "liveStorage": "13.3128",
-            "storagePercentage": "26.72%",
-            "inflow": "0.80",
+            "date": "13.08.2023",
+            "waterLevel": "1196.85",
+            "liveStorage": "13.2434",
+            "storagePercentage": "26.58%",
+            "inflow": "1.00",
             "powerHouseDischarge": "0.00",
             "spillwayRelease": "0.00",
             "totalOutflow": "0.00",
@@ -6877,7 +6866,7 @@
             "rainfall": "0.00"
         },
         {
-            "date": "1.6.2023",
+            "date": "01.06.2023",
             "waterLevel": "1190.52",
             "liveStorage": "2.8647",
             "storagePercentage": "5.75%",
@@ -7454,17 +7443,6 @@
             "liveStorage": "26.2557",
             "storagePercentage": "52.69%",
             "inflow": "2.36",
-            "powerHouseDischarge": "0.00",
-            "spillwayRelease": "0.00",
-            "totalOutflow": "0.00",
-            "rainfall": "0.00"
-        },
-        {
-            "date": "09.04.2.23",
-            "waterLevel": "1201.30",
-            "liveStorage": "27.0519",
-            "storagePercentage": "54.29%",
-            "inflow": "4.20",
             "powerHouseDischarge": "0.00",
             "spillwayRelease": "0.00",
             "totalOutflow": "0.00",
@@ -18047,6 +18025,28 @@
             "liveStorage": "19.674",
             "storagePercentage": "39.48",
             "inflow": "5.53",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "10.042024",
+            "waterLevel": "1201.28",
+            "liveStorage": "26.9882",
+            "storagePercentage": "54.16%",
+            "inflow": "3.83",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "09.04.2.23",
+            "waterLevel": "1201.30",
+            "liveStorage": "27.0519",
+            "storagePercentage": "54.29%",
+            "inflow": "4.20",
             "powerHouseDischarge": "0.00",
             "spillwayRelease": "0.00",
             "totalOutflow": "0.00",
