@@ -13,6 +13,17 @@
     "longitude": 77.0565,
     "data": [
         {
+            "date": "17.03.2025",
+            "waterLevel": "695.60",
+            "liveStorage": "23.0174",
+            "storagePercentage": "48.56%",
+            "inflow": "6.14",
+            "powerHouseDischarge": "1.30",
+            "spillwayRelease": "0.00",
+            "totalOutflow": "1.30",
+            "rainfall": "0.00"
+        },
+        {
             "date": "16.03.2025",
             "waterLevel": "695.35",
             "liveStorage": "22.5994",
