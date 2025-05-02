@@ -2,7 +2,7 @@
 
 This repository contains live and historical data / API of water levels for major dams in Kerala, India. The data is automatically updated daily using GitHub Actions.
 
-## LIVE DASHBOARD - https://damstats.amithv.xyz
+## LIVE DASHBOARD - https://dams.keralam.co
 
 ## Overview
 
