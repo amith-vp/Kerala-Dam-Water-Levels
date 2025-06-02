@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "31.05.2025",
+    "lastUpdate": "02.06.2025",
     "dams": [
         {
             "id": "1",
@@ -8,23 +8,23 @@
             "MWL": "734.11",
             "FRL": "732.43",
             "liveStorageAtFRL": "1459.49",
-            "ruleLevel": "732.43",
-            "blueLevel": "730.00",
-            "orangeLevel": "731.82",
-            "redLevel": "732.13",
+            "ruleLevel": "723.29",
+            "blueLevel": "720.85",
+            "orangeLevel": "722.68",
+            "redLevel": "722.99",
             "latitude": 9.8436,
             "longitude": 76.9762,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "714.38",
-                    "liveStorage": "592.912",
-                    "storagePercentage": "40.62%",
-                    "inflow": "384.35",
-                    "powerHouseDischarge": "55.73",
+                    "date": "02.06.2025",
+                    "waterLevel": "714.69",
+                    "liveStorage": "605.202",
+                    "storagePercentage": "41.47%",
+                    "inflow": "147.60",
+                    "powerHouseDischarge": "126.19",
                     "spillwayRelease": "0.00",
-                    "totalOutflow": "55.73",
-                    "rainfall": "24.20"
+                    "totalOutflow": "126.19",
+                    "rainfall": "6.40"
                 }
             ]
         },
@@ -35,23 +35,23 @@
             "MWL": "171.00",
             "FRL": "169.00",
             "liveStorageAtFRL": "1017.80",
-            "ruleLevel": "169.00",
-            "blueLevel": "167.50",
-            "orangeLevel": "168.00",
-            "redLevel": "168.50",
+            "ruleLevel": "161.00",
+            "blueLevel": "159.50",
+            "orangeLevel": "160.00",
+            "redLevel": "160.50",
             "latitude": 10.221867602366947,
             "longitude": 76.70603684268934,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "141.81",
-                    "liveStorage": "344.223",
-                    "storagePercentage": "33.82%",
-                    "inflow": "221.34",
-                    "powerHouseDischarge": "23.96",
+                    "date": "02.06.2025",
+                    "waterLevel": "141.94",
+                    "liveStorage": "346.739",
+                    "storagePercentage": "34.07%",
+                    "inflow": "54.23",
+                    "powerHouseDischarge": "62.50",
                     "spillwayRelease": "0.00",
-                    "totalOutflow": "23.96",
-                    "rainfall": "22.00"
+                    "totalOutflow": "62.50",
+                    "rainfall": "2.00"
                 }
             ]
         },
@@ -62,23 +62,23 @@
             "MWL": "982.160",
             "FRL": "981.46",
             "liveStorageAtFRL": "446.51",
-            "ruleLevel": "981.46",
-            "blueLevel": "979.46",
-            "orangeLevel": "980.46",
-            "redLevel": "980.96",
+            "ruleLevel": "975.36",
+            "blueLevel": "973.36",
+            "orangeLevel": "974.36",
+            "redLevel": "974.86",
             "latitude": 9.341667,
             "longitude": 77.15,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "961.50",
-                    "liveStorage": "195.350",
-                    "storagePercentage": "43.75%",
-                    "inflow": "162.27",
-                    "powerHouseDischarge": "34.44",
+                    "date": "02.06.2025",
+                    "waterLevel": "962.68",
+                    "liveStorage": "205.380",
+                    "storagePercentage": "46.00%",
+                    "inflow": "84.85",
+                    "powerHouseDischarge": "41.57",
                     "spillwayRelease": "0.00",
-                    "totalOutflow": "34.44",
-                    "rainfall": "58.00"
+                    "totalOutflow": "41.57",
+                    "rainfall": "2.00"
                 }
             ]
         },
@@ -89,23 +89,23 @@
             "MWL": "775.600",
             "FRL": "775.60",
             "liveStorageAtFRL": "201.00",
-            "ruleLevel": "775.60",
-            "blueLevel": "774.10",
-            "orangeLevel": "774.60",
-            "redLevel": "775.10",
+            "ruleLevel": "767.00",
+            "blueLevel": "765.50",
+            "orangeLevel": "766.00",
+            "redLevel": "766.50",
             "latitude": 11.6709,
             "longitude": 75.9504,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "762.60",
-                    "liveStorage": "64.350",
-                    "storagePercentage": "32.01%",
-                    "inflow": "48.61",
+                    "date": "02.06.2025",
+                    "waterLevel": "763.00",
+                    "liveStorage": "67.350",
+                    "storagePercentage": "33.51%",
+                    "inflow": "11.57",
                     "powerHouseDischarge": "0.00",
                     "spillwayRelease": "0.00",
                     "totalOutflow": "0.00",
-                    "rainfall": "21.80"
+                    "rainfall": "4.20"
                 }
             ]
         },
@@ -124,15 +124,15 @@
             "longitude": 76.7342,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "796.50",
-                    "liveStorage": "46.920",
-                    "storagePercentage": "31.47%",
-                    "inflow": "24.26",
-                    "powerHouseDischarge": "3.35",
+                    "date": "02.06.2025",
+                    "waterLevel": "796.81",
+                    "liveStorage": "48.340",
+                    "storagePercentage": "32.42%",
+                    "inflow": "10.62",
+                    "powerHouseDischarge": "7.28",
                     "spillwayRelease": "0.00",
-                    "totalOutflow": "3.35",
-                    "rainfall": "20.00"
+                    "totalOutflow": "7.28",
+                    "rainfall": "0.00"
                 }
             ]
         },
@@ -151,15 +151,15 @@
             "longitude": 77.1238,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "1590.70",
-                    "liveStorage": "32.740",
-                    "storagePercentage": "59.78%",
-                    "inflow": "16.20",
+                    "date": "02.06.2025",
+                    "waterLevel": "1591.50",
+                    "liveStorage": "34.340",
+                    "storagePercentage": "62.70%",
+                    "inflow": "6.94",
                     "powerHouseDischarge": "0.00",
                     "spillwayRelease": "0.00",
                     "totalOutflow": "0.00",
-                    "rainfall": "23.60"
+                    "rainfall": "0.00"
                 }
             ]
         },
@@ -178,15 +178,15 @@
             "longitude": 77.20724298186308,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "1197.72",
-                    "liveStorage": "15.651",
-                    "storagePercentage": "31.41%",
-                    "inflow": "17.32",
+                    "date": "02.06.2025",
+                    "waterLevel": "1198.27",
+                    "liveStorage": "17.403",
+                    "storagePercentage": "34.92%",
+                    "inflow": "6.64",
                     "powerHouseDischarge": "0.00",
                     "spillwayRelease": "0.00",
                     "totalOutflow": "0.00",
-                    "rainfall": "40.00"
+                    "rainfall": "0.00"
                 }
             ]
         },
@@ -205,15 +205,15 @@
             "longitude": 77.0565,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "706.50",
-                    "liveStorage": "43.900",
-                    "storagePercentage": "92.62%",
-                    "inflow": "66.28",
-                    "powerHouseDischarge": "20.28",
-                    "spillwayRelease": "46.00",
-                    "totalOutflow": "66.28",
-                    "rainfall": "16.00"
+                    "date": "02.06.2025",
+                    "waterLevel": "706.00",
+                    "liveStorage": "42.741",
+                    "storagePercentage": "90.17%",
+                    "inflow": "26.93",
+                    "powerHouseDischarge": "20.34",
+                    "spillwayRelease": "9.26",
+                    "totalOutflow": "29.60",
+                    "rainfall": "0.00"
                 }
             ]
         },
@@ -232,15 +232,15 @@
             "longitude": 75.925,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "757.180",
-                    "liveStorage": "31.847",
-                    "storagePercentage": "93.72%",
-                    "inflow": "31.06",
-                    "powerHouseDischarge": "16.96",
+                    "date": "02.06.2025",
+                    "waterLevel": "756.970",
+                    "liveStorage": "31.315",
+                    "storagePercentage": "92.16%",
+                    "inflow": "13.40",
+                    "powerHouseDischarge": "18.68",
                     "spillwayRelease": "0.00",
-                    "totalOutflow": "16.96",
-                    "rainfall": "44.00"
+                    "totalOutflow": "18.68",
+                    "rainfall": "42.00"
                 }
             ]
         },
@@ -259,15 +259,15 @@
             "longitude": 77.1598,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "976.15",
-                    "liveStorage": "13.86",
-                    "storagePercentage": "44.49%",
-                    "inflow": "69.16",
+                    "date": "02.06.2025",
+                    "waterLevel": "974.05",
+                    "liveStorage": "10.76",
+                    "storagePercentage": "34.54%",
+                    "inflow": "24.14",
                     "powerHouseDischarge": "0.00",
                     "spillwayRelease": "0.00",
                     "totalOutflow": "0.00",
-                    "rainfall": "42.00"
+                    "rainfall": "19.00"
                 }
             ]
         },
@@ -286,15 +286,15 @@
             "longitude": 76.6344,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "420.10",
-                    "liveStorage": "20.00",
-                    "storagePercentage": "66.01%",
-                    "inflow": "213.40",
-                    "powerHouseDischarge": "43.28",
-                    "spillwayRelease": "186.04",
-                    "totalOutflow": "229.32",
-                    "rainfall": "21.80"
+                    "date": "02.06.2025",
+                    "waterLevel": "419.60",
+                    "liveStorage": "18.75",
+                    "storagePercentage": "61.88%",
+                    "inflow": "65.38",
+                    "powerHouseDischarge": "47.92",
+                    "spillwayRelease": "21.79",
+                    "totalOutflow": "69.72",
+                    "rainfall": "6.60"
                 }
             ]
         },
@@ -313,11 +313,11 @@
             "longitude": 77.19868256414041,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "1745.20",
-                    "liveStorage": "1.036",
-                    "storagePercentage": "13.54%",
-                    "inflow": "7.30",
+                    "date": "02.06.2025",
+                    "waterLevel": "1744.00",
+                    "liveStorage": "0.700",
+                    "storagePercentage": "9.15%",
+                    "inflow": "3.57",
                     "powerHouseDischarge": "0.00",
                     "spillwayRelease": "0.00",
                     "totalOutflow": "0.00",
@@ -340,15 +340,15 @@
             "longitude": 77.001389,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "456.20",
-                    "liveStorage": "6.219",
-                    "storagePercentage": "96.72%",
-                    "inflow": "265.12",
-                    "powerHouseDischarge": "44.28",
-                    "spillwayRelease": "219.38",
-                    "totalOutflow": "263.65",
-                    "rainfall": "19.00"
+                    "date": "02.06.2025",
+                    "waterLevel": "456.15",
+                    "liveStorage": "6.188",
+                    "storagePercentage": "96.24%",
+                    "inflow": "83.26",
+                    "powerHouseDischarge": "44.25",
+                    "spillwayRelease": "39.38",
+                    "totalOutflow": "83.62",
+                    "rainfall": "0.00"
                 }
             ]
         },
@@ -367,10 +367,10 @@
             "longitude": 77.106,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "748.20",
-                    "liveStorage": "1.4014",
-                    "storagePercentage": "26.48%",
+                    "date": "02.06.2025",
+                    "waterLevel": "747.20",
+                    "liveStorage": "1.0140",
+                    "storagePercentage": "19.16%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -394,15 +394,15 @@
             "longitude": 76.9568,
             "data": [
                 {
-                    "date": "31.05.2025",
+                    "date": "02.06.2025",
                     "waterLevel": "252.90",
                     "liveStorage": "4.507",
                     "storagePercentage": "99.05%",
-                    "inflow": "301.56",
-                    "powerHouseDischarge": "71.62",
-                    "spillwayRelease": "229.94",
-                    "totalOutflow": "301.56",
-                    "rainfall": "26.00"
+                    "inflow": "110.68",
+                    "powerHouseDischarge": "72.17",
+                    "spillwayRelease": "39.00",
+                    "totalOutflow": "111.17",
+                    "rainfall": "6.00"
                 }
             ]
         },
@@ -421,15 +421,15 @@
             "longitude": 77.0656,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "189.60",
-                    "liveStorage": "0.749",
-                    "storagePercentage": "64.57%",
-                    "inflow": "33.57",
-                    "powerHouseDischarge": "35.55",
-                    "spillwayRelease": "5.14",
-                    "totalOutflow": "40.69",
-                    "rainfall": "38.00"
+                    "date": "02.06.2025",
+                    "waterLevel": "190.95",
+                    "liveStorage": "0.933",
+                    "storagePercentage": "80.43%",
+                    "inflow": "40.33",
+                    "powerHouseDischarge": "31.41",
+                    "spillwayRelease": "3.64",
+                    "totalOutflow": "35.05",
+                    "rainfall": "0.00"
                 }
             ]
         },
@@ -448,10 +448,10 @@
             "longitude": 77.1562,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "820.50",
-                    "liveStorage": "0.2030",
-                    "storagePercentage": "26.61%",
+                    "date": "02.06.2025",
+                    "waterLevel": "820.40",
+                    "liveStorage": "0.1993",
+                    "storagePercentage": "26.12%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -475,15 +475,15 @@
             "longitude": 77.0325,
             "data": [
                 {
-                    "date": "31.05.2025",
-                    "waterLevel": "847.00",
-                    "liveStorage": "0.236",
-                    "storagePercentage": "60.51%",
-                    "inflow": "16.99",
-                    "powerHouseDischarge": "17.27",
+                    "date": "02.06.2025",
+                    "waterLevel": "846.70",
+                    "liveStorage": "0.165",
+                    "storagePercentage": "42.31%",
+                    "inflow": "15.63",
+                    "powerHouseDischarge": "15.08",
                     "spillwayRelease": "0.00",
-                    "totalOutflow": "17.27",
-                    "rainfall": "18.10"
+                    "totalOutflow": "15.08",
+                    "rainfall": "1.00"
                 }
             ]
         }
