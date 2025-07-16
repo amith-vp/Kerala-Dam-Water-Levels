@@ -1,10 +1,10 @@
 {
     "id": "9",
     "name": "Kakkayam",
-    "officialName": "KUTTIYADI(KAKKAYAM)",
-    "MWL": "758.040",
-    "FRL": "758.040",
-    "liveStorageAtFRL": "33.98",
+    "officialName": "KUTTIYADI (KAKKAYAM)",
+    "MWL": "758.04",
+    "FRL": "758.04",
+    "liveStorageAtFRL": "24.23",
     "ruleLevel": "",
     "blueLevel": "755.50",
     "orangeLevel": "756.50",
@@ -12,6 +12,72 @@
     "latitude": 11.551,
     "longitude": 75.925,
     "data": [
+        {
+            "date": "16.07.2025",
+            "waterLevel": "754.14",
+            "liveStorage": "24.23",
+            "storagePercentage": "71.31",
+            "inflow": "2.00",
+            "powerHouseDischarge": "3.29",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.29",
+            "rainfall": "48.00"
+        },
+        {
+            "date": "15.07.2025",
+            "waterLevel": "754.65",
+            "liveStorage": "25.52",
+            "storagePercentage": "75.11",
+            "inflow": "2.47",
+            "powerHouseDischarge": "3.00",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.00",
+            "rainfall": "75.00"
+        },
+        {
+            "date": "14.07.2025",
+            "waterLevel": "754.87",
+            "liveStorage": "26.06",
+            "storagePercentage": "76.68",
+            "inflow": "1.74",
+            "powerHouseDischarge": "3.34",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.34",
+            "rainfall": "65.00"
+        },
+        {
+            "date": "13.07.2025",
+            "waterLevel": "755.51",
+            "liveStorage": "27.66",
+            "storagePercentage": "81.40",
+            "inflow": "1.59",
+            "powerHouseDischarge": "3.35",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.35",
+            "rainfall": "26.00"
+        },
+        {
+            "date": "12.07.2025",
+            "waterLevel": "756.21",
+            "liveStorage": "29.41",
+            "storagePercentage": "86.55",
+            "inflow": "2.23",
+            "powerHouseDischarge": "3.30",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.30",
+            "rainfall": "41.00"
+        },
+        {
+            "date": "11.07.2025",
+            "waterLevel": "756.64",
+            "liveStorage": "30.48",
+            "storagePercentage": "89.69",
+            "inflow": "4.16",
+            "powerHouseDischarge": "3.17",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.17",
+            "rainfall": "61.00"
+        },
         {
             "date": "02.06.2025",
             "waterLevel": "756.970",
