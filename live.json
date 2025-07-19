@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "18.07.2025",
+    "lastUpdate": "19.07.2025",
     "dams": [
         {
             "id": "1",
@@ -7,7 +7,7 @@
             "officialName": "IDUKKI",
             "MWL": "732.43",
             "FRL": "732.43",
-            "liveStorageAtFRL": "835.60",
+            "liveStorageAtFRL": "840.15",
             "ruleLevel": "724.80",
             "blueLevel": "722.36",
             "orangeLevel": "724.19",
@@ -16,15 +16,15 @@
             "longitude": 76.9762,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "720.26",
-                    "liveStorage": "835.60",
-                    "storagePercentage": "57.25",
-                    "inflow": "16.18",
-                    "powerHouseDischarge": "10.94",
+                    "date": "19.07.2025",
+                    "waterLevel": "720.36",
+                    "liveStorage": "840.15",
+                    "storagePercentage": "57.56",
+                    "inflow": "16.17",
+                    "powerHouseDischarge": "11.49",
                     "spillwayRelease": "–",
-                    "totalOutflow": "10.94",
-                    "rainfall": "8.20"
+                    "totalOutflow": "11.49",
+                    "rainfall": "43.00"
                 }
             ]
         },
@@ -34,7 +34,7 @@
             "officialName": "IDAMALAYAR",
             "MWL": "169.00",
             "FRL": "169.00",
-            "liveStorageAtFRL": "620.12",
+            "liveStorageAtFRL": "623.21",
             "ruleLevel": "161.75",
             "blueLevel": "160.25",
             "orangeLevel": "160.75",
@@ -43,15 +43,15 @@
             "longitude": 76.70603684268934,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "154.49",
-                    "liveStorage": "620.12",
-                    "storagePercentage": "60.93",
-                    "inflow": "11.19",
-                    "powerHouseDischarge": "6.20",
+                    "date": "19.07.2025",
+                    "waterLevel": "154.62",
+                    "liveStorage": "623.21",
+                    "storagePercentage": "61.23",
+                    "inflow": "8.71",
+                    "powerHouseDischarge": "5.61",
                     "spillwayRelease": "–",
-                    "totalOutflow": "6.20",
-                    "rainfall": "10.80"
+                    "totalOutflow": "5.61",
+                    "rainfall": "37.40"
                 }
             ]
         },
@@ -61,7 +61,7 @@
             "officialName": "KAKKI – ANATHODE",
             "MWL": "981.46",
             "FRL": "981.46",
-            "liveStorageAtFRL": "266.67",
+            "liveStorageAtFRL": "267.63",
             "ruleLevel": "975.36",
             "blueLevel": "973.36",
             "orangeLevel": "974.36",
@@ -70,15 +70,15 @@
             "longitude": null,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "968.91",
-                    "liveStorage": "266.67",
-                    "storagePercentage": "59.72",
-                    "inflow": "5.97",
-                    "powerHouseDischarge": "4.37",
+                    "date": "19.07.2025",
+                    "waterLevel": "968.99",
+                    "liveStorage": "267.63",
+                    "storagePercentage": "59.94",
+                    "inflow": "5.01",
+                    "powerHouseDischarge": "4.05",
                     "spillwayRelease": "–",
-                    "totalOutflow": "4.37",
-                    "rainfall": "16.00"
+                    "totalOutflow": "4.05",
+                    "rainfall": "65.00"
                 }
             ]
         },
@@ -88,7 +88,7 @@
             "officialName": "BANASURASAGAR (K A S)",
             "MWL": "775.60",
             "FRL": "775.60",
-            "liveStorageAtFRL": "171.25",
+            "liveStorageAtFRL": "173.75",
             "ruleLevel": "773.50",
             "blueLevel": "772.00",
             "orangeLevel": "772.50",
@@ -97,15 +97,15 @@
             "longitude": null,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "773.15",
-                    "liveStorage": "171.25",
-                    "storagePercentage": "85.20",
-                    "inflow": "4.80",
+                    "date": "19.07.2025",
+                    "waterLevel": "773.35",
+                    "liveStorage": "173.75",
+                    "storagePercentage": "86.44",
+                    "inflow": "3.23",
                     "powerHouseDischarge": "",
-                    "spillwayRelease": "–",
-                    "totalOutflow": "0.00",
-                    "rainfall": "20.20"
+                    "spillwayRelease": "0.73",
+                    "totalOutflow": "0.73",
+                    "rainfall": "15.00"
                 }
             ]
         },
@@ -115,7 +115,7 @@
             "officialName": "SHOLAYAR",
             "MWL": "811.68",
             "FRL": "811.68",
-            "liveStorageAtFRL": "108.78",
+            "liveStorageAtFRL": "110.40",
             "ruleLevel": "0.00",
             "blueLevel": "810.16",
             "orangeLevel": "810.77",
@@ -124,15 +124,15 @@
             "longitude": 76.7342,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "806.87",
-                    "liveStorage": "108.78",
-                    "storagePercentage": "72.96",
-                    "inflow": "3.13",
+                    "date": "19.07.2025",
+                    "waterLevel": "807.08",
+                    "liveStorage": "110.40",
+                    "storagePercentage": "74.05",
+                    "inflow": "2.93",
                     "powerHouseDischarge": "1.31",
                     "spillwayRelease": "–",
                     "totalOutflow": "1.31",
-                    "rainfall": "10.20"
+                    "rainfall": "11.20"
                 }
             ]
         },
@@ -142,7 +142,7 @@
             "officialName": "MADUPETTY",
             "MWL": "1599.59",
             "FRL": "1599.59",
-            "liveStorageAtFRL": "46.19",
+            "liveStorageAtFRL": "46.07",
             "ruleLevel": "",
             "blueLevel": "1596.00",
             "orangeLevel": "1597.00",
@@ -151,15 +151,15 @@
             "longitude": 77.1238,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "1596.50",
-                    "liveStorage": "46.19",
-                    "storagePercentage": "84.33",
-                    "inflow": "0.30",
-                    "powerHouseDischarge": "0.55",
+                    "date": "19.07.2025",
+                    "waterLevel": "1596.45",
+                    "liveStorage": "46.07",
+                    "storagePercentage": "84.12",
+                    "inflow": "0.33",
+                    "powerHouseDischarge": "0.45",
                     "spillwayRelease": "–",
-                    "totalOutflow": "0.55",
-                    "rainfall": "1.00"
+                    "totalOutflow": "0.45",
+                    "rainfall": "8.20"
                 }
             ]
         },
@@ -169,7 +169,7 @@
             "officialName": "ANAYIRANKAL",
             "MWL": "1207.02",
             "FRL": "1207.02",
-            "liveStorageAtFRL": "29.76",
+            "liveStorageAtFRL": "29.85",
             "ruleLevel": "",
             "blueLevel": "1205.02",
             "orangeLevel": "1206.02",
@@ -178,15 +178,15 @@
             "longitude": 77.20724298186308,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "1202.15",
-                    "liveStorage": "29.76",
-                    "storagePercentage": "59.72",
-                    "inflow": "0.13",
+                    "date": "19.07.2025",
+                    "waterLevel": "1202.18",
+                    "liveStorage": "29.85",
+                    "storagePercentage": "59.91",
+                    "inflow": "0.10",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "–",
                     "totalOutflow": "0.00",
-                    "rainfall": "4.00"
+                    "rainfall": "3.00"
                 }
             ]
         },
@@ -196,7 +196,7 @@
             "officialName": "PONMUDI",
             "MWL": "707.75",
             "FRL": "707.75",
-            "liveStorageAtFRL": "39.96",
+            "liveStorageAtFRL": "39.73",
             "ruleLevel": "",
             "blueLevel": "704.50",
             "orangeLevel": "705.50",
@@ -205,15 +205,15 @@
             "longitude": 77.0565,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "704.80",
-                    "liveStorage": "39.96",
-                    "storagePercentage": "84.30",
-                    "inflow": "1.53",
-                    "powerHouseDischarge": "1.76",
+                    "date": "19.07.2025",
+                    "waterLevel": "704.70",
+                    "liveStorage": "39.73",
+                    "storagePercentage": "83.81",
+                    "inflow": "1.24",
+                    "powerHouseDischarge": "1.47",
                     "spillwayRelease": "–",
-                    "totalOutflow": "1.76",
-                    "rainfall": "0.00"
+                    "totalOutflow": "1.47",
+                    "rainfall": "8.00"
                 }
             ]
         },
@@ -223,7 +223,7 @@
             "officialName": "KUTTIYADI (KAKKAYAM)",
             "MWL": "758.04",
             "FRL": "758.04",
-            "liveStorageAtFRL": "30.55",
+            "liveStorageAtFRL": "29.87",
             "ruleLevel": "",
             "blueLevel": "755.50",
             "orangeLevel": "756.50",
@@ -232,15 +232,15 @@
             "longitude": null,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "756.67",
-                    "liveStorage": "30.55",
-                    "storagePercentage": "89.92",
-                    "inflow": "4.09",
-                    "powerHouseDischarge": "2.79",
+                    "date": "19.07.2025",
+                    "waterLevel": "756.39",
+                    "liveStorage": "29.87",
+                    "storagePercentage": "87.90",
+                    "inflow": "2.64",
+                    "powerHouseDischarge": "3.33",
                     "spillwayRelease": "–",
-                    "totalOutflow": "2.79",
-                    "rainfall": "48.00"
+                    "totalOutflow": "3.33",
+                    "rainfall": "41.00"
                 }
             ]
         },
@@ -250,7 +250,7 @@
             "officialName": "PAMBA",
             "MWL": "986.33",
             "FRL": "986.33",
-            "liveStorageAtFRL": "6.53",
+            "liveStorageAtFRL": "6.58",
             "ruleLevel": "",
             "blueLevel": "982.00",
             "orangeLevel": "983.50",
@@ -259,15 +259,15 @@
             "longitude": 77.1598,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "970.35",
-                    "liveStorage": "6.53",
-                    "storagePercentage": "20.96",
-                    "inflow": "1.62",
+                    "date": "19.07.2025",
+                    "waterLevel": "970.40",
+                    "liveStorage": "6.58",
+                    "storagePercentage": "21.12",
+                    "inflow": "1.46",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "–",
                     "totalOutflow": "0.00",
-                    "rainfall": "8.00"
+                    "rainfall": "33.00"
                 }
             ]
         },
@@ -286,15 +286,15 @@
             "longitude": 76.6344,
             "data": [
                 {
-                    "date": "18.07.2025",
+                    "date": "19.07.2025",
                     "waterLevel": "420.00",
                     "liveStorage": "19.75",
                     "storagePercentage": "65.18",
-                    "inflow": "11.65",
+                    "inflow": "10.37",
                     "powerHouseDischarge": "4.79",
-                    "spillwayRelease": "7.35",
-                    "totalOutflow": "12.15",
-                    "rainfall": "14.30"
+                    "spillwayRelease": "5.58",
+                    "totalOutflow": "10.37",
+                    "rainfall": "24.80"
                 }
             ]
         },
@@ -304,7 +304,7 @@
             "officialName": "KUNDALA",
             "MWL": "1758.69",
             "FRL": "1758.69",
-            "liveStorageAtFRL": "2.10",
+            "liveStorageAtFRL": "2.16",
             "ruleLevel": "",
             "blueLevel": "1755.00",
             "orangeLevel": "1756.00",
@@ -313,15 +313,15 @@
             "longitude": 77.19868256414041,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "1748.55",
-                    "liveStorage": "2.10",
-                    "storagePercentage": "27.45",
-                    "inflow": "0.07",
+                    "date": "19.07.2025",
+                    "waterLevel": "1748.70",
+                    "liveStorage": "2.16",
+                    "storagePercentage": "28.24",
+                    "inflow": "0.06",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "–",
                     "totalOutflow": "0.00",
-                    "rainfall": "1.80"
+                    "rainfall": "1.60"
                 }
             ]
         },
@@ -331,7 +331,7 @@
             "officialName": "KALLARKUTTY",
             "MWL": "456.59",
             "FRL": "456.59",
-            "liveStorageAtFRL": "6.25",
+            "liveStorageAtFRL": "6.19",
             "ruleLevel": "",
             "blueLevel": "",
             "orangeLevel": "",
@@ -340,15 +340,15 @@
             "longitude": 77.001389,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "456.25",
-                    "liveStorage": "6.25",
-                    "storagePercentage": "97.22",
-                    "inflow": "7.58",
-                    "powerHouseDischarge": "3.87",
-                    "spillwayRelease": "3.65",
-                    "totalOutflow": "7.52",
-                    "rainfall": "1.00"
+                    "date": "19.07.2025",
+                    "waterLevel": "456.15",
+                    "liveStorage": "6.19",
+                    "storagePercentage": "96.24",
+                    "inflow": "6.31",
+                    "powerHouseDischarge": "3.78",
+                    "spillwayRelease": "2.59",
+                    "totalOutflow": "6.37",
+                    "rainfall": "15.00"
                 }
             ]
         },
@@ -358,7 +358,7 @@
             "officialName": "ERATTAYAR",
             "MWL": "754.38",
             "FRL": "754.38",
-            "liveStorageAtFRL": "1.05",
+            "liveStorageAtFRL": "0.98",
             "ruleLevel": "",
             "blueLevel": "",
             "orangeLevel": "",
@@ -367,10 +367,10 @@
             "longitude": 77.106,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "747.30",
-                    "liveStorage": "1.05",
-                    "storagePercentage": "19.89",
+                    "date": "19.07.2025",
+                    "waterLevel": "747.10",
+                    "liveStorage": "0.98",
+                    "storagePercentage": "18.43",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -385,7 +385,7 @@
             "officialName": "LOWER PERIYAR",
             "MWL": "253",
             "FRL": "253",
-            "liveStorageAtFRL": "4.51",
+            "liveStorageAtFRL": "4.55",
             "ruleLevel": "",
             "blueLevel": "",
             "orangeLevel": "",
@@ -394,15 +394,15 @@
             "longitude": 76.9568,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "252.90",
-                    "liveStorage": "4.51",
-                    "storagePercentage": "99.05",
-                    "inflow": "11.20",
+                    "date": "19.07.2025",
+                    "waterLevel": "253.00",
+                    "liveStorage": "4.55",
+                    "storagePercentage": "100.00",
+                    "inflow": "9.09",
                     "powerHouseDischarge": "6.26",
-                    "spillwayRelease": "4.91",
-                    "totalOutflow": "11.16",
-                    "rainfall": "3.00"
+                    "spillwayRelease": "2.79",
+                    "totalOutflow": "9.05",
+                    "rainfall": "20.00"
                 }
             ]
         },
@@ -412,7 +412,7 @@
             "officialName": "MOOZHIYAR",
             "MWL": "192.63",
             "FRL": "192.63",
-            "liveStorageAtFRL": "1.09",
+            "liveStorageAtFRL": "1.05",
             "ruleLevel": "",
             "blueLevel": "",
             "orangeLevel": "",
@@ -421,15 +421,15 @@
             "longitude": 77.0656,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "192.10",
-                    "liveStorage": "1.09",
-                    "storagePercentage": "93.97",
-                    "inflow": "4.19",
-                    "powerHouseDischarge": "3.06",
-                    "spillwayRelease": "1.24",
-                    "totalOutflow": "4.30",
-                    "rainfall": "39.00"
+                    "date": "19.07.2025",
+                    "waterLevel": "191.85",
+                    "liveStorage": "1.05",
+                    "storagePercentage": "90.91",
+                    "inflow": "3.39",
+                    "powerHouseDischarge": "3.04",
+                    "spillwayRelease": "0.44",
+                    "totalOutflow": "3.48",
+                    "rainfall": "34.00"
                 }
             ]
         },
@@ -448,7 +448,7 @@
             "longitude": 77.1562,
             "data": [
                 {
-                    "date": "18.07.2025",
+                    "date": "19.07.2025",
                     "waterLevel": "820.50",
                     "liveStorage": "0.20",
                     "storagePercentage": "26.61",
@@ -466,7 +466,7 @@
             "officialName": "SENGULAM",
             "MWL": "847.64",
             "FRL": "847.64",
-            "liveStorageAtFRL": "0.20",
+            "liveStorageAtFRL": "0.18",
             "ruleLevel": "",
             "blueLevel": "",
             "orangeLevel": "",
@@ -475,15 +475,15 @@
             "longitude": null,
             "data": [
                 {
-                    "date": "18.07.2025",
-                    "waterLevel": "846.85",
-                    "liveStorage": "0.20",
-                    "storagePercentage": "51.54",
-                    "inflow": "1.54",
+                    "date": "19.07.2025",
+                    "waterLevel": "846.75",
+                    "liveStorage": "0.18",
+                    "storagePercentage": "45.38",
+                    "inflow": "1.52",
                     "powerHouseDischarge": "1.55",
                     "spillwayRelease": "–",
                     "totalOutflow": "1.55",
-                    "rainfall": "2.00"
+                    "rainfall": "0.00"
                 }
             ]
         }
