@@ -4,7 +4,7 @@
     "officialName": "KALLAR",
     "MWL": "824.48",
     "FRL": "824.48",
-    "liveStorageAtFRL": "0.24",
+    "liveStorageAtFRL": "0.22",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,17 @@
     "latitude": 9.8255,
     "longitude": 77.1562,
     "data": [
+        {
+            "date": "28.07.2025",
+            "waterLevel": "820.90",
+            "liveStorage": "0.22",
+            "storagePercentage": "28.58",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "–",
+            "totalOutflow": "0.00",
+            "rainfall": ""
+        },
         {
             "date": "26.07.2025",
             "waterLevel": "821.50",
