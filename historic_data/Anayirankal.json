@@ -4,7 +4,7 @@
     "officialName": "ANAYIRANKAL",
     "MWL": "1207.02",
     "FRL": "1207.02",
-    "liveStorageAtFRL": "37.88",
+    "liveStorageAtFRL": "38.14",
     "ruleLevel": "",
     "blueLevel": "1205.02",
     "orangeLevel": "1206.02",
@@ -12,6 +12,17 @@
     "latitude": 10.009515341318457,
     "longitude": 77.20724298186308,
     "data": [
+        {
+            "date": "12.08.2025",
+            "waterLevel": "1204.35",
+            "liveStorage": "38.14",
+            "storagePercentage": "76.54",
+            "inflow": "0.26",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "–",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "11.08.2025",
             "waterLevel": "1204.29",
