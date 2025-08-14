@@ -4,7 +4,7 @@
     "officialName": "PORINGALKUTHU",
     "MWL": "423.98",
     "FRL": "423.98",
-    "liveStorageAtFRL": "19.63",
+    "liveStorageAtFRL": "20.13",
     "ruleLevel": "",
     "blueLevel": "421.00",
     "orangeLevel": "422.00",
@@ -12,6 +12,17 @@
     "latitude": 10.3152,
     "longitude": 76.6344,
     "data": [
+        {
+            "date": "14.08.2025",
+            "waterLevel": "420.15",
+            "liveStorage": "20.13",
+            "storagePercentage": "66.44",
+            "inflow": "11.97",
+            "powerHouseDischarge": "4.76",
+            "spillwayRelease": "6.70",
+            "totalOutflow": "11.47",
+            "rainfall": "24.40"
+        },
         {
             "date": "13.08.2025",
             "waterLevel": "419.95",
