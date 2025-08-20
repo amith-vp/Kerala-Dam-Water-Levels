@@ -4,7 +4,7 @@
     "officialName": "SHOLAYAR",
     "MWL": "811.68",
     "FRL": "811.68",
-    "liveStorageAtFRL": "147.11",
+    "liveStorageAtFRL": "147.68",
     "ruleLevel": "0.00",
     "blueLevel": "810.16",
     "orangeLevel": "810.77",
@@ -12,6 +12,17 @@
     "latitude": 10.3178,
     "longitude": 76.7342,
     "data": [
+        {
+            "date": "20.08.2025",
+            "waterLevel": "811.53",
+            "liveStorage": "147.68",
+            "storagePercentage": "99.05",
+            "inflow": "5.26",
+            "powerHouseDischarge": "1.93",
+            "spillwayRelease": "2.76",
+            "totalOutflow": "4.70",
+            "rainfall": "6.00"
+        },
         {
             "date": "19.08.2025",
             "waterLevel": "811.47",
