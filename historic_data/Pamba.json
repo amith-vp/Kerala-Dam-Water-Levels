@@ -4,7 +4,7 @@
     "officialName": "PAMBA",
     "MWL": "986.33",
     "FRL": "986.33",
-    "liveStorageAtFRL": "15.21",
+    "liveStorageAtFRL": "15.43",
     "ruleLevel": "",
     "blueLevel": "982.00",
     "orangeLevel": "983.50",
@@ -12,6 +12,17 @@
     "latitude": 9.3906,
     "longitude": 77.1598,
     "data": [
+        {
+            "date": "30.08.2025",
+            "waterLevel": "977.20",
+            "liveStorage": "15.43",
+            "storagePercentage": "49.53",
+            "inflow": "1.29",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "–",
+            "totalOutflow": "0.00",
+            "rainfall": "44.00"
+        },
         {
             "date": "29.08.2025",
             "waterLevel": "977.05",
