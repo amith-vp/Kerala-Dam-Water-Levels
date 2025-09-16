@@ -4,7 +4,7 @@
     "officialName": "IDUKKI",
     "MWL": "732.43",
     "FRL": "732.43",
-    "liveStorageAtFRL": "1102.99",
+    "liveStorageAtFRL": "1099.35",
     "ruleLevel": "730.00",
     "blueLevel": "727.56",
     "orangeLevel": "729.39",
@@ -12,6 +12,17 @@
     "latitude": 9.8436,
     "longitude": 76.9762,
     "data": [
+        {
+            "date": "16.09.2025",
+            "waterLevel": "725.85",
+            "liveStorage": "1099.35",
+            "storagePercentage": "75.32",
+            "inflow": "3.31",
+            "powerHouseDischarge": "6.83",
+            "spillwayRelease": "–",
+            "totalOutflow": "0.80",
+            "rainfall": "2.20"
+        },
         {
             "date": "15.09.2025",
             "waterLevel": "725.92",
