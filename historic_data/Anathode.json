@@ -4,7 +4,7 @@
     "officialName": "KAKKI – ANATHODE",
     "MWL": "981.46",
     "FRL": "981.46",
-    "liveStorageAtFRL": "347.86",
+    "liveStorageAtFRL": "346.74",
     "ruleLevel": "976.91",
     "blueLevel": "974.91",
     "orangeLevel": "975.91",
@@ -12,6 +12,17 @@
     "latitude": null,
     "longitude": null,
     "data": [
+        {
+            "date": "23.09.2025",
+            "waterLevel": "975.21",
+            "liveStorage": "346.74",
+            "storagePercentage": "77.66",
+            "inflow": "2.00",
+            "powerHouseDischarge": "3.12",
+            "spillwayRelease": "–",
+            "totalOutflow": "3.12",
+            "rainfall": "2.00"
+        },
         {
             "date": "22.09.2025",
             "waterLevel": "975.29",
