@@ -114,7 +114,7 @@ try {
           storagePercentage: $(columns[10]).text().trim(), // % Storage
           inflow: $(columns[11]).text().trim(), // Inflow (MCM)
           powerHouseDischarge: $(columns[13]).text().trim(), // Power House Discharge (MCM)
-          spillwayRelease: $(columns[14]).text().trim(), // Spill(MCM)
+          spillwayRelease: $(columns[14]).text().trim() === '–' ? "0" : $(columns[14]).text().trim(), // Spill(MCM)
           totalOutflow: $(columns[16]).text().trim(), // Total Outflow (MCM)
           rainfall: $(columns[17]).text().trim(), // Rainfall (mm)
         }]
