@@ -4,7 +4,7 @@
     "officialName": "ERATTAYAR",
     "MWL": "754.38",
     "FRL": "754.38",
-    "liveStorageAtFRL": "1.21",
+    "liveStorageAtFRL": "1.13",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,17 @@
     "latitude": 9.8103,
     "longitude": 77.106,
     "data": [
+        {
+            "date": "29.10.2025",
+            "waterLevel": "747.30",
+            "liveStorage": "1.13",
+            "storagePercentage": "21.36",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "0.00",
+            "rainfall": ""
+        },
         {
             "date": "28.10.2025",
             "waterLevel": "747.70",
