@@ -4,7 +4,7 @@
     "officialName": "MOOZHIYAR",
     "MWL": "192.63",
     "FRL": "192.63",
-    "liveStorageAtFRL": "0.39",
+    "liveStorageAtFRL": "1.09",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,17 @@
     "latitude": 9.308,
     "longitude": 77.0656,
     "data": [
+        {
+            "date": "13.11.2025",
+            "waterLevel": "192.10",
+            "liveStorage": "1.09",
+            "storagePercentage": "93.97",
+            "inflow": "2.65",
+            "powerHouseDischarge": "2.17",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.17",
+            "rainfall": "26.00"
+        },
         {
             "date": "12.11.2025",
             "waterLevel": "186.20",
