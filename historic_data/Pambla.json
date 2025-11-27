@@ -4,7 +4,7 @@
     "officialName": "LOWER PERIYAR",
     "MWL": "253",
     "FRL": "253",
-    "liveStorageAtFRL": "2.90",
+    "liveStorageAtFRL": "2.63",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,17 @@
     "latitude": 9.962,
     "longitude": 76.9568,
     "data": [
+        {
+            "date": "27.11.2025",
+            "waterLevel": "248.30",
+            "liveStorage": "2.63",
+            "storagePercentage": "57.74",
+            "inflow": "3.76",
+            "powerHouseDischarge": "4.03",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.03",
+            "rainfall": "0.00"
+        },
         {
             "date": "26.11.2025",
             "waterLevel": "249.00",
