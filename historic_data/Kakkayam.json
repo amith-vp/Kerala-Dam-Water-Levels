@@ -4,7 +4,7 @@
     "officialName": "KUTTIYADI (KAKKAYAM)",
     "MWL": "758.04",
     "FRL": "758.04",
-    "liveStorageAtFRL": "27.73",
+    "liveStorageAtFRL": "27.51",
     "ruleLevel": "",
     "blueLevel": "755.50",
     "orangeLevel": "756.50",
@@ -12,6 +12,17 @@
     "latitude": 11.551,
     "longitude": 75.925,
     "data": [
+        {
+            "date": "23.02.2026",
+            "waterLevel": "755.45",
+            "liveStorage": "27.51",
+            "storagePercentage": "80.95",
+            "inflow": "0.99",
+            "powerHouseDischarge": "0.99",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.99",
+            "rainfall": "11.00"
+        },
         {
             "date": "21.02.2026",
             "waterLevel": "755.54",
