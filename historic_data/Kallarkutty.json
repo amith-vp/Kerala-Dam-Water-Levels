@@ -4,7 +4,7 @@
     "officialName": "KALLARKUTTY",
     "MWL": "456.59",
     "FRL": "456.59",
-    "liveStorageAtFRL": "4.79",
+    "liveStorageAtFRL": "4.35",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,17 @@
     "latitude": 9.98,
     "longitude": 77.001389,
     "data": [
+        {
+            "date": "26.02.2026",
+            "waterLevel": "453.25",
+            "liveStorage": "4.35",
+            "storagePercentage": "67.62",
+            "inflow": "0.19",
+            "powerHouseDischarge": "0.64",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.64",
+            "rainfall": "1.00"
+        },
         {
             "date": "25.02.2026",
             "waterLevel": "453.95",
