@@ -4,7 +4,7 @@
     "officialName": "MADUPETTY",
     "MWL": "1599.59",
     "FRL": "1599.59",
-    "liveStorageAtFRL": "12.09",
+    "liveStorageAtFRL": "10.39",
     "ruleLevel": "",
     "blueLevel": "1596.00",
     "orangeLevel": "1597.00",
@@ -12,6 +12,17 @@
     "latitude": 10.1063,
     "longitude": 77.1238,
     "data": [
+        {
+            "date": "04.05.2026",
+            "waterLevel": "1576.10",
+            "liveStorage": "10.39",
+            "storagePercentage": "18.97",
+            "inflow": "0.16",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "14.60"
+        },
         {
             "date": "30.04.2026",
             "waterLevel": "1577.80",
