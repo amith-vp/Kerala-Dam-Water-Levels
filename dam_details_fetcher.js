@@ -1,13 +1,17 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const { PDFParse } = require('pdf-parse');
 const fs = require('fs').promises;
 
-const baseUrl = 'https://dams.kseb.in/?page_id=45';
+const ksebBaseUrl = 'https://dams.kseb.in/?page_id=45';
+const sdmaDamLevelUrl = 'https://sdma.kerala.gov.in/dam-water-level/';
+const ksebFolderName = 'historic_data';
+const irrigationFolderName = 'irrigation_historic_data';
 
-// Fetch the most recent update from the base URL
+// Fetch the most recent update from the KSEB base URL.
 const fetchMostRecentUpdate = async () => {
 try {
-  const response = await axios.get(baseUrl);
+  const response = await axios.get(ksebBaseUrl);
   const html = response.data;
   const $ = cheerio.load(html);
 
@@ -15,7 +19,7 @@ try {
   const date = pageElement.find('.elementor-post__title a').text().trim();
   const link = pageElement.find('.elementor-post__title a').attr('href');
 
-  console.log('Fetched date:', date, 'Link:', link); 
+  console.log('Fetched date:', date, 'Link:', link);
   return { date, link };
 } catch (error) {
   console.error('Error fetching the most recent page:', error);
@@ -49,13 +53,13 @@ const damCoordinates = {
 const Names = {
 'IDUKKI': 'Idukki',
 'IDAMALAYAR': 'Idamalayar',
-'KAKKI – ANATHODE': 'Anathode', // Updated mapping
-'BANASURASAGAR (K A S)': 'Banasura Sagar', // Updated mapping
+'KAKKI – ANATHODE': 'Anathode',
+'BANASURASAGAR (K A S)': 'Banasura Sagar',
 'SHOLAYAR': 'Sholayar',
 'MADUPETTY': 'Mattupetty',
 'ANAYIRANKAL': 'Anayirankal',
 'PONMUDI': 'Ponmudi',
-'KUTTIYADI (KAKKAYAM)': 'Kakkayam', // Updated mapping
+'KUTTIYADI (KAKKAYAM)': 'Kakkayam',
 'PAMBA': 'Pamba',
 'PORINGALKUTHU': 'Poringalkuthu',
 'KUNDALA': 'Kundala',
@@ -64,7 +68,47 @@ const Names = {
 'LOWER PERIYAR': 'Pambla',
 'MOOZHIYAR': 'Moozhiyar',
 'KALLAR': 'Kallar',
-'SENGULAM': 'Chenkulam', // Updated mapping
+'SENGULAM': 'Chenkulam',
+};
+
+const irrigationDistricts = [
+  'Thiruvananthapuram',
+  'Kollam',
+  'Pathanamthitta',
+  'Alappuzha',
+  'Kottayam',
+  'Idukki',
+  'Ernakulam',
+  'Thrissur',
+  'Palakkad',
+  'Malappuram',
+  'Kozhikode',
+  'Wayanad',
+  'Kannur',
+  'Kasaragod'
+];
+
+const irrigationDamCoordinates = {
+  'Bhoothathankettu (Barrage)': { latitude: 10.1330, longitude: 76.6660 },
+  'Chimoni': { latitude: 10.4350, longitude: 76.4670 },
+  'Chulliyar': { latitude: 10.5900, longitude: 76.7700 },
+  'Kallada': { latitude: 8.9538, longitude: 77.0697 },
+  'Kanjirappuzha': { latitude: 10.9800, longitude: 76.5300 },
+  'Karapuzha': { latitude: 11.6200, longitude: 76.1700 },
+  'Kuttiyadi': { latitude: 11.5900, longitude: 75.8200 },
+  'Malampuzha': { latitude: 10.8300, longitude: 76.6800 },
+  'Malankara': { latitude: 9.8528, longitude: 76.7447 },
+  'Mangalam': { latitude: 10.5160, longitude: 76.5330 },
+  'Maniyar (Barrage)': { latitude: 9.3400, longitude: 76.8500 },
+  'Meenkara': { latitude: 10.6200, longitude: 76.8000 },
+  'Moolathara (Regulator)': { latitude: 10.6658, longitude: 76.8727 },
+  'Neyyar': { latitude: 8.5300, longitude: 77.1500 },
+  'Pazhassi (Barrage)': { latitude: 11.9300, longitude: 75.6200 },
+  'Peechi': { latitude: 10.5300, longitude: 76.3700 },
+  'Pothundy': { latitude: 10.5400, longitude: 76.6300 },
+  'Siruvani (Inter state waters)': { latitude: 10.9750, longitude: 76.6500 },
+  'Vazhani': { latitude: 10.6360, longitude: 76.3060 },
+  'Walayar': { latitude: 10.8300, longitude: 76.8500 },
 };
 
 // Convert feet to meters
@@ -76,7 +120,125 @@ if (typeof value === 'string' && value.trim().toLowerCase().endsWith('ft')) {
 return `${(value * 0.3048).toFixed(2)}`;
 };
 
-// Extract dam details from the given URL
+const normaliseDate = (value) => {
+  const match = value && value.match(/(\d{1,2})[/. -](\d{1,2})[/. -](\d{4})/);
+  if (!match) {
+    return value ? value.trim() : '';
+  }
+
+  return `${match[1].padStart(2, '0')}.${match[2].padStart(2, '0')}.${match[3]}`;
+};
+
+const safeFilename = (name) => name.replace(/[\\/]/g, '-').replace(/\s+/g, '_');
+
+const ensureFolder = async (folderName) => {
+  try {
+    await fs.access(folderName);
+  } catch (error) {
+    await fs.mkdir(folderName);
+    console.log(`Created ${folderName} folder`);
+  }
+};
+
+const loadExistingDamData = async (folderName) => {
+  const existingData = {};
+  const files = await fs.readdir(folderName);
+  console.log(`Found existing files in ${folderName}:`, files);
+
+  for (const file of files) {
+    if (file.endsWith('.json')) {
+      const damName = file.replace('.json', '').replace(/_/g, ' ');
+      console.log(`Loading existing data for: ${damName} from ${file}`);
+      try {
+        const data = JSON.parse(await fs.readFile(`${folderName}/${file}`, 'utf8'));
+        existingData[damName] = data;
+      } catch (error) {
+        console.error(`Error reading ${file}:`, error);
+      }
+    }
+  }
+
+  return existingData;
+};
+
+const updateDamData = async (folderName, liveFileName, page, dams, options = {}) => {
+  if (dams.length === 0) {
+    console.log(`No dam data extracted for ${liveFileName}.`);
+    return false;
+  }
+
+  await ensureFolder(folderName);
+  const existingData = await loadExistingDamData(folderName);
+  let dataChanged = false;
+
+  for (const newDam of dams) {
+    const existingDam = existingData[newDam.name];
+    console.log(`Processing ${newDam.name}:`, existingDam ? 'exists' : 'new dam');
+
+    if (existingDam) {
+      const newDate = newDam.data[0].date;
+      const dateExists = existingDam.data.some(d => d.date === newDate);
+      console.log(`Checking if date ${newDate} exists:`, dateExists);
+
+      if (!dateExists) {
+        console.log(`Adding new data for ${newDam.name} with date ${newDate}`);
+        existingDam.data.unshift(newDam.data[0]);
+        Object.assign(existingDam, {
+          id: newDam.id,
+          officialName: newDam.officialName,
+          MWL: newDam.MWL,
+          FRL: newDam.FRL,
+          liveStorageAtFRL: newDam.liveStorageAtFRL,
+          ruleLevel: newDam.ruleLevel,
+          blueLevel: newDam.blueLevel,
+          orangeLevel: newDam.orangeLevel,
+          redLevel: newDam.redLevel,
+          latitude: newDam.latitude,
+          longitude: newDam.longitude,
+        });
+
+        if (newDam.source) existingDam.source = newDam.source;
+        if (newDam.district) existingDam.district = newDam.district;
+        if (newDam.grossStorage) existingDam.grossStorage = newDam.grossStorage;
+
+        dataChanged = true;
+      } else {
+        console.log(`Data for ${newDam.name} with date ${newDate} already exists. Skipping.`);
+      }
+    } else {
+      console.log(`Creating new dam entry for: ${newDam.name}`);
+      existingData[newDam.name] = newDam;
+      dataChanged = true;
+    }
+  }
+
+  if (dataChanged || options.alwaysWriteLive) {
+    console.log(`Updating ${folderName} files...`);
+    for (const [damName, damData] of Object.entries(existingData)) {
+      const filename = `${folderName}/${safeFilename(damName)}.json`;
+      await fs.writeFile(filename, JSON.stringify(damData, null, 4));
+      console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
+    }
+
+    const liveData = {
+      lastUpdate: page.date,
+      dams
+    };
+
+    if (page.link) {
+      liveData.sourceUrl = page.link;
+    }
+
+    await fs.writeFile(liveFileName, JSON.stringify(liveData, null, 4));
+    console.log(`Live dam data saved successfully in ${liveFileName}.`);
+  } else {
+    console.log(`No data changes detected. ${liveFileName} not updated.`);
+  }
+
+  return dataChanged;
+};
+
+// Extract KSEB dam details from the given URL. Kept intentionally close to the old scraper.
 async function extractDamDetails(url) {
 try {
   const { data } = await axios.get(url);
@@ -84,43 +246,41 @@ try {
   const dams = [];
 
   console.log('Extracting dam details from:', url);
-   // Updated logic to handle the new table structure
   $('table tr').slice(1).each((index, row) => {
     const columns = $(row).find('td');
-    if (columns.length >= 19) { // Changed from 21 to 19
+    if (columns.length >= 19) {
       console.log(`Processing row ${index + 1} with ${columns.length} columns`);
 
       const damName = $(columns[1]).text().trim();
       const damKey = damName.toLowerCase();
       console.log('Processing dam:', damKey, '-> Display name:', Names[damName]);
-    
+
       const dam = {
         id: $(columns[0]).text().trim(),
         name: Names[damName],
         officialName: damName,
-        MWL: $(columns[3]).text().trim(), // FRL (metre)
-        FRL: $(columns[3]).text().trim(), // FRL (metre)
-        liveStorageAtFRL: $(columns[9]).text().trim(), // Live Storage(MCM)
-        ruleLevel: $(columns[4]).text().trim(), // Rule level(metre)
-        blueLevel: $(columns[6]).text().trim(), // Blue Alert level(metre)
-        orangeLevel: $(columns[7]).text().trim(), // Orange Alert level(metre)
-        redLevel: $(columns[8]).text().trim(), // Red Alert Level(metre)
+        MWL: $(columns[3]).text().trim(),
+        FRL: $(columns[3]).text().trim(),
+        liveStorageAtFRL: $(columns[9]).text().trim(),
+        ruleLevel: $(columns[4]).text().trim(),
+        blueLevel: $(columns[6]).text().trim(),
+        orangeLevel: $(columns[7]).text().trim(),
+        redLevel: $(columns[8]).text().trim(),
         latitude: damCoordinates[damKey] ? damCoordinates[damKey].latitude : null,
         longitude: damCoordinates[damKey] ? damCoordinates[damKey].longitude : null,
         data: [{
           date: $('h1.entry-title').text().trim(),
-          waterLevel: $(columns[5]).text().trim(), // Water level on date (metre)
-          liveStorage: $(columns[9]).text().trim(), // Live Storage(MCM)
-          storagePercentage: $(columns[10]).text().trim(), // % Storage
-          inflow: $(columns[11]).text().trim(), // Inflow (MCM)
-          powerHouseDischarge: $(columns[13]).text().trim(), // Power House Discharge (MCM)
-          spillwayRelease: $(columns[14]).text().trim() === '–' ? "0" : $(columns[14]).text().trim(), // Spill(MCM)
-          totalOutflow: $(columns[16]).text().trim(), // Total Outflow (MCM)
-          rainfall: $(columns[17]).text().trim(), // Rainfall (mm)
+          waterLevel: $(columns[5]).text().trim(),
+          liveStorage: $(columns[9]).text().trim(),
+          storagePercentage: $(columns[10]).text().trim(),
+          inflow: $(columns[11]).text().trim(),
+          powerHouseDischarge: $(columns[13]).text().trim(),
+          spillwayRelease: $(columns[14]).text().trim() === '–' ? "0" : $(columns[14]).text().trim(),
+          totalOutflow: $(columns[16]).text().trim(),
+          rainfall: $(columns[17]).text().trim(),
         }]
       };
 
-      // Convert units for Idukki and Sholayar dams
       if (damKey === 'idukki' || damKey === 'sholayar') {
         dam.MWL = convertFeetToMeters(dam.MWL);
         dam.FRL = convertFeetToMeters(dam.FRL);
@@ -135,7 +295,6 @@ try {
         }));
       }
 
-      // Only add dam if it has a valid name mapping
       if (dam.name) {
         dams.push(dam);
         console.log(`Added dam: ${dam.name} with data for ${dam.data[0].date}`);
@@ -153,110 +312,246 @@ try {
 }
 }
 
-const folderName = 'historic_data';
-
-// Fetch dam details and update the data files
-async function fetchDamDetails() {
-try {
+const fetchSdmaPdfLink = async (sourceName) => {
   try {
-    await fs.access(folderName);
+    const response = await axios.get(sdmaDamLevelUrl);
+    const $ = cheerio.load(response.data);
+    const wantedSource = sourceName.toUpperCase();
+    let result = null;
+
+    $('a').each((index, element) => {
+      if (result) return;
+
+      const text = $(element).text().replace(/\s+/g, ' ').trim();
+      if (!text.toUpperCase().includes(wantedSource)) return;
+
+      const href = $(element).attr('href');
+      if (!href || !href.toLowerCase().includes('.pdf')) return;
+
+      const parentText = $(element).parent().text().replace(/\s+/g, ' ').trim();
+      if (!/\d{1,2}[/. -]\d{1,2}[/. -]\d{4}/.test(parentText)) return;
+
+      result = {
+        date: normaliseDate(parentText),
+        link: new URL(href, sdmaDamLevelUrl).href
+      };
+    });
+
+    if (!result) {
+      console.log(`No ${sourceName} PDF link found on SDMA dam water level page.`);
+    } else {
+      console.log(`Fetched ${sourceName} date:`, result.date, 'Link:', result.link);
+    }
+
+    return result;
   } catch (error) {
-    await fs.mkdir(folderName);
-    console.log('Created historic_data folder');
+    console.error(`Error fetching ${sourceName} PDF link from SDMA:`, error);
+    return null;
+  }
+};
+
+const getFirstNumberIndex = (value) => {
+  const match = value.match(/\b\d+(?:\.\d+)?\b/);
+  return match ? match.index : -1;
+};
+
+const cleanPdfTextValue = (value) => (
+  value
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([,.;])/g, '$1')
+    .trim()
+);
+
+const consumeTableTokens = (segment) => {
+  const pieces = segment.trim().split(/\s+/);
+  const values = [];
+  let consumed = 0;
+
+  for (const piece of pieces) {
+    if (/^(?:N\/A|[-_]|[0-9]+(?:\.[0-9]+)?%?)$/i.test(piece)) {
+      values.push(piece);
+      consumed += 1;
+    } else {
+      break;
+    }
   }
 
+  return {
+    values,
+    remarks: cleanPdfTextValue(pieces.slice(consumed).join(' '))
+  };
+};
+
+const splitIrrigationRows = (text) => {
+  const relevantText = text.split('IRRIGATION RESERVOIRS STATISTICS')[0].split('ജലേസചന')[0];
+  const rowStartRegex = /(?:^|\n)(\d{1,2})[ \t]+/g;
+  const starts = [];
+  let match;
+
+  while ((match = rowStartRegex.exec(relevantText)) !== null) {
+    starts.push({
+      id: match[1],
+      start: match.index + (match[0].startsWith('\n') ? 1 : 0)
+    });
+  }
+
+  return starts.map((start, index) => {
+    const nextStart = starts[index + 1] ? starts[index + 1].start : relevantText.length;
+    return relevantText.slice(start.start, nextStart).trim();
+  });
+};
+
+const parseIrrigationRow = (rowText, date) => {
+  const idMatch = rowText.match(/^(\d{1,2})\s+([\s\S]*)$/);
+  if (!idMatch) return null;
+
+  const id = idMatch[1];
+  const body = idMatch[2].trim();
+  const lines = body.split('\n').map(line => line.trim()).filter(Boolean);
+  const officialName = cleanPdfTextValue(lines[0] || '');
+  const district = irrigationDistricts.find(name => body.includes(name)) || '';
+  const numberIndex = getFirstNumberIndex(body);
+
+  if (!officialName || numberIndex < 0) {
+    console.log(`Skipping irrigation row ${id}; unable to identify name or values.`);
+    return null;
+  }
+
+  const { values, remarks } = consumeTableTokens(body.slice(numberIndex));
+  if (values.length < 2) {
+    console.log(`Skipping irrigation row ${id}; expected table values, got:`, values);
+    return null;
+  }
+
+  const hasAlertLevels = values.length >= 9;
+  const frl = values[0] || '';
+  const waterLevel = values[1] || '';
+  const blueLevel = hasAlertLevels ? values[2] || '' : '';
+  const orangeLevel = hasAlertLevels ? values[3] || '' : '';
+  const redLevel = hasAlertLevels ? values[4] || '' : '';
+  const grossStorage = hasAlertLevels ? values[5] || '' : values[2] || '';
+  const liveStorage = hasAlertLevels ? values[6] || '' : values[3] || '';
+  const storagePercentage = hasAlertLevels ? values[7] || '' : values[4] || '';
+  const outflow = hasAlertLevels ? values[8] || '' : values[5] || '';
+  const coordinates = irrigationDamCoordinates[officialName] || {};
+
+  return {
+    id,
+    name: officialName,
+    officialName,
+    source: 'Irrigation',
+    district,
+    MWL: frl,
+    FRL: frl,
+    grossStorage,
+    liveStorageAtFRL: grossStorage,
+    ruleLevel: '',
+    blueLevel,
+    orangeLevel,
+    redLevel,
+    latitude: coordinates.latitude || null,
+    longitude: coordinates.longitude || null,
+    data: [{
+      date,
+      waterLevel,
+      liveStorage,
+      storagePercentage,
+      inflow: '',
+      powerHouseDischarge: '',
+      spillwayRelease: '',
+      totalOutflow: outflow,
+      outflow,
+      rainfall: '',
+      remarks
+    }]
+  };
+};
+
+const extractIrrigationDamDetailsFromText = (text, date) => {
+  const dams = splitIrrigationRows(text)
+    .map(rowText => parseIrrigationRow(rowText, date))
+    .filter(Boolean);
+
+  console.log(`Total irrigation dams extracted: ${dams.length}`);
+  return { dams };
+};
+
+async function extractIrrigationDamDetails(pdfUrl, date) {
+  try {
+    console.log('Extracting irrigation dam details from:', pdfUrl);
+    const response = await axios.get(pdfUrl, { responseType: 'arraybuffer' });
+    const parser = new PDFParse({ data: Buffer.from(response.data) });
+    const result = await parser.getText();
+    await parser.destroy();
+
+    return extractIrrigationDamDetailsFromText(result.text, date);
+  } catch (error) {
+    console.error(`Error fetching irrigation details from ${pdfUrl}:`, error);
+    return { dams: [] };
+  }
+}
+
+// Fetch KSEB dam details and update the data files.
+async function fetchKsebDamDetails() {
+try {
   const page = await fetchMostRecentUpdate();
   if (!page) {
-    console.log('No recent page found.');
+    console.log('No recent KSEB page found.');
     return;
   }
 
-  console.log(`Processing page: ${page.date}`);
+  console.log(`Processing KSEB page: ${page.date}`);
   const { dams } = await extractDamDetails(page.link);
 
   if (dams.length === 0) {
-    console.log('No dam data extracted. Check if the website structure has changed.');
+    console.log('No KSEB dam data extracted. Check if the website structure has changed.');
     return;
   }
 
-  const existingData = {};
-  const files = await fs.readdir(folderName);
-  console.log('Found existing files:', files);
-   for (const file of files) {
-    if (file.endsWith('.json')) {
-      // Fixed: Remove .json extension and convert underscores to spaces for dam name
-      const damName = file.replace('.json', '').replace(/_/g, ' ');
-      console.log(`Loading existing data for: ${damName} from ${file}`);
-      try {
-        const data = JSON.parse(await fs.readFile(`${folderName}/${file}`, 'utf8'));
-        existingData[damName] = data;
-      } catch (error) {
-        console.error(`Error reading ${file}:`, error);
-      }
-    }
-  }
-
-  let dataChanged = false;
-
-  for (const newDam of dams) {
-    const existingDam = existingData[newDam.name];
-    console.log(`Processing ${newDam.name}:`, existingDam ? 'exists' : 'new dam');
-
-    if (existingDam) {
-      const newDate = newDam.data[0].date;
-      const dateExists = existingDam.data.some(d => d.date === newDate);
-      console.log(`Checking if date ${newDate} exists:`, dateExists);
-
-      if (!dateExists) {
-        console.log(`Adding new data for ${newDam.name} with date ${newDate}`);
-        existingDam.data.unshift(newDam.data[0]);
-        // Update all dam properties with latest values
-        existingDam.id = newDam.id;
-        existingDam.officialName = newDam.officialName;
-        existingDam.MWL = newDam.MWL;
-        existingDam.FRL = newDam.FRL;
-        existingDam.liveStorageAtFRL = newDam.liveStorageAtFRL;
-        existingDam.ruleLevel = newDam.ruleLevel;
-        existingDam.blueLevel = newDam.blueLevel;
-        existingDam.orangeLevel = newDam.orangeLevel;
-        existingDam.redLevel = newDam.redLevel;
-        existingDam.latitude = newDam.latitude;
-        existingDam.longitude = newDam.longitude;
-        dataChanged = true;
-      } else {
-        console.log(`Data for ${newDam.name} with date ${newDate} already exists. Skipping.`);
-      }
-    } else {
-      console.log(`Creating new dam entry for: ${newDam.name}`);
-      existingData[newDam.name] = newDam;
-      dataChanged = true;
-    }
-  }
-
-  if (dataChanged) {
-    console.log('Data changed. Updating files...');
-    for (const [damName, damData] of Object.entries(existingData)) {
-      const filename = `${folderName}/${damName.replace(/\s+/g, '_')}.json`;
-      await fs.writeFile(filename, JSON.stringify(damData, null, 4));
-      console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
-    }
-
-    // Save live JSON file with most recent data
-    const liveData = {
-      lastUpdate: page.date,
-      dams
-    };
-    await fs.writeFile('live.json', JSON.stringify(liveData, null, 4));
-    console.log('Live dam data saved successfully in live.json.');
-  } else {
-    console.log('No data changes detected. Files not updated.');
-  }
+  await updateDamData(ksebFolderName, 'live.json', page, dams);
 } catch (error) {
   console.error('Error:', error);
 }
 }
 
+async function fetchIrrigationDamDetails() {
+try {
+  const page = await fetchSdmaPdfLink('IRRIGATION');
+  if (!page) {
+    console.log('No recent irrigation PDF found.');
+    return;
+  }
 
-fetchDamDetails()
+  console.log(`Processing irrigation PDF: ${page.date}`);
+  const { dams } = await extractIrrigationDamDetails(page.link, page.date);
 
-module.exports = { extractDamDetails };
+  if (dams.length === 0) {
+    console.log('No irrigation dam data extracted. Check if the PDF structure has changed.');
+    return;
+  }
+
+  await updateDamData(irrigationFolderName, 'irrigation_live.json', page, dams);
+} catch (error) {
+  console.error('Irrigation error:', error);
+}
+}
+
+async function fetchDamDetails() {
+  await fetchKsebDamDetails();
+  await fetchIrrigationDamDetails();
+}
+
+if (require.main === module) {
+  fetchDamDetails();
+}
+
+module.exports = {
+  extractDamDetails,
+  extractIrrigationDamDetails,
+  extractIrrigationDamDetailsFromText,
+  fetchDamDetails,
+  fetchIrrigationDamDetails,
+  fetchKsebDamDetails,
+  fetchMostRecentUpdate,
+  fetchSdmaPdfLink
+};

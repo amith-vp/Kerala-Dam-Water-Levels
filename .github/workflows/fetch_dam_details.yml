@@ -38,7 +38,7 @@ jobs:
 
 
     - name: Install dependencies
-      run: npm install axios cheerio
+      run: npm ci
 
     - name: Run dam details fetcher
       run: node dam_details_fetcher.js
