@@ -12,9 +12,22 @@
     "blueLevel": "106.71",
     "orangeLevel": "107.21",
     "redLevel": "107.59",
-    "latitude": 10.54,
-    "longitude": 76.63,
+    "latitude": 10.5417,
+    "longitude": 76.6083,
     "data": [
+        {
+            "date": "16.05.2026",
+            "waterLevel": "92.81",
+            "liveStorage": "9.46",
+            "storagePercentage": "6%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "0.32",
+            "outflow": "0.32",
+            "rainfall": "",
+            "remarks": "Outflow for drinking water"
+        },
         {
             "date": "15.05.2026",
             "waterLevel": "92.82",

@@ -12,9 +12,22 @@
     "blueLevel": "154.9",
     "orangeLevel": "155.36",
     "redLevel": "156.06",
-    "latitude": 10.62,
+    "latitude": 10.6333,
     "longitude": 76.8,
     "data": [
+        {
+            "date": "16.05.2026",
+            "waterLevel": "151.85",
+            "liveStorage": "3.04",
+            "storagePercentage": "20%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "0.00",
+            "outflow": "0.00",
+            "rainfall": "",
+            "remarks": ""
+        },
         {
             "date": "15.05.2026",
             "waterLevel": "151.85",
