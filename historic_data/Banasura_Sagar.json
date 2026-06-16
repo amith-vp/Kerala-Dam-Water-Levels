@@ -4,7 +4,7 @@
     "officialName": "BANASURASAGAR (K A S)",
     "MWL": "775.60",
     "FRL": "775.60",
-    "liveStorageAtFRL": "17.75",
+    "liveStorageAtFRL": "18.05",
     "ruleLevel": "767.00",
     "blueLevel": "765.50",
     "orangeLevel": "766.00",
@@ -12,6 +12,17 @@
     "latitude": 11.6709,
     "longitude": 75.9504,
     "data": [
+        {
+            "date": "16.06.2026",
+            "waterLevel": "755.45",
+            "liveStorage": "18.05",
+            "storagePercentage": "8.98",
+            "inflow": "0.30",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "15.06.2026",
             "waterLevel": "755.40",
