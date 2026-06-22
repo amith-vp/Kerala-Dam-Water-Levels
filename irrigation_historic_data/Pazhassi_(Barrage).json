@@ -16,6 +16,19 @@
     "longitude": 75.6275,
     "data": [
         {
+            "date": "22.06.2026",
+            "waterLevel": "21.09",
+            "liveStorage": "12.54",
+            "storagePercentage": "25%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "41.32",
+            "outflow": "41.32",
+            "rainfall": "",
+            "remarks": "2/15 shutters opened @ 30cm each, 2/15 shutters opened @ 15cm each"
+        },
+        {
             "date": "21.06.2026",
             "waterLevel": "21.51",
             "liveStorage": "14.40",
