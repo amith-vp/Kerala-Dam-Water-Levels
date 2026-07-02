@@ -4,7 +4,7 @@
     "officialName": "KUNDALA",
     "MWL": "1758.69",
     "FRL": "1758.69",
-    "liveStorageAtFRL": "1.36",
+    "liveStorageAtFRL": "1.39",
     "ruleLevel": "",
     "blueLevel": "1755.00",
     "orangeLevel": "1756.00",
@@ -12,6 +12,17 @@
     "latitude": 10.14358754366575,
     "longitude": 77.19868256414041,
     "data": [
+        {
+            "date": "02.07.2026",
+            "waterLevel": "1746.45",
+            "liveStorage": "1.39",
+            "storagePercentage": "18.12",
+            "inflow": "0.03",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "3.00"
+        },
         {
             "date": "01.07.2026",
             "waterLevel": "1746.35",
