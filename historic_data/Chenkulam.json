@@ -4,7 +4,7 @@
     "officialName": "SENGULAM",
     "MWL": "847.64",
     "FRL": "847.64",
-    "liveStorageAtFRL": "0.17",
+    "liveStorageAtFRL": "3.81",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,17 @@
     "latitude": 10.010833,
     "longitude": 77.0325,
     "data": [
+        {
+            "date": "18.07.2026",
+            "waterLevel": "846.55",
+            "liveStorage": "3.81",
+            "storagePercentage": "977.18",
+            "inflow": "1.63",
+            "powerHouseDischarge": "1.86",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.86",
+            "rainfall": "9.00"
+        },
         {
             "date": "17.07.2026",
             "waterLevel": "846.70",
