@@ -4,7 +4,7 @@
     "officialName": "PONMUDI",
     "MWL": "707.75",
     "FRL": "707.75",
-    "liveStorageAtFRL": "20.84",
+    "liveStorageAtFRL": "17.76",
     "ruleLevel": "",
     "blueLevel": "704.50",
     "orangeLevel": "705.50",
@@ -12,6 +12,50 @@
     "latitude": 9.9604,
     "longitude": 77.0565,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "692.40",
+            "liveStorage": "17.76",
+            "storagePercentage": "37.47",
+            "inflow": "0.15",
+            "powerHouseDischarge": "0.31",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.31",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "692.50",
+            "liveStorage": "17.92",
+            "storagePercentage": "37.81",
+            "inflow": "0.16",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "692.40",
+            "liveStorage": "17.76",
+            "storagePercentage": "37.47",
+            "inflow": "0.08",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "3.00"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "692.35",
+            "liveStorage": "17.68",
+            "storagePercentage": "37.31",
+            "inflow": "0.32",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "694.30",

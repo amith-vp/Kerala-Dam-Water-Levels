@@ -4,7 +4,7 @@
     "officialName": "IDAMALAYAR",
     "MWL": "169.00",
     "FRL": "169.00",
-    "liveStorageAtFRL": "416.03",
+    "liveStorageAtFRL": "385.44",
     "ruleLevel": "162.50",
     "blueLevel": "161.00",
     "orangeLevel": "161.50",
@@ -12,6 +12,50 @@
     "latitude": 10.221867602366947,
     "longitude": 76.70603684268934,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "143.94",
+            "liveStorage": "385.44",
+            "storagePercentage": "37.87",
+            "inflow": "1.82",
+            "powerHouseDischarge": "1.01",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.01",
+            "rainfall": "0.60"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "143.90",
+            "liveStorage": "384.67",
+            "storagePercentage": "37.79",
+            "inflow": "2.36",
+            "powerHouseDischarge": "0.41",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.41",
+            "rainfall": "3.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "143.80",
+            "liveStorage": "382.73",
+            "storagePercentage": "37.60",
+            "inflow": "1.76",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "9.80"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "143.71",
+            "liveStorage": "380.99",
+            "storagePercentage": "37.43",
+            "inflow": "2.93",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "6.60"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "145.43",

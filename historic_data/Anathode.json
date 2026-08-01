@@ -4,7 +4,7 @@
     "officialName": "KAKKI – ANATHODE",
     "MWL": "981.46",
     "FRL": "981.46",
-    "liveStorageAtFRL": "153.88",
+    "liveStorageAtFRL": "140.45",
     "ruleLevel": "975.36",
     "blueLevel": "973.36",
     "orangeLevel": "974.36",
@@ -12,6 +12,50 @@
     "latitude": 9.341667,
     "longitude": 77.15,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "954.65",
+            "liveStorage": "140.45",
+            "storagePercentage": "31.46",
+            "inflow": "0.73",
+            "powerHouseDischarge": "0.73",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.73",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "954.65",
+            "liveStorage": "140.45",
+            "storagePercentage": "31.46",
+            "inflow": "0.93",
+            "powerHouseDischarge": "0.37",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.37",
+            "rainfall": "5.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "954.57",
+            "liveStorage": "139.89",
+            "storagePercentage": "31.33",
+            "inflow": "0.94",
+            "powerHouseDischarge": "0.24",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.24",
+            "rainfall": "6.00"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "954.47",
+            "liveStorage": "139.19",
+            "storagePercentage": "31.17",
+            "inflow": "1.07",
+            "powerHouseDischarge": "0.16",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.16",
+            "rainfall": "0.00"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "956.47",

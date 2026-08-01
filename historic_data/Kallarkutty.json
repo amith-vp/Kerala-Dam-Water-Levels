@@ -4,7 +4,7 @@
     "officialName": "KALLARKUTTY",
     "MWL": "456.59",
     "FRL": "456.59",
-    "liveStorageAtFRL": "5.08",
+    "liveStorageAtFRL": "4.41",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,50 @@
     "latitude": 9.98,
     "longitude": 77.001389,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "453.35",
+            "liveStorage": "4.41",
+            "storagePercentage": "68.60",
+            "inflow": "1.23",
+            "powerHouseDischarge": "1.20",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.20",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "453.30",
+            "liveStorage": "4.38",
+            "storagePercentage": "68.12",
+            "inflow": "0.77",
+            "powerHouseDischarge": "0.71",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.71",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "453.20",
+            "liveStorage": "4.32",
+            "storagePercentage": "67.20",
+            "inflow": "1.15",
+            "powerHouseDischarge": "1.03",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.03",
+            "rainfall": "5.00"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "452.95",
+            "liveStorage": "4.19",
+            "storagePercentage": "65.21",
+            "inflow": "1.00",
+            "powerHouseDischarge": "1.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "454.40",

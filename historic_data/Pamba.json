@@ -4,7 +4,7 @@
     "officialName": "PAMBA",
     "MWL": "986.33",
     "FRL": "986.33",
-    "liveStorageAtFRL": "2.48",
+    "liveStorageAtFRL": "0.69",
     "ruleLevel": "",
     "blueLevel": "982.00",
     "orangeLevel": "983.50",
@@ -12,6 +12,50 @@
     "latitude": 9.3906,
     "longitude": 77.1598,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "964.10",
+            "liveStorage": "0.69",
+            "storagePercentage": "2.22",
+            "inflow": "0.63",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "964.15",
+            "liveStorage": "0.73",
+            "storagePercentage": "2.34",
+            "inflow": "0.69",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "964.20",
+            "liveStorage": "0.77",
+            "storagePercentage": "2.47",
+            "inflow": "0.74",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "4.00"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "964.25",
+            "liveStorage": "0.81",
+            "storagePercentage": "2.60",
+            "inflow": "0.79",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "966.30",

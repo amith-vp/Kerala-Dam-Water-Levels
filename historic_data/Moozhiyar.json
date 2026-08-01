@@ -4,7 +4,7 @@
     "officialName": "MOOZHIYAR",
     "MWL": "192.63",
     "FRL": "192.63",
-    "liveStorageAtFRL": "0.70",
+    "liveStorageAtFRL": "0.42",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,50 @@
     "latitude": 9.308,
     "longitude": 77.0656,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "186.50",
+            "liveStorage": "0.42",
+            "storagePercentage": "35.78",
+            "inflow": "0.88",
+            "powerHouseDischarge": "0.22",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.22",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "186.40",
+            "liveStorage": "0.41",
+            "storagePercentage": "34.91",
+            "inflow": "0.51",
+            "powerHouseDischarge": "0.32",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.32",
+            "rainfall": "9.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "186.15",
+            "liveStorage": "0.38",
+            "storagePercentage": "32.76",
+            "inflow": "0.37",
+            "powerHouseDischarge": "0.39",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.39",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "186.30",
+            "liveStorage": "0.40",
+            "storagePercentage": "34.05",
+            "inflow": "0.33",
+            "powerHouseDischarge": "0.39",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.39",
+            "rainfall": "0.00"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "189.20",

@@ -4,7 +4,7 @@
     "officialName": "IDUKKI",
     "MWL": "732.43",
     "FRL": "732.43",
-    "liveStorageAtFRL": "449.28",
+    "liveStorageAtFRL": "420.03",
     "ruleLevel": "725.60",
     "blueLevel": "723.16",
     "orangeLevel": "724.99",
@@ -12,6 +12,50 @@
     "latitude": 9.8436,
     "longitude": 76.9762,
     "data": [
+        {
+            "date": "26.07.2026",
+            "waterLevel": "709.62",
+            "liveStorage": "420.03",
+            "storagePercentage": "28.78",
+            "inflow": "2.39",
+            "powerHouseDischarge": "3.30",
+            "spillwayRelease": "0",
+            "totalOutflow": "3.30",
+            "rainfall": "1.60"
+        },
+        {
+            "date": "25.07.2026",
+            "waterLevel": "709.65",
+            "liveStorage": "421.10",
+            "storagePercentage": "28.85",
+            "inflow": "2.58",
+            "powerHouseDischarge": "1.79",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.79",
+            "rainfall": "1.00"
+        },
+        {
+            "date": "24.07.2026",
+            "waterLevel": "709.64",
+            "liveStorage": "420.46",
+            "storagePercentage": "28.81",
+            "inflow": "3.28",
+            "powerHouseDischarge": "1.20",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.20",
+            "rainfall": "4.60"
+        },
+        {
+            "date": "23.07.2026",
+            "waterLevel": "709.58",
+            "liveStorage": "418.54",
+            "storagePercentage": "28.68",
+            "inflow": "2.82",
+            "powerHouseDischarge": "0.95",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.95",
+            "rainfall": "3.40"
+        },
         {
             "date": "31.07.2026",
             "waterLevel": "710.46",
