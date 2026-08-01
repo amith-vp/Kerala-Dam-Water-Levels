@@ -149,6 +149,42 @@ const normaliseDate = (value) => {
   return `${match[1].padStart(2, '0')}.${match[2].padStart(2, '0')}.${match[3]}`;
 };
 
+const parseDamDate = (value) => {
+  const text = String(value || '').trim();
+  const dayFirstMatch = text.match(/^(\d{1,2})[/. -](\d{1,2})[/. -](\d{4})$/);
+  if (dayFirstMatch) {
+    return Date.UTC(
+      Number(dayFirstMatch[3]),
+      Number(dayFirstMatch[2]) - 1,
+      Number(dayFirstMatch[1])
+    );
+  }
+
+  const isoMatch = text.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+  if (isoMatch) {
+    return Date.UTC(
+      Number(isoMatch[1]),
+      Number(isoMatch[2]) - 1,
+      Number(isoMatch[3])
+    );
+  }
+
+  return null;
+};
+
+const sortDamDataNewestFirst = (data) => {
+  data.sort((left, right) => {
+    const leftTime = parseDamDate(left.date);
+    const rightTime = parseDamDate(right.date);
+
+    if (leftTime === null && rightTime === null) return 0;
+    if (leftTime === null) return 1;
+    if (rightTime === null) return -1;
+
+    return rightTime - leftTime;
+  });
+};
+
 const safeFilename = (name) => name.replace(/[\\/]/g, '-').replace(/\s+/g, '_');
 
 const ensureFolder = async (folderName) => {
@@ -235,6 +271,7 @@ const updateDamData = async (folderName, liveFileName, page, dams, options = {})
   if (dataChanged || options.alwaysWriteLive) {
     console.log(`Updating ${folderName} files...`);
     for (const [damName, damData] of Object.entries(existingData)) {
+      sortDamDataNewestFirst(damData.data);
       const filename = `${folderName}/${safeFilename(damName)}.json`;
       await fs.writeFile(filename, JSON.stringify(damData, null, 4));
       console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
