@@ -4,7 +4,7 @@
     "officialName": "SENGULAM",
     "MWL": "847.64",
     "FRL": "847.64",
-    "liveStorageAtFRL": "0.26",
+    "liveStorageAtFRL": "0.25",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,61 @@
     "latitude": 10.010833,
     "longitude": 77.0325,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "847.05",
+            "liveStorage": "0.25",
+            "storagePercentage": "63.59",
+            "inflow": "1.47",
+            "powerHouseDischarge": "1.41",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.41",
+            "rainfall": "14.00"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "846.80",
+            "liveStorage": "0.19",
+            "storagePercentage": "48.46",
+            "inflow": "1.36",
+            "powerHouseDischarge": "1.34",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.34",
+            "rainfall": "20.70"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "846.70",
+            "liveStorage": "0.17",
+            "storagePercentage": "42.31",
+            "inflow": "0.60",
+            "powerHouseDischarge": "0.66",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.66",
+            "rainfall": "8.30"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "846.95",
+            "liveStorage": "0.23",
+            "storagePercentage": "57.69",
+            "inflow": "0.59",
+            "powerHouseDischarge": "0.54",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.54",
+            "rainfall": "3.30"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "846.75",
+            "liveStorage": "0.18",
+            "storagePercentage": "45.38",
+            "inflow": "0.55",
+            "powerHouseDischarge": "0.55",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.55",
+            "rainfall": "0.60"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "847.10",

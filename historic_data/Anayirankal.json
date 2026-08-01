@@ -4,7 +4,7 @@
     "officialName": "ANAYIRANKAL",
     "MWL": "1207.02",
     "FRL": "1207.02",
-    "liveStorageAtFRL": "11.94",
+    "liveStorageAtFRL": "11.86",
     "ruleLevel": "",
     "blueLevel": "1205.02",
     "orangeLevel": "1206.02",
@@ -12,6 +12,61 @@
     "latitude": 10.009515341318457,
     "longitude": 77.20724298186308,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "1196.05",
+            "liveStorage": "11.86",
+            "storagePercentage": "23.79",
+            "inflow": "0.07",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "11.00"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "1196.01",
+            "liveStorage": "11.79",
+            "storagePercentage": "23.65",
+            "inflow": "0.07",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "20.00"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "1195.97",
+            "liveStorage": "11.72",
+            "storagePercentage": "23.51",
+            "inflow": "0.03",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "20.00"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "1195.95",
+            "liveStorage": "11.68",
+            "storagePercentage": "23.44",
+            "inflow": "0.03",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "1.00"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "1195.93",
+            "liveStorage": "11.65",
+            "storagePercentage": "23.38",
+            "inflow": "0.02",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "0.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "1196.10",

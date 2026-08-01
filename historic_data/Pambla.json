@@ -4,7 +4,7 @@
     "officialName": "LOWER PERIYAR",
     "MWL": "253",
     "FRL": "253",
-    "liveStorageAtFRL": "4.34",
+    "liveStorageAtFRL": "4.55",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,61 @@
     "latitude": 9.962,
     "longitude": 76.9568,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "253.00",
+            "liveStorage": "4.55",
+            "storagePercentage": "100.00",
+            "inflow": "7.68",
+            "powerHouseDischarge": "6.22",
+            "spillwayRelease": "0.70",
+            "totalOutflow": "6.92",
+            "rainfall": "72.00"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "251.20",
+            "liveStorage": "3.78",
+            "storagePercentage": "83.16",
+            "inflow": "7.28",
+            "powerHouseDischarge": "6.08",
+            "spillwayRelease": "0",
+            "totalOutflow": "6.08",
+            "rainfall": "70.00"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "248.20",
+            "liveStorage": "2.59",
+            "storagePercentage": "56.88",
+            "inflow": "2.00",
+            "powerHouseDischarge": "2.12",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.12",
+            "rainfall": "43.00"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "248.50",
+            "liveStorage": "2.71",
+            "storagePercentage": "59.45",
+            "inflow": "1.58",
+            "powerHouseDischarge": "1.82",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.82",
+            "rainfall": "20.00"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "249.10",
+            "liveStorage": "2.94",
+            "storagePercentage": "64.59",
+            "inflow": "1.44",
+            "powerHouseDischarge": "1.48",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.48",
+            "rainfall": "11.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "252.50",

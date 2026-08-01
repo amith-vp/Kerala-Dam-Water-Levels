@@ -4,7 +4,7 @@
     "officialName": "SHOLAYAR",
     "MWL": "811.68",
     "FRL": "811.68",
-    "liveStorageAtFRL": "62.49",
+    "liveStorageAtFRL": "60.50",
     "ruleLevel": "0.00",
     "blueLevel": "810.16",
     "orangeLevel": "810.77",
@@ -12,6 +12,61 @@
     "latitude": 10.3178,
     "longitude": 76.7342,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "799.25",
+            "liveStorage": "60.50",
+            "storagePercentage": "40.58",
+            "inflow": "1.62",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "82.00"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "798.94",
+            "liveStorage": "58.88",
+            "storagePercentage": "39.49",
+            "inflow": "1.10",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "45.00"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "798.73",
+            "liveStorage": "57.78",
+            "storagePercentage": "38.76",
+            "inflow": "0.78",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "50.00"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "798.58",
+            "liveStorage": "57.00",
+            "storagePercentage": "38.23",
+            "inflow": "0.92",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "26.20"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "798.39",
+            "liveStorage": "56.09",
+            "storagePercentage": "37.62",
+            "inflow": "7.08",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "40.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "799.61",

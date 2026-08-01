@@ -4,7 +4,7 @@
     "officialName": "PORINGALKUTHU",
     "MWL": "423.98",
     "FRL": "423.98",
-    "liveStorageAtFRL": "21.00",
+    "liveStorageAtFRL": "19.63",
     "ruleLevel": "",
     "blueLevel": "421.00",
     "orangeLevel": "422.00",
@@ -12,6 +12,61 @@
     "latitude": 10.3152,
     "longitude": 76.6344,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "419.95",
+            "liveStorage": "19.63",
+            "storagePercentage": "64.79",
+            "inflow": "8.41",
+            "powerHouseDischarge": "4.78",
+            "spillwayRelease": "2.88",
+            "totalOutflow": "7.66",
+            "rainfall": "37.40"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "419.65",
+            "liveStorage": "18.87",
+            "storagePercentage": "62.28",
+            "inflow": "9.06",
+            "powerHouseDischarge": "4.68",
+            "spillwayRelease": "0.20",
+            "totalOutflow": "4.88",
+            "rainfall": "36.20"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "417.80",
+            "liveStorage": "14.70",
+            "storagePercentage": "48.51",
+            "inflow": "3.99",
+            "powerHouseDischarge": "2.49",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.49",
+            "rainfall": "75.20"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "417.05",
+            "liveStorage": "13.20",
+            "storagePercentage": "43.56",
+            "inflow": "2.14",
+            "powerHouseDischarge": "2.54",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.54",
+            "rainfall": "33.00"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "417.25",
+            "liveStorage": "13.60",
+            "storagePercentage": "44.88",
+            "inflow": "1.33",
+            "powerHouseDischarge": "1.23",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.23",
+            "rainfall": "26.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "420.50",

@@ -4,7 +4,7 @@
     "officialName": "KUTTIYADI (KAKKAYAM)",
     "MWL": "758.04",
     "FRL": "758.04",
-    "liveStorageAtFRL": "23.85",
+    "liveStorageAtFRL": "21.99",
     "ruleLevel": "",
     "blueLevel": "755.50",
     "orangeLevel": "756.50",
@@ -12,6 +12,61 @@
     "latitude": 11.551,
     "longitude": 75.925,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "753.10",
+            "liveStorage": "21.99",
+            "storagePercentage": "64.71",
+            "inflow": "3.90",
+            "powerHouseDischarge": "2.93",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.93",
+            "rainfall": "117.00"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "752.61",
+            "liveStorage": "21.01",
+            "storagePercentage": "61.84",
+            "inflow": "4.28",
+            "powerHouseDischarge": "2.81",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.81",
+            "rainfall": "106.00"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "751.88",
+            "liveStorage": "19.55",
+            "storagePercentage": "57.53",
+            "inflow": "2.66",
+            "powerHouseDischarge": "1.93",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.93",
+            "rainfall": "125.00"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "751.51",
+            "liveStorage": "18.82",
+            "storagePercentage": "55.38",
+            "inflow": "1.20",
+            "powerHouseDischarge": "0.83",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.83",
+            "rainfall": "55.00"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "751.33",
+            "liveStorage": "18.45",
+            "storagePercentage": "54.30",
+            "inflow": "1.52",
+            "powerHouseDischarge": "0.60",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.60",
+            "rainfall": "46.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "753.98",

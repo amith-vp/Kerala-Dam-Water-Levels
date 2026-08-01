@@ -4,7 +4,7 @@
     "officialName": "PONMUDI",
     "MWL": "707.75",
     "FRL": "707.75",
-    "liveStorageAtFRL": "22.68",
+    "liveStorageAtFRL": "20.84",
     "ruleLevel": "",
     "blueLevel": "704.50",
     "orangeLevel": "705.50",
@@ -12,6 +12,61 @@
     "latitude": 9.9604,
     "longitude": 77.0565,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "694.30",
+            "liveStorage": "20.84",
+            "storagePercentage": "43.97",
+            "inflow": "1.63",
+            "powerHouseDischarge": "0.21",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.21",
+            "rainfall": "54.00"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "693.45",
+            "liveStorage": "19.42",
+            "storagePercentage": "40.98",
+            "inflow": "1.03",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "43.00"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "692.80",
+            "liveStorage": "18.39",
+            "storagePercentage": "38.81",
+            "inflow": "0.47",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "42.00"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "692.50",
+            "liveStorage": "17.92",
+            "storagePercentage": "37.81",
+            "inflow": "0.08",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "16.00"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "692.45",
+            "liveStorage": "17.84",
+            "storagePercentage": "37.64",
+            "inflow": "0.08",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "3.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "695.40",

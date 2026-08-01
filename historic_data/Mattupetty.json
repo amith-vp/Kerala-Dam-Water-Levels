@@ -4,7 +4,7 @@
     "officialName": "MADUPETTY",
     "MWL": "1599.59",
     "FRL": "1599.59",
-    "liveStorageAtFRL": "1.34",
+    "liveStorageAtFRL": "0.94",
     "ruleLevel": "",
     "blueLevel": "1596.00",
     "orangeLevel": "1597.00",
@@ -12,6 +12,61 @@
     "latitude": 10.1063,
     "longitude": 77.1238,
     "data": [
+        {
+            "date": "31.07.2026",
+            "waterLevel": "1566.65",
+            "liveStorage": "0.94",
+            "storagePercentage": "1.72",
+            "inflow": "0.30",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "30.60"
+        },
+        {
+            "date": "30.07.2026",
+            "waterLevel": "1566.35",
+            "liveStorage": "0.64",
+            "storagePercentage": "1.17",
+            "inflow": "0.30",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "36.80"
+        },
+        {
+            "date": "29.07.2026",
+            "waterLevel": "1566.05",
+            "liveStorage": "0.34",
+            "storagePercentage": "0.62",
+            "inflow": "0.09",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "23.00"
+        },
+        {
+            "date": "28.07.2026",
+            "waterLevel": "1566.20",
+            "liveStorage": "0.49",
+            "storagePercentage": "0.89",
+            "inflow": "0.00",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "7.00"
+        },
+        {
+            "date": "27.07.2026",
+            "waterLevel": "1566.45",
+            "liveStorage": "0.74",
+            "storagePercentage": "1.35",
+            "inflow": "0.09",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "01.08.2026",
             "waterLevel": "1567.05",
