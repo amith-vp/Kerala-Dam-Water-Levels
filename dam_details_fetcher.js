@@ -7,24 +7,44 @@ const ksebBaseUrl = 'https://dams.kseb.in/?page_id=45';
 const sdmaDamLevelUrl = 'https://sdma.kerala.gov.in/dam-water-level/';
 const ksebFolderName = 'historic_data';
 const irrigationFolderName = 'irrigation_historic_data';
+const ksebLookbackPosts = 10;
+const ksebMissingDatesPerRun = 5;
 
-// Fetch the most recent update from the KSEB base URL.
-const fetchMostRecentUpdate = async () => {
+// Fetch recent dated updates so delayed KSEB uploads can fill history gaps.
+const fetchRecentUpdates = async (limit = ksebLookbackPosts) => {
 try {
   const response = await axios.get(ksebBaseUrl);
   const html = response.data;
   const $ = cheerio.load(html);
+  const pages = [];
+  const seenLinks = new Set();
 
-  const pageElement = $('.elementor-post').first();
-  const date = pageElement.find('.elementor-post__title a').text().trim();
-  const link = pageElement.find('.elementor-post__title a').attr('href');
+  $('.elementor-post').each((index, element) => {
+    if (pages.length >= limit) return false;
 
-  console.log('Fetched date:', date, 'Link:', link);
-  return { date, link };
+    const pageLink = $(element).find('.elementor-post__title a').first();
+    const link = pageLink.attr('href');
+    const rawDate = pageLink.text().trim();
+    const date = normaliseDate(rawDate);
+
+    if (!link || !date || seenLinks.has(link)) return;
+
+    seenLinks.add(link);
+    pages.push({ date, link });
+    return undefined;
+  });
+
+  console.log('Fetched KSEB updates:', pages.map(page => `${page.date} (${page.link})`).join(', '));
+  return pages;
 } catch (error) {
-  console.error('Error fetching the most recent page:', error);
-  return null;
+  console.error('Error fetching recent KSEB pages:', error);
+  return [];
 }
+};
+
+const fetchMostRecentUpdate = async () => {
+  const pages = await fetchRecentUpdates(1);
+  return pages[0] || null;
 };
 
 // Dam coordinates for geolocation data
@@ -494,21 +514,46 @@ async function extractIrrigationDamDetails(pdfUrl, date) {
 // Fetch KSEB dam details and update the data files.
 async function fetchKsebDamDetails() {
 try {
-  const page = await fetchMostRecentUpdate();
-  if (!page) {
-    console.log('No recent KSEB page found.');
+  const pages = await fetchRecentUpdates();
+  if (pages.length === 0) {
+    console.log('No recent KSEB pages found.');
     return;
   }
 
-  console.log(`Processing KSEB page: ${page.date}`);
-  const { dams } = await extractDamDetails(page.link);
+  await ensureFolder(ksebFolderName);
+  const existingData = await loadExistingDamData(ksebFolderName);
+  const existingDates = new Set(
+    Object.values(existingData).flatMap(dam => dam.data.map(entry => entry.date))
+  );
+  const pagesToProcess = pages
+    .filter(page => !existingDates.has(page.date))
+    .slice(0, ksebMissingDatesPerRun)
+    .reverse();
 
-  if (dams.length === 0) {
-    console.log('No KSEB dam data extracted. Check if the website structure has changed.');
-    return;
+  console.log('Missing KSEB dates selected:', pagesToProcess.map(page => page.date).join(', ') || 'none');
+
+  for (const page of pagesToProcess) {
+    console.log(`Processing KSEB page: ${page.date}`);
+    const { dams } = await extractDamDetails(page.link);
+
+    if (dams.length === 0) {
+      console.log(`No KSEB dam data extracted for ${page.date}.`);
+      continue;
+    }
+
+    await updateDamData(ksebFolderName, 'live.json', page, dams);
+    existingDates.add(page.date);
   }
 
-  await updateDamData(ksebFolderName, 'live.json', page, dams);
+  // A later backfill batch must not replace live.json with an older page.
+  const latestPage = pages[0];
+  if (!pagesToProcess.some(page => page.date === latestPage.date)) {
+    console.log(`Refreshing live KSEB data from latest page: ${latestPage.date}`);
+    const { dams } = await extractDamDetails(latestPage.link);
+    if (dams.length > 0) {
+      await updateDamData(ksebFolderName, 'live.json', latestPage, dams, { alwaysWriteLive: true });
+    }
+  }
 } catch (error) {
   console.error('Error:', error);
 }
@@ -552,6 +597,7 @@ module.exports = {
   fetchDamDetails,
   fetchIrrigationDamDetails,
   fetchKsebDamDetails,
+  fetchRecentUpdates,
   fetchMostRecentUpdate,
   fetchSdmaPdfLink
 };
