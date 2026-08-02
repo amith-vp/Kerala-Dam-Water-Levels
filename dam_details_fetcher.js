@@ -111,12 +111,12 @@ const irrigationDistricts = [
 const irrigationDamCoordinates = {
   'Bhoothathankettu (Barrage)': { latitude: 10.1330, longitude: 76.6660 },
   'Chimoni': { latitude: 10.4333, longitude: 76.4667 },
-  'Chulliyar': { latitude: 10.7917, longitude: 76.7667 },
+  'Chulliyar': { latitude: 10.59329, longitude: 76.76764 },
   'Kallada': { latitude: 8.9500, longitude: 77.0722 },
   'Kanjirappuzha': { latitude: 10.9667, longitude: 76.5333 },
   'Karapuzha': { latitude: 11.6167, longitude: 76.1750 },
   'Kuttiyadi': { latitude: 11.6125, longitude: 75.8242 },
-  'Malampuzha': { latitude: 10.8583, longitude: 76.6750 },
+  'Malampuzha': { latitude: 10.83057, longitude: 76.68381 },
   'Malankara': { latitude: 9.8417, longitude: 76.6250 },
   'Mangalam': { latitude: 10.5167, longitude: 76.5333 },
   'Maniyar (Barrage)': { latitude: 9.3333, longitude: 76.8833 },
@@ -124,11 +124,11 @@ const irrigationDamCoordinates = {
   'Moolathara (Regulator)': { latitude: 10.6750, longitude: 76.7667 },
   'Neyyar': { latitude: 8.5333, longitude: 77.1500 },
   'Pazhassi (Barrage)': { latitude: 11.9942, longitude: 75.6275 },
-  'Peechi': { latitude: 10.4333, longitude: 76.4000 },
-  'Pothundy': { latitude: 10.5417, longitude: 76.6083 },
+  'Peechi': { latitude: 10.53002, longitude: 76.36998 },
+  'Pothundy': { latitude: 10.54490, longitude: 76.62535 },
   'Siruvani (Inter state waters)': { latitude: 10.9767, longitude: 76.6422 },
-  'Vazhani': { latitude: 10.6333, longitude: 76.1500 },
-  'Walayar': { latitude: 10.7917, longitude: 76.7667 },
+  'Vazhani': { latitude: 10.63614, longitude: 76.30715 },
+  'Walayar': { latitude: 10.83823, longitude: 76.85325 },
 };
 
 // Convert feet to meters
