@@ -2,6 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const { PDFParse } = require('pdf-parse');
 const fs = require('fs').promises;
+const fsSync = require('fs');
 
 const ksebBaseUrl = 'https://dams.kseb.in/?page_id=45';
 const sdmaDamLevelUrl = 'https://sdma.kerala.gov.in/dam-water-level/';
@@ -9,6 +10,32 @@ const ksebFolderName = 'historic_data';
 const irrigationFolderName = 'irrigation_historic_data';
 const ksebLookbackPosts = 10;
 const ksebMissingDatesPerRun = 5;
+
+let damConstants = null;
+try {
+  damConstants = JSON.parse(fsSync.readFileSync('dam_constants.json', 'utf-8'));
+  console.log('Loaded dam constants from dam_constants.json');
+} catch {
+  console.log('dam_constants.json not found, static dam fields will be taken from live sources.');
+}
+
+const applyDamConstants = (dams) => {
+  if (!damConstants) return;
+  for (const dam of dams) {
+    const c = damConstants[dam.name];
+    if (!c) continue;
+    dam.MWL = c.MWL;
+    dam.FRL = c.FRL;
+    dam.liveStorageAtFRL = c.liveStorageAtFRL;
+    dam.ruleLevel = c.ruleLevel;
+    dam.blueLevel = c.blueLevel;
+    dam.orangeLevel = c.orangeLevel;
+    dam.redLevel = c.redLevel;
+    if (c.grossStorage) dam.grossStorage = c.grossStorage;
+    if (c.latitude != null) dam.latitude = c.latitude;
+    if (c.longitude != null) dam.longitude = c.longitude;
+  }
+};
 
 // Fetch recent dated updates so delayed KSEB uploads can fill history gaps.
 const fetchRecentUpdates = async (limit = ksebLookbackPosts) => {
@@ -45,28 +72,6 @@ try {
 const fetchMostRecentUpdate = async () => {
   const pages = await fetchRecentUpdates(1);
   return pages[0] || null;
-};
-
-// Dam coordinates for geolocation data
-const damCoordinates = {
-'idukki': { latitude: 9.8436, longitude: 76.9762 },
-'idamalayar': { latitude: 10.221867602366947, longitude: 76.70603684268934 },
-'kakki – anathode': { latitude: 9.341667, longitude: 77.15 },
-'banasurasagar (k a s)': { latitude: 11.6709, longitude: 75.9504 },
-'sholayar': { latitude: 10.3178, longitude: 76.7342 },
-'madupetty': { latitude: 10.1063, longitude: 77.1238 },
-'anayirankal': { latitude: 10.009515341318457, longitude: 77.20724298186308 },
-'ponmudi': { latitude: 9.9604, longitude: 77.0565 },
-'kuttiyadi (kakkayam)': { latitude: 11.551, longitude: 75.925 },
-'pamba': { latitude: 9.3906, longitude: 77.1598 },
-'poringalkuthu': { latitude: 10.3152, longitude: 76.6344 },
-'kundala': { latitude: 10.14358754366575, longitude: 77.19868256414041 },
-'kallarkutty': { latitude: 9.98, longitude: 77.001389 },
-'erattayar': { latitude: 9.8103, longitude: 77.106 },
-'lower periyar': { latitude: 9.9620, longitude: 76.9568 },
-'moozhiyar': { latitude: 9.308, longitude: 77.0656 },
-'kallar': { latitude: 9.8255, longitude: 77.1562 },
-'sengulam': { latitude: 10.010833, longitude: 77.0325 },
 };
 
 // Map official names to their display names
@@ -107,29 +112,6 @@ const irrigationDistricts = [
   'Kannur',
   'Kasaragod'
 ];
-
-const irrigationDamCoordinates = {
-  'Bhoothathankettu (Barrage)': { latitude: 10.1330, longitude: 76.6660 },
-  'Chimoni': { latitude: 10.4333, longitude: 76.4667 },
-  'Chulliyar': { latitude: 10.59329, longitude: 76.76764 },
-  'Kallada': { latitude: 8.9500, longitude: 77.0722 },
-  'Kanjirappuzha': { latitude: 10.9667, longitude: 76.5333 },
-  'Karapuzha': { latitude: 11.6167, longitude: 76.1750 },
-  'Kuttiyadi': { latitude: 11.6125, longitude: 75.8242 },
-  'Malampuzha': { latitude: 10.83057, longitude: 76.68381 },
-  'Malankara': { latitude: 9.8417, longitude: 76.6250 },
-  'Mangalam': { latitude: 10.5167, longitude: 76.5333 },
-  'Maniyar (Barrage)': { latitude: 9.3333, longitude: 76.8833 },
-  'Meenkara': { latitude: 10.6333, longitude: 76.8000 },
-  'Moolathara (Regulator)': { latitude: 10.6750, longitude: 76.7667 },
-  'Neyyar': { latitude: 8.5333, longitude: 77.1500 },
-  'Pazhassi (Barrage)': { latitude: 11.9942, longitude: 75.6275 },
-  'Peechi': { latitude: 10.53002, longitude: 76.36998 },
-  'Pothundy': { latitude: 10.54490, longitude: 76.62535 },
-  'Siruvani (Inter state waters)': { latitude: 10.9767, longitude: 76.6422 },
-  'Vazhani': { latitude: 10.63614, longitude: 76.30715 },
-  'Walayar': { latitude: 10.83823, longitude: 76.85325 },
-};
 
 // Convert feet to meters
 const convertFeetToMeters = (value) => {
@@ -249,10 +231,10 @@ const updateDamData = async (folderName, liveFileName, page, dams, options = {})
           blueLevel: newDam.blueLevel,
           orangeLevel: newDam.orangeLevel,
           redLevel: newDam.redLevel,
-          latitude: newDam.latitude,
-          longitude: newDam.longitude,
         });
 
+        if (newDam.latitude != null) existingDam.latitude = newDam.latitude;
+        if (newDam.longitude != null) existingDam.longitude = newDam.longitude;
         if (newDam.source) existingDam.source = newDam.source;
         if (newDam.district) existingDam.district = newDam.district;
         if (newDam.grossStorage) existingDam.grossStorage = newDam.grossStorage;
@@ -323,8 +305,6 @@ try {
         blueLevel: $(columns[6]).text().trim(),
         orangeLevel: $(columns[7]).text().trim(),
         redLevel: $(columns[8]).text().trim(),
-        latitude: damCoordinates[damKey] ? damCoordinates[damKey].latitude : null,
-        longitude: damCoordinates[damKey] ? damCoordinates[damKey].longitude : null,
         data: [{
           date: $('h1.entry-title').text().trim(),
           waterLevel: $(columns[5]).text().trim(),
@@ -384,6 +364,7 @@ const fetchSdmaPdfLink = async (sourceName) => {
 
       const href = $(element).attr('href');
       if (!href || !href.toLowerCase().includes('.pdf')) return;
+      if (wantedSource === 'KSEB' && !href.toLowerCase().includes('kseb-site')) return;
 
       const parentText = $(element).parent().text().replace(/\s+/g, ' ').trim();
       if (!/\d{1,2}[/. -]\d{1,2}[/. -]\d{4}/.test(parentText)) return;
@@ -490,7 +471,6 @@ const parseIrrigationRow = (rowText, date) => {
   const liveStorage = hasAlertLevels ? values[6] || '' : values[3] || '';
   const storagePercentage = hasAlertLevels ? values[7] || '' : values[4] || '';
   const outflow = hasAlertLevels ? values[8] || '' : values[5] || '';
-  const coordinates = irrigationDamCoordinates[officialName] || {};
 
   return {
     id,
@@ -506,8 +486,6 @@ const parseIrrigationRow = (rowText, date) => {
     blueLevel,
     orangeLevel,
     redLevel,
-    latitude: coordinates.latitude || null,
-    longitude: coordinates.longitude || null,
     data: [{
       date,
       waterLevel,
@@ -578,6 +556,7 @@ try {
       continue;
     }
 
+    applyDamConstants(dams);
     await updateDamData(ksebFolderName, 'live.json', page, dams);
     existingDates.add(page.date);
   }
@@ -588,6 +567,7 @@ try {
     console.log(`Refreshing live KSEB data from latest page: ${latestPage.date}`);
     const { dams } = await extractDamDetails(latestPage.link);
     if (dams.length > 0) {
+      applyDamConstants(dams);
       await updateDamData(ksebFolderName, 'live.json', latestPage, dams, { alwaysWriteLive: true });
     }
   }
@@ -612,6 +592,7 @@ try {
     return;
   }
 
+  applyDamConstants(dams);
   await updateDamData(irrigationFolderName, 'irrigation_live.json', page, dams);
 } catch (error) {
   console.error('Irrigation error:', error);
