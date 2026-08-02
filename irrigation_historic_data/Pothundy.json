@@ -16,6 +16,19 @@
     "longitude": 76.6083,
     "data": [
         {
+            "date": "02.08.2026",
+            "waterLevel": "99.21",
+            "liveStorage": "23.82",
+            "storagePercentage": "38%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "0.24",
+            "outflow": "0.24",
+            "rainfall": "",
+            "remarks": "Outflow for drinking water"
+        },
+        {
             "date": "01.08.2026",
             "waterLevel": "98.15",
             "liveStorage": "21.07",
