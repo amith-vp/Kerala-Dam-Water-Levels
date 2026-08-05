@@ -4,7 +4,7 @@
     "officialName": "PONMUDI",
     "MWL": "707.75",
     "FRL": "707.75",
-    "liveStorageAtFRL": "29.23",
+    "liveStorageAtFRL": "30.28",
     "ruleLevel": "",
     "blueLevel": "704.50",
     "orangeLevel": "705.50",
@@ -12,6 +12,17 @@
     "latitude": 9.9604,
     "longitude": 77.0565,
     "data": [
+        {
+            "date": "05.08.2026",
+            "waterLevel": "700.05",
+            "liveStorage": "30.28",
+            "storagePercentage": "63.88",
+            "inflow": "1.05",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "16.00"
+        },
         {
             "date": "04.08.2026",
             "waterLevel": "699.45",
