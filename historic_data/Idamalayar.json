@@ -4,7 +4,7 @@
     "officialName": "IDAMALAYAR",
     "MWL": "169.00",
     "FRL": "169.00",
-    "liveStorageAtFRL": "518.58",
+    "liveStorageAtFRL": "531.09",
     "ruleLevel": "163.00",
     "blueLevel": "161.50",
     "orangeLevel": "162.00",
@@ -12,6 +12,17 @@
     "latitude": 10.221867602366947,
     "longitude": 76.70603684268934,
     "data": [
+        {
+            "date": "07.08.2026",
+            "waterLevel": "150.68",
+            "liveStorage": "531.09",
+            "storagePercentage": "52.18",
+            "inflow": "13.42",
+            "powerHouseDischarge": "0.89",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.89",
+            "rainfall": "72.00"
+        },
         {
             "date": "06.08.2026",
             "waterLevel": "150.14",
