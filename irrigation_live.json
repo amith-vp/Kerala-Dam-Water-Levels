@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "09.08.2026",
+    "lastUpdate": "10.08.2026",
     "dams": [
         {
             "id": "1",
@@ -19,17 +19,17 @@
             "longitude": 77.15,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "83.78",
-                    "liveStorage": "88.93",
+                    "date": "10.08.2026",
+                    "waterLevel": "83.80",
+                    "liveStorage": "89.11",
                     "storagePercentage": "91%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "22.01",
-                    "outflow": "22.01",
+                    "totalOutflow": "22.06",
+                    "outflow": "22.06",
                     "rainfall": "",
-                    "remarks": "4/4 shutters opened @10cm each. Outflow for drinking water."
+                    "remarks": "4/4 shutters opened @ 10 cm each. Outflow for drinking water."
                 }
             ]
         },
@@ -51,17 +51,17 @@
             "longitude": 77.0722,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "105.02",
-                    "liveStorage": "280.40",
-                    "storagePercentage": "54%",
+                    "date": "10.08.2026",
+                    "waterLevel": "105.24",
+                    "liveStorage": "284.80",
+                    "storagePercentage": "55%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "34.93",
-                    "outflow": "34.93",
+                    "totalOutflow": "35.16",
+                    "outflow": "35.16",
                     "rainfall": "",
-                    "remarks": "Outflow for power generation, URL - 106.79m"
+                    "remarks": "Outflow for power generation, URL - 106.79 m"
                 }
             ]
         },
@@ -83,7 +83,7 @@
             "longitude": 76.8833,
             "data": [
                 {
-                    "date": "09.08.2026",
+                    "date": "10.08.2026",
                     "waterLevel": "29.26",
                     "liveStorage": "7.97",
                     "storagePercentage": "48%",
@@ -93,7 +93,7 @@
                     "totalOutflow": "_",
                     "outflow": "_",
                     "rainfall": "",
-                    "remarks": "5/5 shutters opened @450cm each"
+                    "remarks": "5/5 shutters opened @ 450 cm each"
                 }
             ]
         },
@@ -115,17 +115,17 @@
             "longitude": 76.625,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "39.74",
-                    "liveStorage": "29.28",
-                    "storagePercentage": "76%",
+                    "date": "10.08.2026",
+                    "waterLevel": "39.76",
+                    "liveStorage": "29.32",
+                    "storagePercentage": "77%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "60.90",
-                    "outflow": "60.90",
+                    "totalOutflow": "87.88",
+                    "outflow": "87.88",
                     "rainfall": "",
-                    "remarks": "1/6 spillway shutter opened @100cm, Outflow for Drinking Water, Outflow for Power generation."
+                    "remarks": "1/6 spillway shutter opened @100cm, 1/6 spillway shutter opened @"
                 }
             ]
         },
@@ -147,17 +147,17 @@
             "longitude": 76.666,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "27.90",
+                    "date": "10.08.2026",
+                    "waterLevel": "27.20",
                     "liveStorage": "-",
                     "storagePercentage": "-",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "1512.00",
-                    "outflow": "1512.00",
+                    "totalOutflow": "1036.00",
+                    "outflow": "1036.00",
                     "rainfall": "",
-                    "remarks": "14/15 shutters opened @700cm each"
+                    "remarks": "14/15 shutters opened @ 700 cm each"
                 }
             ]
         },
@@ -179,10 +179,10 @@
             "longitude": 76.30715,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "56.03",
-                    "liveStorage": "10.52",
-                    "storagePercentage": "54%",
+                    "date": "10.08.2026",
+                    "waterLevel": "56.18",
+                    "liveStorage": "10.72",
+                    "storagePercentage": "56%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -211,10 +211,10 @@
             "longitude": 76.4667,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "70.76",
-                    "liveStorage": "110.70",
-                    "storagePercentage": "73%",
+                    "date": "10.08.2026",
+                    "waterLevel": "71.03",
+                    "liveStorage": "112.73",
+                    "storagePercentage": "74%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -243,10 +243,10 @@
             "longitude": 76.36998,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "75.31",
-                    "liveStorage": "49.49",
-                    "storagePercentage": "52%",
+                    "date": "10.08.2026",
+                    "waterLevel": "75.50",
+                    "liveStorage": "51.07",
+                    "storagePercentage": "53%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -275,15 +275,15 @@
             "longitude": 76.6422,
             "data": [
                 {
-                    "date": "09.08.2026",
+                    "date": "10.08.2026",
                     "waterLevel": "871.57",
                     "liveStorage": "15.11",
                     "storagePercentage": "44%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "0.79",
-                    "outflow": "0.79",
+                    "totalOutflow": "0.80",
+                    "outflow": "0.80",
                     "rainfall": "",
                     "remarks": "No alert levels present, as there is no spillway and reservoir operation is done by operating river sluice."
                 }
@@ -307,17 +307,17 @@
             "longitude": 76.5333,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "95.30",
-                    "liveStorage": "58.54",
-                    "storagePercentage": "82%",
+                    "date": "10.08.2026",
+                    "waterLevel": "95.20",
+                    "liveStorage": "57.98",
+                    "storagePercentage": "81%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "14.74",
-                    "outflow": "14.74",
+                    "totalOutflow": "14.56",
+                    "outflow": "14.56",
                     "rainfall": "",
-                    "remarks": "3/3 spillway shutter opened @10cm each, River sluice opened @2cm"
+                    "remarks": "3/3 spillway shutter opened @ 10 cm each, River sluice opened @ 2 cm"
                 }
             ]
         },
@@ -339,10 +339,10 @@
             "longitude": 76.8,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "151.79",
-                    "liveStorage": "2.97",
-                    "storagePercentage": "19%",
+                    "date": "10.08.2026",
+                    "waterLevel": "151.91",
+                    "liveStorage": "3.12",
+                    "storagePercentage": "21%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -371,7 +371,7 @@
             "longitude": 76.85325,
             "data": [
                 {
-                    "date": "09.08.2026",
+                    "date": "10.08.2026",
                     "waterLevel": "196.86",
                     "liveStorage": "6.13",
                     "storagePercentage": "19%",
@@ -403,17 +403,17 @@
             "longitude": 76.68381,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "107.99",
-                    "liveStorage": "89.99",
-                    "storagePercentage": "39%",
+                    "date": "10.08.2026",
+                    "waterLevel": "108.05",
+                    "liveStorage": "90.82",
+                    "storagePercentage": "40%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
                     "totalOutflow": "1.24",
                     "outflow": "1.24",
                     "rainfall": "",
-                    "remarks": "Outflow for drinking water, URL - 112.72m"
+                    "remarks": "Outflow for drinking water, URL - 112.72 m"
                 }
             ]
         },
@@ -435,10 +435,10 @@
             "longitude": 76.62535,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "101.24",
-                    "liveStorage": "29.53",
-                    "storagePercentage": "51%",
+                    "date": "10.08.2026",
+                    "waterLevel": "101.46",
+                    "liveStorage": "30.16",
+                    "storagePercentage": "53%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -467,7 +467,7 @@
             "longitude": 76.76764,
             "data": [
                 {
-                    "date": "09.08.2026",
+                    "date": "10.08.2026",
                     "waterLevel": "145.39",
                     "liveStorage": "3.03",
                     "storagePercentage": "16%",
@@ -499,17 +499,17 @@
             "longitude": 76.5333,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "76.65",
-                    "liveStorage": "20.44",
-                    "storagePercentage": "80%",
+                    "date": "10.08.2026",
+                    "waterLevel": "76.58",
+                    "liveStorage": "20.21",
+                    "storagePercentage": "79%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "17.12",
-                    "outflow": "17.12",
+                    "totalOutflow": "14.33",
+                    "outflow": "14.33",
                     "rainfall": "",
-                    "remarks": "6/6 spillway shutter opened @20cm each"
+                    "remarks": "6/6 spillway shutter opened @ 20 cm each"
                 }
             ]
         },
@@ -531,17 +531,17 @@
             "longitude": 76.7667,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "181.50",
+                    "date": "10.08.2026",
+                    "waterLevel": "181.40",
                     "liveStorage": "-",
                     "storagePercentage": "-",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "4.08",
-                    "outflow": "4.08",
+                    "totalOutflow": "3.11",
+                    "outflow": "3.11",
                     "rainfall": "",
-                    "remarks": "1/19 shutters opened @10cm"
+                    "remarks": "1/19 shutters opened @ 10 cm"
                 }
             ]
         },
@@ -563,15 +563,15 @@
             "longitude": 75.8242,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "38.86",
-                    "liveStorage": "72.20",
+                    "date": "10.08.2026",
+                    "waterLevel": "38.82",
+                    "liveStorage": "71.74",
                     "storagePercentage": "57%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "62.09",
-                    "outflow": "62.09",
+                    "totalOutflow": "58.38",
+                    "outflow": "58.38",
                     "rainfall": "",
                     "remarks": "4/4 spilway shutters are fully opened. Outflow for drinking water & power generation."
                 }
@@ -595,7 +595,7 @@
             "longitude": 76.175,
             "data": [
                 {
-                    "date": "09.08.2026",
+                    "date": "10.08.2026",
                     "waterLevel": "757.15",
                     "liveStorage": "35.21",
                     "storagePercentage": "43%",
@@ -605,7 +605,7 @@
                     "totalOutflow": "3.97",
                     "outflow": "3.97",
                     "rainfall": "",
-                    "remarks": "3/3 spillway shutter opened @10cm each, Outflow for drinking water"
+                    "remarks": "3/3 spillway shutter opened @ 10 cm each, Outflow for drinking water"
                 }
             ]
         },
@@ -627,20 +627,20 @@
             "longitude": 75.6275,
             "data": [
                 {
-                    "date": "09.08.2026",
-                    "waterLevel": "16.06",
-                    "liveStorage": "1.23",
-                    "storagePercentage": "2%",
+                    "date": "10.08.2026",
+                    "waterLevel": "15.69",
+                    "liveStorage": "0.99",
+                    "storagePercentage": "1%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "599.78",
-                    "outflow": "599.78",
+                    "totalOutflow": "464.38",
+                    "outflow": "464.38",
                     "rainfall": "",
-                    "remarks": "12/16 shutters opened @500cm each, 3/16 shutters opened @450cm each, Orange ഓറǥ് Red Ƽവ˔് 3rd Stage of alert ̳ ʱ ാംഘǷ ̲ ʱ റിയി˔് Yellow മǰ Dams that currently release controlled amounts of water for irrigation purposes or as a precautionary measure"
+                    "remarks": "12/16 shutters opened @ 500 cm each, 3/16 shutters opened @ 450 cm each,"
                 }
             ]
         }
     ],
-    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/08/IRR-SITE-5.pdf"
+    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/08/IRR-SITE-6.pdf"
 }
