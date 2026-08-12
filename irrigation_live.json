@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "11.08.2026",
+    "lastUpdate": "12.08.2026",
     "dams": [
         {
             "id": "1",
@@ -19,7 +19,7 @@
             "longitude": 77.15,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "83.78",
                     "liveStorage": "88.93",
                     "storagePercentage": "91%",
@@ -51,7 +51,7 @@
             "longitude": 77.0722,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "105.41",
                     "liveStorage": "288.20",
                     "storagePercentage": "56%",
@@ -61,7 +61,7 @@
                     "totalOutflow": "35.50",
                     "outflow": "35.50",
                     "rainfall": "",
-                    "remarks": "Outflow for power generation, URL - 107.56 m"
+                    "remarks": "Outflow for power generation, URL - 107.56m"
                 }
             ]
         },
@@ -73,8 +73,8 @@
             "district": "Pathanamthitta",
             "MWL": "34.62",
             "FRL": "34.62",
-            "grossStorage": "",
-            "liveStorageAtFRL": "",
+            "grossStorage": "8.80",
+            "liveStorageAtFRL": "8.80",
             "ruleLevel": "",
             "blueLevel": "",
             "orangeLevel": "",
@@ -83,17 +83,17 @@
             "longitude": 76.8833,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "8.80",
-                    "liveStorage": "",
-                    "storagePercentage": "",
+                    "date": "12.08.2026",
+                    "waterLevel": "29.26",
+                    "liveStorage": "7.97",
+                    "storagePercentage": "48%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "",
-                    "outflow": "",
+                    "totalOutflow": "_",
+                    "outflow": "_",
                     "rainfall": "",
-                    "remarks": "5/5 shutters opened @450 cm each"
+                    "remarks": "5/5 shutters opened @450cm each"
                 }
             ]
         },
@@ -115,7 +115,7 @@
             "longitude": 76.625,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "39.62",
                     "liveStorage": "28.84",
                     "storagePercentage": "75%",
@@ -125,7 +125,7 @@
                     "totalOutflow": "115.79",
                     "outflow": "115.79",
                     "rainfall": "",
-                    "remarks": "1/6 spillway shutter opened @100 cm, 3/6 spillway shutter opened @50 cm, Outflow for Drinking Water, Outflow for Power generation."
+                    "remarks": "1/6 spillway shutter opened @100cm, 3/6 spillway shutter opened @50cm, Outflow for Drinking Water, Outflow for Power generation."
                 }
             ]
         },
@@ -147,7 +147,7 @@
             "longitude": 76.666,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "27.00",
                     "liveStorage": "-",
                     "storagePercentage": "-",
@@ -157,7 +157,7 @@
                     "totalOutflow": "901.00",
                     "outflow": "901.00",
                     "rainfall": "",
-                    "remarks": "14/15 shutters opened @700 cm each"
+                    "remarks": "14/15 shutters opened @700cm each"
                 }
             ]
         },
@@ -169,25 +169,25 @@
             "district": "Thrissur",
             "MWL": "62.48",
             "FRL": "62.48",
-            "grossStorage": "61.48",
-            "liveStorageAtFRL": "61.48",
+            "grossStorage": "18.12",
+            "liveStorageAtFRL": "18.12",
             "ruleLevel": "",
-            "blueLevel": "",
-            "orangeLevel": "",
-            "redLevel": "",
+            "blueLevel": "60.98",
+            "orangeLevel": "61.48",
+            "redLevel": "61.88",
             "latitude": 10.63614,
             "longitude": 76.30715,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "60.98",
-                    "liveStorage": "61.88",
-                    "storagePercentage": "18.12",
+                    "date": "12.08.2026",
+                    "waterLevel": "56.28",
+                    "liveStorage": "10.85",
+                    "storagePercentage": "56%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "",
-                    "outflow": "",
+                    "totalOutflow": "0.00",
+                    "outflow": "0.00",
                     "rainfall": "",
                     "remarks": ""
                 }
@@ -201,25 +201,25 @@
             "district": "Thrissur",
             "MWL": "76.40",
             "FRL": "76.40",
-            "grossStorage": "75.4",
-            "liveStorageAtFRL": "75.4",
+            "grossStorage": "151.55",
+            "liveStorageAtFRL": "151.55",
             "ruleLevel": "",
-            "blueLevel": "",
-            "orangeLevel": "",
-            "redLevel": "",
+            "blueLevel": "74.9",
+            "orangeLevel": "75.4",
+            "redLevel": "75.9",
             "latitude": 10.4333,
             "longitude": 76.4667,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "74.9",
-                    "liveStorage": "75.9",
-                    "storagePercentage": "151.55",
+                    "date": "12.08.2026",
+                    "waterLevel": "71.22",
+                    "liveStorage": "114.15",
+                    "storagePercentage": "75%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "",
-                    "outflow": "",
+                    "totalOutflow": "0.00",
+                    "outflow": "0.00",
                     "rainfall": "",
                     "remarks": ""
                 }
@@ -243,7 +243,7 @@
             "longitude": 76.36998,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "75.62",
                     "liveStorage": "52.11",
                     "storagePercentage": "55%",
@@ -275,8 +275,8 @@
             "longitude": 76.6422,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "871.16",
+                    "date": "12.08.2026",
+                    "waterLevel": "871.57",
                     "liveStorage": "15.11",
                     "storagePercentage": "44%",
                     "inflow": "",
@@ -307,7 +307,7 @@
             "longitude": 76.5333,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "95.15",
                     "liveStorage": "57.70",
                     "storagePercentage": "81%",
@@ -317,7 +317,7 @@
                     "totalOutflow": "7.48",
                     "outflow": "7.48",
                     "rainfall": "",
-                    "remarks": "3/3 spillway shutter opened @5 cm each, River sluice opened @2cm"
+                    "remarks": "3/3 spillway shutter opened @5cm each, River sluice opened @2cm"
                 }
             ]
         },
@@ -329,25 +329,25 @@
             "district": "Palakkad",
             "MWL": "156.36",
             "FRL": "156.36",
-            "grossStorage": "155.36",
-            "liveStorageAtFRL": "155.36",
+            "grossStorage": "11.33",
+            "liveStorageAtFRL": "11.33",
             "ruleLevel": "",
-            "blueLevel": "",
-            "orangeLevel": "",
-            "redLevel": "",
+            "blueLevel": "154.90",
+            "orangeLevel": "155.36",
+            "redLevel": "156.06",
             "latitude": 10.6333,
             "longitude": 76.8,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "154.90",
-                    "liveStorage": "156.06",
-                    "storagePercentage": "11.33",
+                    "date": "12.08.2026",
+                    "waterLevel": "151.97",
+                    "liveStorage": "3.19",
+                    "storagePercentage": "21%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "",
-                    "outflow": "",
+                    "totalOutflow": "0.00",
+                    "outflow": "0.00",
                     "rainfall": "",
                     "remarks": ""
                 }
@@ -361,25 +361,25 @@
             "district": "Palakkad",
             "MWL": "203.00",
             "FRL": "203.00",
-            "grossStorage": "202.00",
-            "liveStorageAtFRL": "202.00",
+            "grossStorage": "18.40",
+            "liveStorageAtFRL": "18.40",
             "ruleLevel": "",
-            "blueLevel": "",
-            "orangeLevel": "",
-            "redLevel": "",
+            "blueLevel": "201.50",
+            "orangeLevel": "202.00",
+            "redLevel": "202.30",
             "latitude": 10.83823,
             "longitude": 76.85325,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "201.50",
-                    "liveStorage": "202.30",
-                    "storagePercentage": "18.40",
+                    "date": "12.08.2026",
+                    "waterLevel": "196.86",
+                    "liveStorage": "6.13",
+                    "storagePercentage": "19%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "",
-                    "outflow": "",
+                    "totalOutflow": "0.00",
+                    "outflow": "0.00",
                     "rainfall": "",
                     "remarks": ""
                 }
@@ -403,7 +403,7 @@
             "longitude": 76.68381,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "108.11",
                     "liveStorage": "91.65",
                     "storagePercentage": "40%",
@@ -413,7 +413,7 @@
                     "totalOutflow": "1.24",
                     "outflow": "1.24",
                     "rainfall": "",
-                    "remarks": "Outflow for drinking water, URL - 113.25 m"
+                    "remarks": "Outflow for drinking water, URL - 113.25m"
                 }
             ]
         },
@@ -435,7 +435,7 @@
             "longitude": 76.62535,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "101.57",
                     "liveStorage": "30.49",
                     "storagePercentage": "53%",
@@ -457,25 +457,25 @@
             "district": "Palakkad",
             "MWL": "154.08",
             "FRL": "154.08",
-            "grossStorage": "153.08",
-            "liveStorageAtFRL": "153.08",
+            "grossStorage": "13.70",
+            "liveStorageAtFRL": "13.70",
             "ruleLevel": "",
-            "blueLevel": "",
-            "orangeLevel": "",
-            "redLevel": "",
+            "blueLevel": "152.50",
+            "orangeLevel": "153.08",
+            "redLevel": "153.70",
             "latitude": 10.59329,
             "longitude": 76.76764,
             "data": [
                 {
-                    "date": "11.08.2026",
-                    "waterLevel": "152.50",
-                    "liveStorage": "153.70",
-                    "storagePercentage": "13.70",
+                    "date": "12.08.2026",
+                    "waterLevel": "145.39",
+                    "liveStorage": "3.03",
+                    "storagePercentage": "16%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "",
-                    "outflow": "",
+                    "totalOutflow": "0.00",
+                    "outflow": "0.00",
                     "rainfall": "",
                     "remarks": ""
                 }
@@ -499,7 +499,7 @@
             "longitude": 76.5333,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "76.48",
                     "liveStorage": "19.88",
                     "storagePercentage": "78%",
@@ -509,7 +509,7 @@
                     "totalOutflow": "12.22",
                     "outflow": "12.22",
                     "rainfall": "",
-                    "remarks": "6/6 spillway shutter opened @20 cm each"
+                    "remarks": "6/6 spillway shutter opened @20cm each"
                 }
             ]
         },
@@ -531,7 +531,7 @@
             "longitude": 76.7667,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "181.30",
                     "liveStorage": "-",
                     "storagePercentage": "-",
@@ -541,7 +541,7 @@
                     "totalOutflow": "2.38",
                     "outflow": "2.38",
                     "rainfall": "",
-                    "remarks": "1/19 shutters opened @10 cm"
+                    "remarks": "1/19 shutters opened @10cm"
                 }
             ]
         },
@@ -563,7 +563,7 @@
             "longitude": 75.8242,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "38.76",
                     "liveStorage": "71.04",
                     "storagePercentage": "56%",
@@ -595,7 +595,7 @@
             "longitude": 76.175,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "757.10",
                     "liveStorage": "34.90",
                     "storagePercentage": "42%",
@@ -605,7 +605,7 @@
                     "totalOutflow": "3.01",
                     "outflow": "3.01",
                     "rainfall": "",
-                    "remarks": "3/3 spillway shutter opened @10 cm each, Outflow for drinking water"
+                    "remarks": "3/3 spillway shutter opened @10cm each, Outflow for drinking water"
                 }
             ]
         },
@@ -627,7 +627,7 @@
             "longitude": 75.6275,
             "data": [
                 {
-                    "date": "11.08.2026",
+                    "date": "12.08.2026",
                     "waterLevel": "15.41",
                     "liveStorage": "0.82",
                     "storagePercentage": "1%",
@@ -637,10 +637,10 @@
                     "totalOutflow": "375.00",
                     "outflow": "375.00",
                     "rainfall": "",
-                    "remarks": "12/16 shutters opened @500 cm each, 3/16 shutters opened @450 cm each"
+                    "remarks": "12/16 shutters opened @500cm each, 3/16 shutters opened @450cm each, Orange ഓറǥ് Red Ƽവ˔് 3rd Stage of alert ̳ ʱ ാംഘǷ ̲ ʱ റിയി˔് Yellow മǰ Dams that currently release controlled amounts of water for irrigation purposes or as a precautionary measure"
                 }
             ]
         }
     ],
-    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/08/11-am-Irr-Site.pdf"
+    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/08/IRR-SITE-8.pdf"
 }

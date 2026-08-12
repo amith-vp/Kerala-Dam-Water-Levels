@@ -7,7 +7,7 @@
     "MWL": "34.62",
     "FRL": "34.62",
     "grossStorage": "8.80",
-    "liveStorageAtFRL": "",
+    "liveStorageAtFRL": "8.80",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -15,6 +15,19 @@
     "latitude": 9.3333,
     "longitude": 76.8833,
     "data": [
+        {
+            "date": "12.08.2026",
+            "waterLevel": "29.26",
+            "liveStorage": "7.97",
+            "storagePercentage": "48%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "_",
+            "outflow": "_",
+            "rainfall": "",
+            "remarks": "5/5 shutters opened @450cm each"
+        },
         {
             "date": "11.08.2026",
             "waterLevel": "8.80",
