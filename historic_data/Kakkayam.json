@@ -4,7 +4,7 @@
     "officialName": "KUTTIYADI (KAKKAYAM)",
     "MWL": "758.04",
     "FRL": "758.04",
-    "liveStorageAtFRL": "18.63",
+    "liveStorageAtFRL": "33.98",
     "ruleLevel": "",
     "blueLevel": "755.50",
     "orangeLevel": "756.50",
@@ -12,6 +12,73 @@
     "latitude": 11.551,
     "longitude": 75.925,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "750.33",
+            "liveStorage": "16.440",
+            "storagePercentage": "48.38",
+            "inflow": "3.11",
+            "powerHouseDischarge": "1.46",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.46",
+            "rainfall": "77.00",
+            "remarks": "All spillway gates are in closed position"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "749.50",
+            "liveStorage": "14.80",
+            "storagePercentage": "43.54",
+            "inflow": "0.96",
+            "powerHouseDischarge": "1.63",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.63",
+            "rainfall": "78.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "749.84",
+            "liveStorage": "15.46",
+            "storagePercentage": "45.51",
+            "inflow": "0.76",
+            "powerHouseDischarge": "1.98",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.98",
+            "rainfall": "14.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "750.45",
+            "liveStorage": "16.68",
+            "storagePercentage": "49.10",
+            "inflow": "0.94",
+            "powerHouseDischarge": "1.98",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.98",
+            "rainfall": "52.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "751.00",
+            "liveStorage": "17.78",
+            "storagePercentage": "52.33",
+            "inflow": "0.05",
+            "powerHouseDischarge": "1.08",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.08",
+            "rainfall": "4.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "751.48",
+            "liveStorage": "18.76",
+            "storagePercentage": "55.20",
+            "inflow": "1.21",
+            "powerHouseDischarge": "1.09",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.09",
+            "rainfall": "38.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "751.42",
@@ -18217,5 +18284,7 @@
             "totalOutflow": "11.99",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Kozhikode"
 }

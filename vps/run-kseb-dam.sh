@@ -17,7 +17,7 @@ cd "$REPO_DIR"
 GIT_PAGER=cat git pull --ff-only origin main
 npm ci
 
-# KSEB is geo-blocked outside India. Irrigation remains on the GitHub workflow.
+# SDMA data is written by GitHub Actions. Append KSEB-only fields from India.
 node -e "require('./dam_details_fetcher').fetchKsebDamDetails().catch(error => { console.error(error); process.exit(1); })"
 
 git add live.json historic_data

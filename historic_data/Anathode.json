@@ -4,14 +4,81 @@
     "officialName": "KAKKI – ANATHODE",
     "MWL": "981.46",
     "FRL": "981.46",
-    "liveStorageAtFRL": "296.10",
-    "ruleLevel": "976.00",
-    "blueLevel": "974.00",
-    "orangeLevel": "975.00",
-    "redLevel": "975.50",
+    "liveStorageAtFRL": "446.51",
+    "ruleLevel": "976.20",
+    "blueLevel": "974.20",
+    "orangeLevel": "975.20",
+    "redLevel": "975.70",
     "latitude": 9.341667,
     "longitude": 77.15,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "971.21",
+            "liveStorage": "294.480",
+            "storagePercentage": "65.95",
+            "inflow": "0.75",
+            "powerHouseDischarge": "2.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.00",
+            "rainfall": "56.00",
+            "remarks": "All gates are in closed position"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "971.31",
+            "liveStorage": "295.73",
+            "storagePercentage": "66.23",
+            "inflow": "2.45",
+            "powerHouseDischarge": "2.70",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.70",
+            "rainfall": "34.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "971.33",
+            "liveStorage": "295.98",
+            "storagePercentage": "66.29",
+            "inflow": "2.96",
+            "powerHouseDischarge": "2.83",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.83",
+            "rainfall": "15.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "971.32",
+            "liveStorage": "295.85",
+            "storagePercentage": "66.26",
+            "inflow": "0.97",
+            "powerHouseDischarge": "2.72",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.72",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "971.46",
+            "liveStorage": "297.60",
+            "storagePercentage": "66.65",
+            "inflow": "2.57",
+            "powerHouseDischarge": "2.20",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.20",
+            "rainfall": "8.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "971.43",
+            "liveStorage": "297.23",
+            "storagePercentage": "66.57",
+            "inflow": "3.51",
+            "powerHouseDischarge": "2.38",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.38",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "971.37",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "41.72",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Pathanamthitta"
 }

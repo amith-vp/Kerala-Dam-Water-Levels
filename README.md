@@ -145,12 +145,9 @@ Each irrigation dam or reservoir has its own JSON file in the `irrigation_histor
 ## Workflow
 
 1. The script runs daily via GitHub Actions.
-2. It fetches the most recent update from the KSEB website.
-3. It fetches the latest dated Irrigation PDF link from the SDMA dam water level page.
-4. KSEB HTML data and Irrigation PDF data are extracted and processed for each dam.
-5. The `live.json` and `irrigation_live.json` files are updated with the most recent data.
-6. Historical data files are updated for each dam.
-7. Changes are committed and pushed to the repository.
+2. It fetches the latest KSEB and Irrigation PDFs from the SDMA dam water level page.
+3. SDMA data updates `live.json`, `irrigation_live.json`, and the historical files.
+
 
 ## Contributing
 
@@ -162,4 +159,4 @@ Contributions to improve the data collection, processing, or to add new features
 
 ## Disclaimer
 
-This data is scraped from the Kerala State Electricity Board website and is provided as-is also may not be accurate data(parsing errors). Please refer to the original source for official information.
+This data is sourced primarily from Kerala SDMA and enriched with additional fields from the Kerala State Electricity Board website. It is provided as-is and may contain source or parsing errors. Please refer to the official sources for authoritative information.

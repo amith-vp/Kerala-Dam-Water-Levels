@@ -2,16 +2,83 @@
     "id": "13",
     "name": "Kallarkutty",
     "officialName": "KALLARKUTTY",
-    "MWL": "456.59",
-    "FRL": "456.59",
-    "liveStorageAtFRL": "4.98",
+    "MWL": "456.25",
+    "FRL": "456.25",
+    "liveStorageAtFRL": "6.43",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
-    "redLevel": "455.00",
+    "redLevel": "455",
     "latitude": 9.98,
     "longitude": 77.001389,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "454.10",
+            "liveStorage": "4.890",
+            "storagePercentage": "76.00",
+            "inflow": "3.43",
+            "powerHouseDischarge": "2.79",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.79",
+            "rainfall": "25.00",
+            "remarks": "All gates closed."
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "453.05",
+            "liveStorage": "4.24",
+            "storagePercentage": "66.00",
+            "inflow": "3.12",
+            "powerHouseDischarge": "3.04",
+            "spillwayRelease": "0",
+            "totalOutflow": "3.04",
+            "rainfall": "10.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "452.90",
+            "liveStorage": "4.17",
+            "storagePercentage": "64.82",
+            "inflow": "3.01",
+            "powerHouseDischarge": "3.77",
+            "spillwayRelease": "0",
+            "totalOutflow": "3.77",
+            "rainfall": "7.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "453.55",
+            "liveStorage": "4.54",
+            "storagePercentage": "70.58",
+            "inflow": "3.16",
+            "powerHouseDischarge": "2.71",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.71",
+            "rainfall": "11.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "452.75",
+            "liveStorage": "4.09",
+            "storagePercentage": "63.61",
+            "inflow": "3.45",
+            "powerHouseDischarge": "3.83",
+            "spillwayRelease": "0",
+            "totalOutflow": "3.83",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "453.45",
+            "liveStorage": "4.48",
+            "storagePercentage": "69.60",
+            "inflow": "3.01",
+            "powerHouseDischarge": "3.85",
+            "spillwayRelease": "0",
+            "totalOutflow": "3.85",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "454.25",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "19.97",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Idukki"
 }

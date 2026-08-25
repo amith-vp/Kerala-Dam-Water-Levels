@@ -1,8 +1,11 @@
 {
   "name": "dam-details-fetcher",
   "version": "1.0.0",
-  "description": "Fetch dam details from KSEB website",
+  "description": "Fetch Kerala dam details from SDMA and enrich KSEB data",
   "main": "dam_details_fetcher.js",
+  "scripts": {
+    "test": "node tests/sdma_kseb.test.js"
+  },
   "dependencies": {
     "axios": "^0.21.4",
     "cheerio": "^1.2.0",

@@ -4,7 +4,7 @@
     "officialName": "PAMBA",
     "MWL": "986.33",
     "FRL": "986.33",
-    "liveStorageAtFRL": "8.60",
+    "liveStorageAtFRL": "31.15",
     "ruleLevel": "",
     "blueLevel": "982.00",
     "orangeLevel": "983.50",
@@ -12,6 +12,73 @@
     "latitude": 9.3906,
     "longitude": 77.1598,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "971.85",
+            "liveStorage": "8.150",
+            "storagePercentage": "26.16",
+            "inflow": "1.09",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "49.00",
+            "remarks": ""
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "971.65",
+            "liveStorage": "7.88",
+            "storagePercentage": "25.30",
+            "inflow": "0.64",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "14.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "971.70",
+            "liveStorage": "7.94",
+            "storagePercentage": "25.49",
+            "inflow": "0.68",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "20.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "971.75",
+            "liveStorage": "8.00",
+            "storagePercentage": "25.68",
+            "inflow": "0.67",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "7.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "971.80",
+            "liveStorage": "8.06",
+            "storagePercentage": "25.87",
+            "inflow": "0.51",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "3.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "972.05",
+            "liveStorage": "8.36",
+            "storagePercentage": "26.84",
+            "inflow": "0.78",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "972.25",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "0.00",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Pathanamthitta"
 }

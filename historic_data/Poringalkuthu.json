@@ -4,7 +4,7 @@
     "officialName": "PORINGALKUTHU",
     "MWL": "423.98",
     "FRL": "423.98",
-    "liveStorageAtFRL": "18.00",
+    "liveStorageAtFRL": "30.30",
     "ruleLevel": "",
     "blueLevel": "421.00",
     "orangeLevel": "422.00",
@@ -12,6 +12,73 @@
     "latitude": 10.3152,
     "longitude": 76.6344,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "417.20",
+            "liveStorage": "13.500",
+            "storagePercentage": "44.55",
+            "inflow": "4.43",
+            "powerHouseDischarge": "4.43",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.43",
+            "rainfall": "42.30",
+            "remarks": "All crest gates in fully opened condition and All Sluice gates are in closed condition."
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "417.20",
+            "liveStorage": "13.50",
+            "storagePercentage": "44.55",
+            "inflow": "3.25",
+            "powerHouseDischarge": "4.65",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.65",
+            "rainfall": "17.40"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "417.90",
+            "liveStorage": "14.90",
+            "storagePercentage": "49.17",
+            "inflow": "3.45",
+            "powerHouseDischarge": "4.62",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.62",
+            "rainfall": "24.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "418.45",
+            "liveStorage": "16.07",
+            "storagePercentage": "53.04",
+            "inflow": "3.58",
+            "powerHouseDischarge": "4.54",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.54",
+            "rainfall": "6.10"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "418.20",
+            "liveStorage": "17.04",
+            "storagePercentage": "56.24",
+            "inflow": "3.71",
+            "powerHouseDischarge": "4.30",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.30",
+            "rainfall": "9.30"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "419.15",
+            "liveStorage": "17.62",
+            "storagePercentage": "58.15",
+            "inflow": "4.24",
+            "powerHouseDischarge": "4.62",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.62",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "419.30",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "13.36",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Thrissur"
 }

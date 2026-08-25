@@ -4,14 +4,81 @@
     "officialName": "KUNDALA",
     "MWL": "1758.69",
     "FRL": "1758.69",
-    "liveStorageAtFRL": "2.84",
+    "liveStorageAtFRL": "7.65",
     "ruleLevel": "",
-    "blueLevel": "1755.00",
-    "orangeLevel": "1756.00",
-    "redLevel": "1757.00",
+    "blueLevel": "1755",
+    "orangeLevel": "1756",
+    "redLevel": "1757",
     "latitude": 10.14358754366575,
     "longitude": 77.19868256414041,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "1750.75",
+            "liveStorage": "2.980",
+            "storagePercentage": "38.95",
+            "inflow": "0.02",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "1.20",
+            "remarks": "Sluice discharge = 0.00 MCM. All gates are closed"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "1750.70",
+            "liveStorage": "2.96",
+            "storagePercentage": "38.69",
+            "inflow": "0.02",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.20"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "1750.65",
+            "liveStorage": "2.94",
+            "storagePercentage": "38.43",
+            "inflow": "0.02",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "1750.60",
+            "liveStorage": "2.92",
+            "storagePercentage": "38.17",
+            "inflow": "0.04",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "–"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "1750.45",
+            "liveStorage": "2.86",
+            "storagePercentage": "37.39",
+            "inflow": "0.02",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "1750.45",
+            "liveStorage": "2.86",
+            "storagePercentage": "37.39",
+            "inflow": "0.02",
+            "powerHouseDischarge": "0.00",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "0.60"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "1750.40",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "1.27",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Idukki"
 }

@@ -13,6 +13,72 @@
     "longitude": 77.0325,
     "data": [
         {
+            "date": "24.08.2026",
+            "waterLevel": "846.90",
+            "liveStorage": "0.21",
+            "storagePercentage": "54.62",
+            "inflow": "1.18",
+            "powerHouseDischarge": "1.06",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.06",
+            "rainfall": "7.50"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "846.40",
+            "liveStorage": "0.10",
+            "storagePercentage": "24.36",
+            "inflow": "0.94",
+            "powerHouseDischarge": "0.98",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.98",
+            "rainfall": "1.60"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "846.60",
+            "liveStorage": "0.14",
+            "storagePercentage": "36.41",
+            "inflow": "1.18",
+            "powerHouseDischarge": "1.19",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.19",
+            "rainfall": "1.30"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "846.65",
+            "liveStorage": "0.15",
+            "storagePercentage": "39.49",
+            "inflow": "1.48",
+            "powerHouseDischarge": "1.49",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.49",
+            "rainfall": "1.40"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "846.70",
+            "liveStorage": "0.17",
+            "storagePercentage": "42.31",
+            "inflow": "1.19",
+            "powerHouseDischarge": "1.24",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.24",
+            "rainfall": "0.90"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "846.90",
+            "liveStorage": "0.21",
+            "storagePercentage": "54.62",
+            "inflow": "1.24",
+            "powerHouseDischarge": "1.19",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.19",
+            "rainfall": "0.00"
+        },
+        {
             "date": "18.08.2026",
             "waterLevel": "846.70",
             "liveStorage": "0.17",

@@ -4,14 +4,81 @@
     "officialName": "SHOLAYAR",
     "MWL": "811.68",
     "FRL": "811.68",
-    "liveStorageAtFRL": "102.53",
-    "ruleLevel": "0.00",
+    "liveStorageAtFRL": "149.09",
+    "ruleLevel": "",
     "blueLevel": "810.16",
     "orangeLevel": "810.77",
     "redLevel": "811.07",
     "latitude": 10.3178,
     "longitude": 76.7342,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "807.32",
+            "liveStorage": "112.280",
+            "storagePercentage": "75.31",
+            "inflow": "2.78",
+            "powerHouseDischarge": "0.43",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.43",
+            "rainfall": "47.20",
+            "remarks": ""
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "806.71",
+            "liveStorage": "109.94",
+            "storagePercentage": "73.74",
+            "inflow": "2.60",
+            "powerHouseDischarge": "0.75",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.75",
+            "rainfall": "15.20"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "806.78",
+            "liveStorage": "108.09",
+            "storagePercentage": "72.50",
+            "inflow": "2.24",
+            "powerHouseDischarge": "0.88",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.88",
+            "rainfall": "4.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "806.59",
+            "liveStorage": "106.73",
+            "storagePercentage": "71.59",
+            "inflow": "1.83",
+            "powerHouseDischarge": "0.71",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.71",
+            "rainfall": "1.80"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "806.44",
+            "liveStorage": "105.61",
+            "storagePercentage": "70.84",
+            "inflow": "2.04",
+            "powerHouseDischarge": "0.71",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.71",
+            "rainfall": "1.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "806.26",
+            "liveStorage": "104.28",
+            "storagePercentage": "69.94",
+            "inflow": "2.05",
+            "powerHouseDischarge": "0.30",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.30",
+            "rainfall": "35.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "806.01",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "14.52",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Thrissur"
 }

@@ -2,9 +2,9 @@
     "id": "4",
     "name": "Banasura Sagar",
     "officialName": "BANASURASAGAR (K A S)",
-    "MWL": "775.60",
-    "FRL": "775.60",
-    "liveStorageAtFRL": "148.05",
+    "MWL": "770",
+    "FRL": "770",
+    "liveStorageAtFRL": "201.00",
     "ruleLevel": "774.50",
     "blueLevel": "773.00",
     "orangeLevel": "773.50",
@@ -12,6 +12,73 @@
     "latitude": 11.6709,
     "longitude": 75.9504,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "771.85",
+            "liveStorage": "155.950",
+            "storagePercentage": "77.59",
+            "inflow": "1.90",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "33.80",
+            "remarks": "Tunnel fully closed on 29.06.'26 at 11.15 am. Tunnel discharge- Nil"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "771.65",
+            "liveStorage": "154.05",
+            "storagePercentage": "76.64",
+            "inflow": "1.50",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "11.40"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "771.55",
+            "liveStorage": "152.55",
+            "storagePercentage": "75.90",
+            "inflow": "1.10",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "11.40"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "771.45",
+            "liveStorage": "151.45",
+            "storagePercentage": "75.35",
+            "inflow": "1.50",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "5.20"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "771.30",
+            "liveStorage": "149.95",
+            "storagePercentage": "74.60",
+            "inflow": "0.70",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "7.60"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "771.25",
+            "liveStorage": "149.25",
+            "storagePercentage": "74.25",
+            "inflow": "1.20",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.00",
+            "rainfall": "13.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "771.15",
@@ -22353,5 +22420,7 @@
             "totalOutflow": "9.03",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Wayanad"
 }

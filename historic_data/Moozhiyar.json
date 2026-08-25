@@ -4,14 +4,81 @@
     "officialName": "MOOZHIYAR",
     "MWL": "192.63",
     "FRL": "192.63",
-    "liveStorageAtFRL": "0.43",
+    "liveStorageAtFRL": "1.16",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
-    "redLevel": "190.00",
+    "redLevel": "190",
     "latitude": 9.308,
     "longitude": 77.0656,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "186.45",
+            "liveStorage": "0.410",
+            "storagePercentage": "35.34",
+            "inflow": "1.61",
+            "powerHouseDischarge": "1.82",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.82",
+            "rainfall": "18.00",
+            "remarks": "All gates are in closed condition"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "188.50",
+            "liveStorage": "0.62",
+            "storagePercentage": "53.71",
+            "inflow": "2.48",
+            "powerHouseDischarge": "2.15",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.15",
+            "rainfall": "14.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "189.30",
+            "liveStorage": "0.72",
+            "storagePercentage": "61.64",
+            "inflow": "2.35",
+            "powerHouseDischarge": "2.30",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.30",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "188.90",
+            "liveStorage": "0.67",
+            "storagePercentage": "57.76",
+            "inflow": "2.31",
+            "powerHouseDischarge": "2.41",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.41",
+            "rainfall": "5.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "189.70",
+            "liveStorage": "0.76",
+            "storagePercentage": "65.60",
+            "inflow": "2.36",
+            "powerHouseDischarge": "1.90",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.90",
+            "rainfall": "8.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "185.60",
+            "liveStorage": "0.33",
+            "storagePercentage": "28.19",
+            "inflow": "2.61",
+            "powerHouseDischarge": "2.14",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.14",
+            "rainfall": "2.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "186.60",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "30.32",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Pathanamthitta"
 }

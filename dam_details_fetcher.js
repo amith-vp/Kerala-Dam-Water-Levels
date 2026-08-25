@@ -9,6 +9,12 @@ const ksebFolderName = 'historic_data';
 const irrigationFolderName = 'irrigation_historic_data';
 const ksebLookbackPosts = 10;
 const ksebMissingDatesPerRun = 5;
+const ksebEnrichmentFields = [
+  'inflow',
+  'powerHouseDischarge',
+  'totalOutflow',
+  'rainfall'
+];
 
 // Fetch recent dated updates so delayed KSEB uploads can fill history gaps.
 const fetchRecentUpdates = async (limit = ksebLookbackPosts) => {
@@ -90,6 +96,27 @@ const Names = {
 'KALLAR': 'Kallar',
 'SENGULAM': 'Chenkulam',
 };
+
+// Keep the existing public IDs/names while reading SDMA's different row order.
+const sdmaKsebDamDefinitions = [
+  { pdfName: 'Kakki (Anathode)', id: '3', name: 'Anathode', officialName: 'KAKKI – ANATHODE', district: 'Pathanamthitta', coordinateKey: 'kakki – anathode' },
+  { pdfName: 'Pamba', id: '10', name: 'Pamba', officialName: 'PAMBA', district: 'Pathanamthitta', coordinateKey: 'pamba' },
+  { pdfName: 'Moozhiyar', id: '16', name: 'Moozhiyar', officialName: 'MOOZHIYAR', district: 'Pathanamthitta', coordinateKey: 'moozhiyar' },
+  { pdfName: 'Idukki', id: '1', name: 'Idukki', officialName: 'IDUKKI', district: 'Idukki', coordinateKey: 'idukki', levelsInFeet: true },
+  { pdfName: 'Madupetty', id: '6', name: 'Mattupetty', officialName: 'MADUPETTY', district: 'Idukki', coordinateKey: 'madupetty' },
+  { pdfName: 'Anayirankal', id: '7', name: 'Anayirankal', officialName: 'ANAYIRANKAL', district: 'Idukki', coordinateKey: 'anayirankal' },
+  { pdfName: 'Ponmudi', id: '8', name: 'Ponmudi', officialName: 'PONMUDI', district: 'Idukki', coordinateKey: 'ponmudi' },
+  { pdfName: 'Kundala', id: '12', name: 'Kundala', officialName: 'KUNDALA', district: 'Idukki', coordinateKey: 'kundala' },
+  { pdfName: 'Kallarkutty', id: '13', name: 'Kallarkutty', officialName: 'KALLARKUTTY', district: 'Idukki', coordinateKey: 'kallarkutty' },
+  { pdfName: 'Erattayar', id: '14', name: 'Erattayar', officialName: 'ERATTAYAR', district: 'Idukki', coordinateKey: 'erattayar' },
+  { pdfName: 'Lower Periyar', id: '15', name: 'Pambla', officialName: 'LOWER PERIYAR', district: 'Idukki', coordinateKey: 'lower periyar' },
+  { pdfName: 'Kallar', id: '17', name: 'Kallar', officialName: 'KALLAR', district: 'Idukki', coordinateKey: 'kallar' },
+  { pdfName: 'Idamalayar', id: '2', name: 'Idamalayar', officialName: 'IDAMALAYAR', district: 'Ernakulam', coordinateKey: 'idamalayar' },
+  { pdfName: 'Sholayar', id: '5', name: 'Sholayar', officialName: 'SHOLAYAR', district: 'Thrissur', coordinateKey: 'sholayar', levelsInFeet: true },
+  { pdfName: 'Poringalkuthu', id: '11', name: 'Poringalkuthu', officialName: 'PORINGALKUTHU', district: 'Thrissur', coordinateKey: 'poringalkuthu' },
+  { pdfName: 'Kuttiyadi', id: '9', name: 'Kakkayam', officialName: 'KUTTIYADI (KAKKAYAM)', district: 'Kozhikode', coordinateKey: 'kuttiyadi (kakkayam)' },
+  { pdfName: 'Banasurasagar', id: '4', name: 'Banasura Sagar', officialName: 'BANASURASAGAR (K A S)', district: 'Wayanad', coordinateKey: 'banasurasagar (k a s)' }
+];
 
 const irrigationDistricts = [
   'Thiruvananthapuram',
@@ -217,6 +244,51 @@ const loadExistingDamData = async (folderName) => {
   return existingData;
 };
 
+const hasDamValue = (value) => value !== undefined && value !== null && String(value).trim() !== '';
+
+const mergeDailyData = (existingEntry, newEntry, preserveFields = []) => {
+  const mergedEntry = { ...existingEntry, ...newEntry };
+
+  for (const field of preserveFields) {
+    if (hasDamValue(existingEntry[field]) && !hasDamValue(newEntry[field])) {
+      mergedEntry[field] = existingEntry[field];
+    }
+  }
+
+  return mergedEntry;
+};
+
+const damMetadataFields = [
+  'id',
+  'officialName',
+  'source',
+  'district',
+  'MWL',
+  'FRL',
+  'grossStorage',
+  'liveStorageAtFRL',
+  'ruleLevel',
+  'blueLevel',
+  'orangeLevel',
+  'redLevel',
+  'latitude',
+  'longitude'
+];
+
+const updateDamMetadata = (existingDam, newDam) => {
+  let changed = false;
+
+  for (const field of damMetadataFields) {
+    if (!Object.prototype.hasOwnProperty.call(newDam, field) || newDam[field] === undefined) continue;
+    if (existingDam[field] === newDam[field]) continue;
+
+    existingDam[field] = newDam[field];
+    changed = true;
+  }
+
+  return changed;
+};
+
 const updateDamData = async (folderName, liveFileName, page, dams, options = {}) => {
   if (dams.length === 0) {
     console.log(`No dam data extracted for ${liveFileName}.`);
@@ -233,31 +305,30 @@ const updateDamData = async (folderName, liveFileName, page, dams, options = {})
 
     if (existingDam) {
       const newDate = newDam.data[0].date;
-      const dateExists = existingDam.data.some(d => d.date === newDate);
+      const existingEntryIndex = existingDam.data.findIndex(d => d.date === newDate);
+      const dateExists = existingEntryIndex >= 0;
       console.log(`Checking if date ${newDate} exists:`, dateExists);
 
       if (!dateExists) {
         console.log(`Adding new data for ${newDam.name} with date ${newDate}`);
         existingDam.data.unshift(newDam.data[0]);
-        Object.assign(existingDam, {
-          id: newDam.id,
-          officialName: newDam.officialName,
-          MWL: newDam.MWL,
-          FRL: newDam.FRL,
-          liveStorageAtFRL: newDam.liveStorageAtFRL,
-          ruleLevel: newDam.ruleLevel,
-          blueLevel: newDam.blueLevel,
-          orangeLevel: newDam.orangeLevel,
-          redLevel: newDam.redLevel,
-          latitude: newDam.latitude,
-          longitude: newDam.longitude,
-        });
-
-        if (newDam.source) existingDam.source = newDam.source;
-        if (newDam.district) existingDam.district = newDam.district;
-        if (newDam.grossStorage) existingDam.grossStorage = newDam.grossStorage;
-
+        updateDamMetadata(existingDam, newDam);
         dataChanged = true;
+      } else if (options.updateExistingData) {
+        const mergedEntry = mergeDailyData(
+          existingDam.data[existingEntryIndex],
+          newDam.data[0],
+          options.preserveDataFields
+        );
+
+        if (JSON.stringify(existingDam.data[existingEntryIndex]) !== JSON.stringify(mergedEntry)) {
+          existingDam.data[existingEntryIndex] = mergedEntry;
+          dataChanged = true;
+        }
+
+        if (options.updateMetadataOnExisting && updateDamMetadata(existingDam, newDam)) {
+          dataChanged = true;
+        }
       } else {
         console.log(`Data for ${newDam.name} with date ${newDate} already exists. Skipping.`);
       }
@@ -277,13 +348,42 @@ const updateDamData = async (folderName, liveFileName, page, dams, options = {})
       console.log(`Details for dam ${damName} saved successfully in ${filename}.`);
     }
 
+    const liveDams = options.liveFromStoredData
+      ? dams.map(newDam => {
+        const storedDam = existingData[newDam.name];
+        const storedEntry = storedDam.data.find(entry => entry.date === page.date);
+        return { ...storedDam, data: storedEntry ? [storedEntry] : newDam.data };
+      })
+      : dams;
+
+    if (options.includeStoredDamsForLive) {
+      const liveDamNames = new Set(liveDams.map(dam => dam.name));
+      for (const storedDam of Object.values(existingData)) {
+        if (liveDamNames.has(storedDam.name)) continue;
+        const storedEntry = storedDam.data.find(entry => entry.date === page.date);
+        if (storedEntry) liveDams.push({ ...storedDam, data: [storedEntry] });
+      }
+    }
     const liveData = {
       lastUpdate: page.date,
-      dams
+      dams: liveDams
     };
 
     if (page.link) {
       liveData.sourceUrl = page.link;
+    }
+
+    if (options.preserveLiveFields) {
+      try {
+        const previousLiveData = JSON.parse(await fs.readFile(liveFileName, 'utf8'));
+        if (previousLiveData.lastUpdate === page.date) {
+          for (const field of options.preserveLiveFields) {
+            if (previousLiveData[field] !== undefined) liveData[field] = previousLiveData[field];
+          }
+        }
+      } catch (error) {
+        console.log(`No previous ${liveFileName} metadata to preserve.`);
+      }
     }
 
     await fs.writeFile(liveFileName, JSON.stringify(liveData, null, 4));
@@ -384,6 +484,7 @@ const fetchSdmaPdfLink = async (sourceName) => {
 
       const href = $(element).attr('href');
       if (!href || !href.toLowerCase().includes('.pdf')) return;
+      if (wantedSource === 'KSEB' && !href.toLowerCase().includes('kseb-site')) return;
 
       const parentText = $(element).parent().text().replace(/\s+/g, ' ').trim();
       if (!/\d{1,2}[/. -]\d{1,2}[/. -]\d{4}/.test(parentText)) return;
@@ -418,6 +519,141 @@ const cleanPdfTextValue = (value) => (
     .replace(/\s+([,.;])/g, '$1')
     .trim()
 );
+
+const splitSdmaKsebRows = (text) => {
+  const rowStartRegex = /(?:^|\n)(\d{1,2})[ \t]+/g;
+  const starts = [];
+  let match;
+
+  while ((match = rowStartRegex.exec(text)) !== null) {
+    starts.push({
+      id: match[1],
+      start: match.index + (match[0].startsWith('\n') ? 1 : 0)
+    });
+  }
+
+  return starts.map((start, index) => {
+    const nextStart = starts[index + 1] ? starts[index + 1].start : text.length;
+    const rowText = text.slice(start.start, nextStart).trim();
+    const repeatedHeader = rowText.search(/\n[^\n]*\(KSEB\)[^\n]*\n\d{1,2}\/\d{1,2}\/\d{4}/i);
+    return repeatedHeader >= 0 ? rowText.slice(0, repeatedHeader).trim() : rowText;
+  });
+};
+
+const findSdmaKsebDamDefinition = (body) => {
+  const nameSectionEnd = getFirstNumberIndex(body);
+  const nameSection = (nameSectionEnd >= 0 ? body.slice(0, nameSectionEnd) : body).toLowerCase();
+
+  return sdmaKsebDamDefinitions
+    .map(definition => ({
+      definition,
+      index: nameSection.indexOf(definition.pdfName.toLowerCase())
+    }))
+    .filter(candidate => candidate.index >= 0)
+    .sort((left, right) => left.index - right.index)[0]?.definition || null;
+};
+
+const normaliseKsebLevel = (value, levelsInFeet) => {
+  if (!value) return '';
+  return levelsInFeet ? convertFeetToMeters(`${value} ft`) : value;
+};
+
+const parseSdmaKsebRow = (rowText, date) => {
+  const idMatch = rowText.match(/^\d{1,2}\s+([\s\S]*)$/);
+  if (!idMatch) return null;
+
+  const body = cleanPdfTextValue(idMatch[1]);
+  const definition = findSdmaKsebDamDefinition(body);
+  const numberIndex = getFirstNumberIndex(body);
+  if (!definition || numberIndex < 0) return null;
+
+  const numericSegment = body.slice(numberIndex);
+  const percentageMatch = numericSegment.match(/(\d+(?:\.\d+)?)%/);
+  if (!percentageMatch) {
+    console.log(`Skipping SDMA KSEB row for ${definition.name}; storage percentage was not found.`);
+    return null;
+  }
+
+  const values = Array.from(
+    numericSegment.slice(0, percentageMatch.index).matchAll(/\d+(?:\.\d+)?/g),
+    value => value[0]
+  );
+  if (values.length < 4) {
+    console.log(`Skipping SDMA KSEB row for ${definition.name}; expected level and storage values.`);
+    return null;
+  }
+
+  const frl = values[0];
+  const waterLevel = values[1];
+  const alertValues = values.slice(2, -2);
+  const liveStorageAtFRL = values[values.length - 2];
+  const liveStorage = values[values.length - 1];
+  const levels = alertValues.map(value => normaliseKsebLevel(value, definition.levelsInFeet));
+  let ruleLevel = '';
+  let blueLevel = '';
+  let orangeLevel = '';
+  let redLevel = '';
+
+  if (levels.length >= 4) {
+    [ruleLevel, blueLevel, orangeLevel, redLevel] = levels.slice(-4);
+  } else if (levels.length === 3) {
+    [blueLevel, orangeLevel, redLevel] = levels;
+  } else if (levels.length === 2) {
+    [orangeLevel, redLevel] = levels;
+  } else if (levels.length === 1) {
+    [redLevel] = levels;
+  }
+
+  const afterPercentage = numericSegment
+    .slice(percentageMatch.index + percentageMatch[0].length)
+    .trim();
+  const spillwayMatch = afterPercentage.match(/^(N\/A|[-_–—]|\d+(?:\.\d+)?)/i);
+  const rawSpillwayRelease = spillwayMatch ? spillwayMatch[1] : '';
+  const spillwayRelease = /^[-_–—]$/.test(rawSpillwayRelease) ? '0' : rawSpillwayRelease;
+  const remarks = spillwayMatch
+    ? cleanPdfTextValue(afterPercentage.slice(spillwayMatch[0].length))
+    : cleanPdfTextValue(afterPercentage);
+  const coordinates = damCoordinates[definition.coordinateKey] || {};
+
+  return {
+    id: definition.id,
+    name: definition.name,
+    officialName: definition.officialName,
+    source: 'KSEB',
+    district: definition.district,
+    MWL: normaliseKsebLevel(frl, definition.levelsInFeet),
+    FRL: normaliseKsebLevel(frl, definition.levelsInFeet),
+    liveStorageAtFRL,
+    ruleLevel,
+    blueLevel,
+    orangeLevel,
+    redLevel,
+    latitude: coordinates.latitude ?? null,
+    longitude: coordinates.longitude ?? null,
+    data: [{
+      date,
+      waterLevel: normaliseKsebLevel(waterLevel, definition.levelsInFeet),
+      liveStorage,
+      storagePercentage: percentageMatch[1],
+      inflow: '',
+      powerHouseDischarge: '',
+      spillwayRelease,
+      totalOutflow: '',
+      rainfall: '',
+      remarks
+    }]
+  };
+};
+
+const extractSdmaKsebDamDetailsFromText = (text, date) => {
+  const rows = splitSdmaKsebRows(text);
+  const dams = rows
+    .map(rowText => parseSdmaKsebRow(rowText, date))
+    .filter(Boolean);
+
+  console.log(`Total SDMA KSEB dams extracted: ${dams.length}`);
+  return { dams, rowCount: rows.length };
+};
 
 const consumeTableTokens = (segment) => {
   const pieces = segment.trim().split(/\s+/);
@@ -533,6 +769,21 @@ const extractIrrigationDamDetailsFromText = (text, date) => {
   return { dams };
 };
 
+async function extractSdmaKsebDamDetails(pdfUrl, date) {
+  try {
+    console.log('Extracting SDMA KSEB dam details from:', pdfUrl);
+    const response = await axios.get(pdfUrl, { responseType: 'arraybuffer' });
+    const parser = new PDFParse({ data: Buffer.from(response.data) });
+    const result = await parser.getText();
+    await parser.destroy();
+
+    return extractSdmaKsebDamDetailsFromText(result.text, date);
+  } catch (error) {
+    console.error(`Error fetching SDMA KSEB details from ${pdfUrl}:`, error);
+    return { dams: [], rowCount: 0 };
+  }
+}
+
 async function extractIrrigationDamDetails(pdfUrl, date) {
   try {
     console.log('Extracting irrigation dam details from:', pdfUrl);
@@ -548,7 +799,144 @@ async function extractIrrigationDamDetails(pdfUrl, date) {
   }
 }
 
-// Fetch KSEB dam details and update the data files.
+const mergeKsebEnrichmentFields = (targetEntry, ksebEntry) => {
+  let changed = false;
+
+  for (const field of ksebEnrichmentFields) {
+    if (!hasDamValue(ksebEntry[field]) || targetEntry[field] === ksebEntry[field]) continue;
+    targetEntry[field] = ksebEntry[field];
+    changed = true;
+  }
+
+  return changed;
+};
+
+const ksebDateNeedsEnrichment = (existingData, date) => {
+  const entriesForDate = Object.values(existingData)
+    .map(dam => dam.data.find(entry => entry.date === date))
+    .filter(Boolean);
+
+  if (entriesForDate.length === 0) return false;
+
+  const missingEnrichment = entriesForDate.some(entry => (
+    ksebEnrichmentFields.every(field => !hasDamValue(entry[field]))
+  ));
+  const chenkulamEntry = existingData.Chenkulam?.data.find(entry => entry.date === date);
+  return missingEnrichment || !chenkulamEntry;
+};
+
+const enrichKsebDamData = async (page, dams) => {
+  await ensureFolder(ksebFolderName);
+  const existingData = await loadExistingDamData(ksebFolderName);
+  const baselineExists = Object.values(existingData).some(dam => (
+    dam.data.some(entry => entry.date === page.date)
+  ));
+
+  if (!baselineExists) {
+    console.log(`Skipping KSEB enrichment for ${page.date}; no SDMA baseline exists.`);
+    return false;
+  }
+
+  let historyChanged = false;
+
+  for (const ksebDam of dams) {
+    const ksebEntry = { ...ksebDam.data[0], date: page.date };
+    const existingDam = existingData[ksebDam.name];
+
+    if (!existingDam) {
+      existingData[ksebDam.name] = { ...ksebDam, data: [ksebEntry] };
+      historyChanged = true;
+      continue;
+    }
+
+    const existingEntry = existingDam.data.find(entry => entry.date === page.date);
+    if (!existingEntry) {
+      existingDam.data.unshift(ksebEntry);
+      historyChanged = true;
+      continue;
+    }
+
+    if (mergeKsebEnrichmentFields(existingEntry, ksebEntry)) {
+      historyChanged = true;
+    }
+  }
+
+  if (historyChanged) {
+    for (const [damName, damData] of Object.entries(existingData)) {
+      sortDamDataNewestFirst(damData.data);
+      const filename = `${ksebFolderName}/${safeFilename(damName)}.json`;
+      await fs.writeFile(filename, JSON.stringify(damData, null, 4));
+    }
+  }
+
+  let liveChanged = false;
+  let liveData = null;
+  try {
+    liveData = JSON.parse(await fs.readFile('live.json', 'utf8'));
+  } catch (error) {
+    console.error('Unable to read live.json for KSEB enrichment:', error);
+  }
+
+  if (liveData && liveData.lastUpdate === page.date && Array.isArray(liveData.dams)) {
+    for (const ksebDam of dams) {
+      const ksebEntry = { ...ksebDam.data[0], date: page.date };
+      const liveDam = liveData.dams.find(dam => dam.name === ksebDam.name);
+
+      if (!liveDam) {
+        liveData.dams.push({ ...ksebDam, data: [ksebEntry] });
+        liveChanged = true;
+        continue;
+      }
+
+      if (!liveDam.data[0]) liveDam.data[0] = { date: page.date };
+      if (mergeKsebEnrichmentFields(liveDam.data[0], ksebEntry)) {
+        liveChanged = true;
+      }
+    }
+
+    if (page.link && liveData.enrichmentSourceUrl !== page.link) {
+      liveData.enrichmentSourceUrl = page.link;
+      liveChanged = true;
+    }
+
+    if (liveChanged) {
+      await fs.writeFile('live.json', JSON.stringify(liveData, null, 4));
+    }
+  }
+
+  return historyChanged || liveChanged;
+};
+
+async function fetchSdmaKsebDamDetails() {
+try {
+  const page = await fetchSdmaPdfLink('KSEB');
+  if (!page) {
+    console.log('No recent SDMA KSEB PDF found.');
+    return;
+  }
+
+  console.log(`Processing SDMA KSEB PDF: ${page.date}`);
+  const { dams, rowCount } = await extractSdmaKsebDamDetails(page.link, page.date);
+  if (rowCount !== sdmaKsebDamDefinitions.length || dams.length !== rowCount) {
+    console.log(`Expected ${sdmaKsebDamDefinitions.length} SDMA KSEB rows, found ${rowCount} and parsed ${dams.length}. No files were updated.`);
+    return;
+  }
+
+  await updateDamData(ksebFolderName, 'live.json', page, dams, {
+    alwaysWriteLive: true,
+    includeStoredDamsForLive: true,
+    liveFromStoredData: true,
+    preserveLiveFields: ['enrichmentSourceUrl'],
+    preserveDataFields: ksebEnrichmentFields,
+    updateExistingData: true,
+    updateMetadataOnExisting: true
+  });
+} catch (error) {
+  console.error('SDMA KSEB error:', error);
+}
+}
+
+// Run from the India VPS after SDMA; only append fields missing from SDMA.
 async function fetchKsebDamDetails() {
 try {
   const pages = await fetchRecentUpdates();
@@ -559,18 +947,27 @@ try {
 
   await ensureFolder(ksebFolderName);
   const existingData = await loadExistingDamData(ksebFolderName);
-  const existingDates = new Set(
-    Object.values(existingData).flatMap(dam => dam.data.map(entry => entry.date))
-  );
+  let currentLiveData = null;
+  try {
+    currentLiveData = JSON.parse(await fs.readFile('live.json', 'utf8'));
+  } catch (error) {
+    console.log('No live.json metadata found while selecting KSEB enrichment dates.');
+  }
   const pagesToProcess = pages
-    .filter(page => !existingDates.has(page.date))
+    .filter(page => (
+      ksebDateNeedsEnrichment(existingData, page.date)
+      || (
+        currentLiveData?.lastUpdate === page.date
+        && !currentLiveData.enrichmentSourceUrl
+      )
+    ))
     .slice(0, ksebMissingDatesPerRun)
     .reverse();
 
-  console.log('Missing KSEB dates selected:', pagesToProcess.map(page => page.date).join(', ') || 'none');
+  console.log('KSEB dates selected for enrichment:', pagesToProcess.map(page => page.date).join(', ') || 'none');
 
   for (const page of pagesToProcess) {
-    console.log(`Processing KSEB page: ${page.date}`);
+    console.log(`Enriching from KSEB page: ${page.date}`);
     const { dams } = await extractDamDetails(page.link);
 
     if (dams.length === 0) {
@@ -578,21 +975,10 @@ try {
       continue;
     }
 
-    await updateDamData(ksebFolderName, 'live.json', page, dams);
-    existingDates.add(page.date);
-  }
-
-  // A later backfill batch must not replace live.json with an older page.
-  const latestPage = pages[0];
-  if (!pagesToProcess.some(page => page.date === latestPage.date)) {
-    console.log(`Refreshing live KSEB data from latest page: ${latestPage.date}`);
-    const { dams } = await extractDamDetails(latestPage.link);
-    if (dams.length > 0) {
-      await updateDamData(ksebFolderName, 'live.json', latestPage, dams, { alwaysWriteLive: true });
-    }
+    await enrichKsebDamData(page, dams);
   }
 } catch (error) {
-  console.error('Error:', error);
+  console.error('KSEB enrichment error:', error);
 }
 }
 
@@ -612,14 +998,19 @@ try {
     return;
   }
 
-  await updateDamData(irrigationFolderName, 'irrigation_live.json', page, dams);
+  await updateDamData(irrigationFolderName, 'irrigation_live.json', page, dams, {
+    alwaysWriteLive: true,
+    liveFromStoredData: true,
+    updateExistingData: true,
+    updateMetadataOnExisting: true
+  });
 } catch (error) {
   console.error('Irrigation error:', error);
 }
 }
 
 async function fetchDamDetails() {
-  await fetchKsebDamDetails();
+  await fetchSdmaKsebDamDetails();
   await fetchIrrigationDamDetails();
 }
 
@@ -631,10 +1022,14 @@ module.exports = {
   extractDamDetails,
   extractIrrigationDamDetails,
   extractIrrigationDamDetailsFromText,
+  extractSdmaKsebDamDetails,
+  extractSdmaKsebDamDetailsFromText,
   fetchDamDetails,
   fetchIrrigationDamDetails,
   fetchKsebDamDetails,
+  fetchSdmaKsebDamDetails,
   fetchRecentUpdates,
   fetchMostRecentUpdate,
-  fetchSdmaPdfLink
+  fetchSdmaPdfLink,
+  mergeKsebEnrichmentFields
 };

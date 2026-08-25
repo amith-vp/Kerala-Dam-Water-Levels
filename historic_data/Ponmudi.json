@@ -4,14 +4,81 @@
     "officialName": "PONMUDI",
     "MWL": "707.75",
     "FRL": "707.75",
-    "liveStorageAtFRL": "28.67",
+    "liveStorageAtFRL": "47.4",
     "ruleLevel": "",
-    "blueLevel": "704.50",
-    "orangeLevel": "705.50",
-    "redLevel": "706.50",
+    "blueLevel": "704.5",
+    "orangeLevel": "705.5",
+    "redLevel": "706.5",
     "latitude": 9.9604,
     "longitude": 77.0565,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "697.40",
+            "liveStorage": "25.960",
+            "storagePercentage": "54.76",
+            "inflow": "0.75",
+            "powerHouseDischarge": "0.99",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.99",
+            "rainfall": "22.00",
+            "remarks": "All radial gates are in closed position"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "697.55",
+            "liveStorage": "26.20",
+            "storagePercentage": "55.27",
+            "inflow": "0.59",
+            "powerHouseDischarge": "1.23",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.23",
+            "rainfall": "7.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "697.95",
+            "liveStorage": "26.83",
+            "storagePercentage": "56.61",
+            "inflow": "0.60",
+            "powerHouseDischarge": "1.07",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.07",
+            "rainfall": "6.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "698.25",
+            "liveStorage": "27.31",
+            "storagePercentage": "57.62",
+            "inflow": "0.63",
+            "powerHouseDischarge": "0.95",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.95",
+            "rainfall": "10.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "698.45",
+            "liveStorage": "27.63",
+            "storagePercentage": "58.30",
+            "inflow": "0.59",
+            "powerHouseDischarge": "1.38",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.38",
+            "rainfall": "1.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "698.95",
+            "liveStorage": "28.43",
+            "storagePercentage": "59.98",
+            "inflow": "0.13",
+            "powerHouseDischarge": "0.37",
+            "spillwayRelease": "0",
+            "totalOutflow": "0.37",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "699.10",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "19.88",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Idukki"
 }

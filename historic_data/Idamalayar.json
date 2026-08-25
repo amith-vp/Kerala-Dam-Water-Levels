@@ -4,14 +4,81 @@
     "officialName": "IDAMALAYAR",
     "MWL": "169.00",
     "FRL": "169.00",
-    "liveStorageAtFRL": "631.05",
-    "ruleLevel": "163.50",
-    "blueLevel": "162.00",
-    "orangeLevel": "162.50",
-    "redLevel": "163.00",
+    "liveStorageAtFRL": "1017.80",
+    "ruleLevel": "164.00",
+    "blueLevel": "162.50",
+    "orangeLevel": "163.00",
+    "redLevel": "163.50",
     "latitude": 10.221867602366947,
     "longitude": 76.70603684268934,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "155.82",
+            "liveStorage": "651.720",
+            "storagePercentage": "64.03",
+            "inflow": "7.67",
+            "powerHouseDischarge": "1.49",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.49",
+            "rainfall": "26.40",
+            "remarks": "All gates are in closed position"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "155.56",
+            "liveStorage": "645.55",
+            "storagePercentage": "63.43",
+            "inflow": "5.30",
+            "powerHouseDischarge": "2.18",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.18",
+            "rainfall": "35.80"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "155.43",
+            "liveStorage": "642.46",
+            "storagePercentage": "63.12",
+            "inflow": "4.20",
+            "powerHouseDischarge": "2.49",
+            "spillwayRelease": "0",
+            "totalOutflow": "2.49",
+            "rainfall": "15.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "155.36",
+            "liveStorage": "640.79",
+            "storagePercentage": "62.96",
+            "inflow": "4.38",
+            "powerHouseDischarge": "1.98",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.98",
+            "rainfall": "7.60"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "155.26",
+            "liveStorage": "638.42",
+            "storagePercentage": "62.73",
+            "inflow": "5.05",
+            "powerHouseDischarge": "1.72",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.72",
+            "rainfall": "6.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "155.12",
+            "liveStorage": "635.09",
+            "storagePercentage": "62.40",
+            "inflow": "5.25",
+            "powerHouseDischarge": "1.20",
+            "spillwayRelease": "0",
+            "totalOutflow": "1.20",
+            "rainfall": "5.60"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "154.95",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "49.68",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Ernakulam"
 }

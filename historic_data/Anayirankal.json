@@ -4,7 +4,7 @@
     "officialName": "ANAYIRANKAL",
     "MWL": "1207.02",
     "FRL": "1207.02",
-    "liveStorageAtFRL": "13.61",
+    "liveStorageAtFRL": "49.83",
     "ruleLevel": "",
     "blueLevel": "1205.02",
     "orangeLevel": "1206.02",
@@ -12,6 +12,73 @@
     "latitude": 10.009515341318457,
     "longitude": 77.20724298186308,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "1197.20",
+            "liveStorage": "14.000",
+            "storagePercentage": "28.09",
+            "inflow": "0.06",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "3.00",
+            "remarks": "(Sluice gate fully closed @ 4.00 pm on 05.06.'26)"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "1197.18",
+            "liveStorage": "13.93",
+            "storagePercentage": "27.96",
+            "inflow": "0.06",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "1197.16",
+            "liveStorage": "13.87",
+            "storagePercentage": "27.83",
+            "inflow": "0.10",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "1197.13",
+            "liveStorage": "13.77",
+            "storagePercentage": "27.64",
+            "inflow": "0.06",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "1197.11",
+            "liveStorage": "13.71",
+            "storagePercentage": "27.51",
+            "inflow": "0.07",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "0.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "1197.08",
+            "liveStorage": "13.64",
+            "storagePercentage": "27.38",
+            "inflow": "0.03",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "0",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "1197.06",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "0.00",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Idukki"
 }

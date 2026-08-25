@@ -2,9 +2,9 @@
     "id": "15",
     "name": "Pambla",
     "officialName": "LOWER PERIYAR",
-    "MWL": "253",
-    "FRL": "253",
-    "liveStorageAtFRL": "2.45",
+    "MWL": "253.00",
+    "FRL": "253.00",
+    "liveStorageAtFRL": "4.55",
     "ruleLevel": "",
     "blueLevel": "",
     "orangeLevel": "",
@@ -12,6 +12,73 @@
     "latitude": 9.962,
     "longitude": 76.9568,
     "data": [
+        {
+            "date": "24.08.2026",
+            "waterLevel": "247.40",
+            "liveStorage": "2.320",
+            "storagePercentage": "51.08",
+            "inflow": "5.11",
+            "powerHouseDischarge": "4.71",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.71",
+            "rainfall": "42.00",
+            "remarks": "All spillway gates are in closed position"
+        },
+        {
+            "date": "23.08.2026",
+            "waterLevel": "246.10",
+            "liveStorage": "1.93",
+            "storagePercentage": "42.42",
+            "inflow": "4.69",
+            "powerHouseDischarge": "4.87",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.87",
+            "rainfall": "10.00"
+        },
+        {
+            "date": "22.08.2026",
+            "waterLevel": "246.70",
+            "liveStorage": "2.11",
+            "storagePercentage": "46.37",
+            "inflow": "5.16",
+            "powerHouseDischarge": "4.83",
+            "spillwayRelease": "0",
+            "totalOutflow": "4.83",
+            "rainfall": "7.00"
+        },
+        {
+            "date": "21.08.2026",
+            "waterLevel": "245.60",
+            "liveStorage": "1.79",
+            "storagePercentage": "39.30",
+            "inflow": "4.49",
+            "powerHouseDischarge": "5.29",
+            "spillwayRelease": "0",
+            "totalOutflow": "5.29",
+            "rainfall": "9.00"
+        },
+        {
+            "date": "20.08.2026",
+            "waterLevel": "248.20",
+            "liveStorage": "2.59",
+            "storagePercentage": "56.88",
+            "inflow": "6.79",
+            "powerHouseDischarge": "6.16",
+            "spillwayRelease": "0",
+            "totalOutflow": "6.16",
+            "rainfall": "2.00"
+        },
+        {
+            "date": "19.08.2026",
+            "waterLevel": "246.20",
+            "liveStorage": "1.96",
+            "storagePercentage": "43.08",
+            "inflow": "6.15",
+            "powerHouseDischarge": "6.64",
+            "spillwayRelease": "0",
+            "totalOutflow": "6.64",
+            "rainfall": "0.00"
+        },
         {
             "date": "18.08.2026",
             "waterLevel": "247.80",
@@ -22562,5 +22629,7 @@
             "totalOutflow": "20.61",
             "rainfall": "0.00"
         }
-    ]
+    ],
+    "source": "KSEB",
+    "district": "Idukki"
 }
