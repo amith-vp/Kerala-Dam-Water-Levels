@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "26.08.2026",
+    "lastUpdate": "27.08.2026",
     "dams": [
         {
             "id": "3",
@@ -16,10 +16,10 @@
             "longitude": 77.15,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "971.34",
-                    "liveStorage": "296.100",
-                    "storagePercentage": "66.31",
+                    "date": "27.08.2026",
+                    "waterLevel": "972.10",
+                    "liveStorage": "305.80",
+                    "storagePercentage": "68.49",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -46,10 +46,10 @@
             "longitude": 77.1598,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "972.50",
-                    "liveStorage": "8.900",
-                    "storagePercentage": "28.57",
+                    "date": "27.08.2026",
+                    "waterLevel": "974.10",
+                    "liveStorage": "10.82",
+                    "storagePercentage": "34.74",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -76,10 +76,10 @@
             "longitude": 77.0656,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "190.35",
-                    "liveStorage": "0.850",
-                    "storagePercentage": "73.02",
+                    "date": "27.08.2026",
+                    "waterLevel": "190.80",
+                    "liveStorage": "0.910",
+                    "storagePercentage": "78.62",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -106,10 +106,10 @@
             "longitude": 76.9762,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "720.61",
-                    "liveStorage": "852.090",
-                    "storagePercentage": "58.38",
+                    "date": "27.08.2026",
+                    "waterLevel": "721.38",
+                    "liveStorage": "887.87",
+                    "storagePercentage": "60.83",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -136,16 +136,16 @@
             "longitude": 77.1238,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "1574.15",
-                    "liveStorage": "8.440",
-                    "storagePercentage": "15.41",
+                    "date": "27.08.2026",
+                    "waterLevel": "1574.55",
+                    "liveStorage": "8.84",
+                    "storagePercentage": "16.14",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
                     "totalOutflow": "",
                     "rainfall": "",
-                    "remarks": "Sluice discharge =0.00MCM"
+                    "remarks": "Sluice discharge =0.00 MCM"
                 }
             ],
             "source": "KSEB",
@@ -166,10 +166,10 @@
             "longitude": 77.20724298186308,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "1197.25",
-                    "liveStorage": "14.150",
-                    "storagePercentage": "28.41",
+                    "date": "27.08.2026",
+                    "waterLevel": "1197.33",
+                    "liveStorage": "14.41",
+                    "storagePercentage": "28.92",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -196,10 +196,10 @@
             "longitude": 77.0565,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "697.75",
-                    "liveStorage": "26.520",
-                    "storagePercentage": "55.94",
+                    "date": "27.08.2026",
+                    "waterLevel": "698.50",
+                    "liveStorage": "27.71",
+                    "storagePercentage": "58.47",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -226,10 +226,10 @@
             "longitude": 77.19868256414041,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "1750.80",
-                    "liveStorage": "3.000",
-                    "storagePercentage": "39.22",
+                    "date": "27.08.2026",
+                    "waterLevel": "1750.95",
+                    "liveStorage": "3.06",
+                    "storagePercentage": "40.00",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -256,16 +256,16 @@
             "longitude": 77.001389,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "455.20",
-                    "liveStorage": "5.590",
-                    "storagePercentage": "86.86",
+                    "date": "27.08.2026",
+                    "waterLevel": "456.30",
+                    "liveStorage": "6.280",
+                    "storagePercentage": "97.68",
                     "inflow": "",
                     "powerHouseDischarge": "",
-                    "spillwayRelease": "0",
+                    "spillwayRelease": "30.00",
                     "totalOutflow": "",
                     "rainfall": "",
-                    "remarks": "All gates closed."
+                    "remarks": "Gate No 3 & 4 -15 cm opened"
                 }
             ],
             "source": "KSEB",
@@ -286,9 +286,9 @@
             "longitude": 77.106,
             "data": [
                 {
-                    "date": "26.08.2026",
+                    "date": "27.08.2026",
                     "waterLevel": "747.60",
-                    "liveStorage": "0.950",
+                    "liveStorage": "0.95",
                     "storagePercentage": "17.86",
                     "inflow": "",
                     "powerHouseDischarge": "",
@@ -316,10 +316,10 @@
             "longitude": 76.9568,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "247.20",
-                    "liveStorage": "2.260",
-                    "storagePercentage": "49.71",
+                    "date": "27.08.2026",
+                    "waterLevel": "249.40",
+                    "liveStorage": "3.06",
+                    "storagePercentage": "67.16",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -346,16 +346,16 @@
             "longitude": 77.1562,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "820.50",
-                    "liveStorage": "0.200",
-                    "storagePercentage": "26.49",
+                    "date": "27.08.2026",
+                    "waterLevel": "820.30",
+                    "liveStorage": "0.19",
+                    "storagePercentage": "25.54",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
                     "totalOutflow": "",
                     "rainfall": "",
-                    "remarks": "All gates are in closed condition"
+                    "remarks": "All gates are in closed position."
                 }
             ],
             "source": "KSEB",
@@ -376,10 +376,10 @@
             "longitude": 76.70603684268934,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "156.36",
-                    "liveStorage": "664.640",
-                    "storagePercentage": "65.30",
+                    "date": "27.08.2026",
+                    "waterLevel": "157.08",
+                    "liveStorage": "682.00",
+                    "storagePercentage": "67.01",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -406,10 +406,10 @@
             "longitude": 76.7342,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "807.69",
-                    "liveStorage": "115.130",
-                    "storagePercentage": "77.22",
+                    "date": "27.08.2026",
+                    "waterLevel": "808.30",
+                    "liveStorage": "119.91",
+                    "storagePercentage": "80.43",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -427,22 +427,22 @@
             "officialName": "PORINGALKUTHU",
             "MWL": "423.98",
             "FRL": "423.98",
-            "liveStorageAtFRL": "30.30",
+            "liveStorageAtFRL": "30.3",
             "ruleLevel": "",
-            "blueLevel": "421.00",
-            "orangeLevel": "422.00",
-            "redLevel": "423.00",
+            "blueLevel": "421",
+            "orangeLevel": "422",
+            "redLevel": "423",
             "latitude": 10.3152,
             "longitude": 76.6344,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "419.40",
-                    "liveStorage": "18.250",
-                    "storagePercentage": "60.23",
+                    "date": "27.08.2026",
+                    "waterLevel": "419.90",
+                    "liveStorage": "19.500",
+                    "storagePercentage": "64.36",
                     "inflow": "",
                     "powerHouseDischarge": "",
-                    "spillwayRelease": "0",
+                    "spillwayRelease": "50.56",
                     "totalOutflow": "",
                     "rainfall": "",
                     "remarks": "All crest gates in fully opened condition and All Sluice gates are in closed condition."
@@ -466,10 +466,10 @@
             "longitude": 75.925,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "750.91",
-                    "liveStorage": "17.600",
-                    "storagePercentage": "51.79",
+                    "date": "27.08.2026",
+                    "waterLevel": "751.12",
+                    "liveStorage": "18.02",
+                    "storagePercentage": "53.04",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
@@ -496,21 +496,21 @@
             "longitude": 75.9504,
             "data": [
                 {
-                    "date": "26.08.2026",
-                    "waterLevel": "772.15",
-                    "liveStorage": "159.350",
-                    "storagePercentage": "79.28",
+                    "date": "27.08.2026",
+                    "waterLevel": "772.65",
+                    "liveStorage": "165.35",
+                    "storagePercentage": "82.26",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "0",
                     "totalOutflow": "",
                     "rainfall": "",
-                    "remarks": "Tunnel fully closed on 29.06.'26 at 11.15 am. Tunnel discharge- Nil"
+                    "remarks": "Tunnel fully closed on 29.06.'26 at 11.15 am. Tunnel discharge- Nil Orange ഓറǥ് 2nd Stage of alert രȗാംഘǷ ̲ ʱ റിയി˔് Red Ƽവ˔് 3rd Stage of alert ̳ ʱ ാംഘǷ ̲ ʱ റിയി˔് Yellow മǰ Dams that currently release controlled amounts of water as precautionary measure (̲ ൻകͭ തലിെ˂ ഭാഗമായി നിലവിൽ നിയ ʜിത അളവിൽ െവ ыം ˅റേȳെōാюōി വിǳʱ അണെōǸകൾ) Colour Code No Warnings No Alerts നിലവിൽ ̲ ʱ റിയി˕കൾ ഇΗ Blue നീല 1st Stage of alert ഒʱാംഘǷ ̲ ʱ റിയി˔്"
                 }
             ],
             "source": "KSEB",
             "district": "Wayanad"
         }
     ],
-    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/08/KSEB-SITE-13.pdf"
+    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/08/KSEB-Site.pdf"
 }
