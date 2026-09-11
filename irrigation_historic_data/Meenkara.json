@@ -9,12 +9,25 @@
     "grossStorage": "11.33",
     "liveStorageAtFRL": "11.33",
     "ruleLevel": "",
-    "blueLevel": "154.90",
+    "blueLevel": "154.9",
     "orangeLevel": "155.36",
     "redLevel": "156.06",
     "latitude": 10.6333,
     "longitude": 76.8,
     "data": [
+        {
+            "date": "11.09.2026",
+            "waterLevel": "152.71",
+            "liveStorage": "4.05",
+            "storagePercentage": "30%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "0.42",
+            "outflow": "0.42",
+            "rainfall": "",
+            "remarks": ""
+        },
         {
             "date": "10.09.2026",
             "waterLevel": "152.74",
