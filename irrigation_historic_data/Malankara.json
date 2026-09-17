@@ -9,12 +9,25 @@
     "grossStorage": "37.00",
     "liveStorageAtFRL": "37.00",
     "ruleLevel": "",
-    "blueLevel": "4070%",
+    "blueLevel": "40.70",
     "orangeLevel": "41.00",
     "redLevel": "41.3",
     "latitude": 9.8417,
     "longitude": 76.625,
     "data": [
+        {
+            "date": "17.09.2026",
+            "waterLevel": "41.70",
+            "liveStorage": "35.80",
+            "storagePercentage": "96%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "49.51",
+            "outflow": "49.51",
+            "rainfall": "",
+            "remarks": "1/6 spillway shutter opened @ 10cm,Outflow for Drinking Water, Outflow for Power generation."
+        },
         {
             "date": "16.09.2026",
             "waterLevel": "40.80",
