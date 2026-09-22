@@ -7,7 +7,7 @@
     "test": "node tests/sdma_kseb.test.js"
   },
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^1.8.2",
     "cheerio": "^1.2.0",
     "pdf-parse": "^2.4.5"
   }
