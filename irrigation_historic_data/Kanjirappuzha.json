@@ -16,6 +16,19 @@
     "longitude": 76.5333,
     "data": [
         {
+            "date": "22.09.2026",
+            "waterLevel": "96.73",
+            "liveStorage": "66.53",
+            "storagePercentage": "94%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "8.37",
+            "outflow": "8.37",
+            "rainfall": "",
+            "remarks": "3/3 spillway shutter opened @ 5cm each, River sluice opened @ 2cm"
+        },
+        {
             "date": "21.09.2026",
             "waterLevel": "96.85",
             "liveStorage": "67.20",
