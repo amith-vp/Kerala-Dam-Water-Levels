@@ -19,7 +19,7 @@ const ksebEnrichmentFields = [
 // Fetch recent dated updates so delayed KSEB uploads can fill history gaps.
 const fetchRecentUpdates = async (limit = ksebLookbackPosts) => {
 try {
-  const response = await axios.get(ksebBaseUrl);
+  const response = await axios.get(ksebBaseUrl, { timeout: 10000, maxContentLength: 5 * 1024 * 1024, maxBodyLength: 5 * 1024 * 1024 });
   const html = response.data;
   const $ = cheerio.load(html);
   const pages = [];
