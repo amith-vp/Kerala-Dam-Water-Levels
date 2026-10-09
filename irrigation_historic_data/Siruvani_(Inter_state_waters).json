@@ -16,6 +16,19 @@
     "longitude": 76.6422,
     "data": [
         {
+            "date": "09.10.2026",
+            "waterLevel": "873.27",
+            "liveStorage": "17.52",
+            "storagePercentage": "57%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "0.70",
+            "outflow": "0.70",
+            "rainfall": "",
+            "remarks": "No alert levels present, as there is no spillway and reservoir operation is done by operating river sluice."
+        },
+        {
             "date": "08.10.2026",
             "waterLevel": "873.24",
             "liveStorage": "17.45",
