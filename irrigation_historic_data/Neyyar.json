@@ -16,6 +16,19 @@
     "longitude": 77.15,
     "data": [
         {
+            "date": "10.10.2026",
+            "waterLevel": "84.27",
+            "liveStorage": "93.18",
+            "storagePercentage": "95%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "48.65",
+            "outflow": "48.65",
+            "rainfall": "",
+            "remarks": "Outflow for drinking water. 4/4 spilway shutters opened @ 20cm each."
+        },
+        {
             "date": "09.10.2026",
             "waterLevel": "84.24",
             "liveStorage": "92.92",
