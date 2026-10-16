@@ -11,10 +11,23 @@
     "ruleLevel": "",
     "blueLevel": "96.50",
     "orangeLevel": "97.00",
-    "redLevel": "97.40",
+    "redLevel": "97.4",
     "latitude": 10.9667,
     "longitude": 76.5333,
     "data": [
+        {
+            "date": "16.10.2026",
+            "waterLevel": "97.00",
+            "liveStorage": "68.03",
+            "storagePercentage": "96%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "5.64",
+            "outflow": "5.64",
+            "rainfall": "",
+            "remarks": "2/3 spillway shutter opened @2cm each, 1/3 spillway shutter opened @5cm, River sluice opened @2cm"
+        },
         {
             "date": "15.10.2026",
             "waterLevel": "96.67",
