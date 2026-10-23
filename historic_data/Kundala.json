@@ -13,6 +13,18 @@
     "longitude": 77.19868256414041,
     "data": [
         {
+            "date": "23.10.2026",
+            "waterLevel": "1755.70",
+            "liveStorage": "5.39",
+            "storagePercentage": "70.46",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "0",
+            "totalOutflow": "",
+            "rainfall": "",
+            "remarks": "Sluice discharge = 0.00 MCM. All gates are closed"
+        },
+        {
             "date": "22.10.2026",
             "waterLevel": "1755.35",
             "liveStorage": "5.18",
