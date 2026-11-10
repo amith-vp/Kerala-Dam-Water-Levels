@@ -16,6 +16,19 @@
     "longitude": 76.30715,
     "data": [
         {
+            "date": "10.11.2026",
+            "waterLevel": "56.66",
+            "liveStorage": "11.35",
+            "storagePercentage": "59%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "2.79",
+            "outflow": "2.79",
+            "rainfall": "",
+            "remarks": "Sluice shutter opened to LBMC"
+        },
+        {
             "date": "09.11.2026",
             "waterLevel": "56.87",
             "liveStorage": "11.63",
