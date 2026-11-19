@@ -1,5 +1,5 @@
 {
-    "lastUpdate": "18.11.2026",
+    "lastUpdate": "19.11.2026",
     "dams": [
         {
             "id": "1",
@@ -19,7 +19,7 @@
             "longitude": 77.15,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "84.17",
                     "liveStorage": "92.32",
                     "storagePercentage": "95%",
@@ -51,17 +51,17 @@
             "longitude": 77.0722,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "108.74",
                     "liveStorage": "354.80",
                     "storagePercentage": "69%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "10.29",
-                    "outflow": "10.29",
+                    "totalOutflow": "10.31",
+                    "outflow": "10.31",
                     "rainfall": "",
-                    "remarks": "Outflow for power generation. URL 114.76 m"
+                    "remarks": "outflow for power generation. URL114.76 m"
                 }
             ]
         },
@@ -83,7 +83,7 @@
             "longitude": 76.8833,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "29.26",
                     "liveStorage": "7.97",
                     "storagePercentage": "48%",
@@ -115,17 +115,17 @@
             "longitude": 76.625,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "39.00",
-                    "liveStorage": "26.90",
-                    "storagePercentage": "69%",
+                    "date": "19.11.2026",
+                    "waterLevel": "39.40",
+                    "liveStorage": "28.10",
+                    "storagePercentage": "73%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "7.10",
-                    "outflow": "7.10",
+                    "totalOutflow": "4.27",
+                    "outflow": "4.27",
                     "rainfall": "",
-                    "remarks": "2/6 spillway shutter opened @ 10 cm each. Outflow for Drinking Water, Outflow for Power generation."
+                    "remarks": "1/6 spillway shutter opened @ 10 cm each. Outflow for Drinking Water, Outflow for Power generation."
                 }
             ]
         },
@@ -147,8 +147,8 @@
             "longitude": 76.666,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "30.45",
+                    "date": "19.11.2026",
+                    "waterLevel": "31.60",
                     "liveStorage": "-",
                     "storagePercentage": "-",
                     "inflow": "",
@@ -179,7 +179,7 @@
             "longitude": 76.30715,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "55.66",
                     "liveStorage": "10.03",
                     "storagePercentage": "51%",
@@ -211,7 +211,7 @@
             "longitude": 76.4667,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "74.14",
                     "liveStorage": "134.16",
                     "storagePercentage": "88%",
@@ -243,15 +243,15 @@
             "longitude": 76.36998,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "77.98",
                     "liveStorage": "78.01",
                     "storagePercentage": "82%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "0.69",
-                    "outflow": "0.69",
+                    "totalOutflow": "6.06",
+                    "outflow": "6.06",
                     "rainfall": "",
                     "remarks": "Outflow for Drinking Water."
                 }
@@ -275,10 +275,10 @@
             "longitude": 76.6422,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "875.76",
-                    "liveStorage": "21.37",
-                    "storagePercentage": "78%",
+                    "date": "19.11.2026",
+                    "waterLevel": "875.75",
+                    "liveStorage": "21.35",
+                    "storagePercentage": "77%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -307,15 +307,15 @@
             "longitude": 76.5333,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "97.45",
-                    "liveStorage": "70.55",
-                    "storagePercentage": "100%",
+                    "date": "19.11.2026",
+                    "waterLevel": "97.43",
+                    "liveStorage": "70.44",
+                    "storagePercentage": "99%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "3.91",
-                    "outflow": "3.91",
+                    "totalOutflow": "3.90",
+                    "outflow": "3.90",
                     "rainfall": "",
                     "remarks": "1/3 spillway shutter opened by 5 cm. River sluice opened @ 2 cm"
                 }
@@ -339,7 +339,7 @@
             "longitude": 76.8,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "153.44",
                     "liveStorage": "5.02",
                     "storagePercentage": "39%",
@@ -371,7 +371,7 @@
             "longitude": 76.85325,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "196.37",
                     "liveStorage": "5.52",
                     "storagePercentage": "15%",
@@ -403,7 +403,7 @@
             "longitude": 76.68381,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "110.86",
                     "liveStorage": "135.38",
                     "storagePercentage": "59%",
@@ -413,7 +413,7 @@
                     "totalOutflow": "1.24",
                     "outflow": "1.24",
                     "rainfall": "",
-                    "remarks": "Outflow for drinking water, URL- 115.06 m."
+                    "remarks": "Outflow for drinking water, URL - 115.06 m."
                 }
             ]
         },
@@ -435,9 +435,9 @@
             "longitude": 76.62535,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "103.05",
-                    "liveStorage": "34.86",
+                    "date": "19.11.2026",
+                    "waterLevel": "102.98",
+                    "liveStorage": "34.64",
                     "storagePercentage": "63%",
                     "inflow": "",
                     "powerHouseDischarge": "",
@@ -467,7 +467,7 @@
             "longitude": 76.76764,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "142.80",
                     "liveStorage": "1.54",
                     "storagePercentage": "4%",
@@ -499,15 +499,15 @@
             "longitude": 76.5333,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "77.08",
-                    "liveStorage": "21.91",
-                    "storagePercentage": "86%",
+                    "date": "19.11.2026",
+                    "waterLevel": "77.02",
+                    "liveStorage": "21.71",
+                    "storagePercentage": "85%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "2.73",
-                    "outflow": "2.73",
+                    "totalOutflow": "3.03",
+                    "outflow": "3.03",
                     "rainfall": "",
                     "remarks": ""
                 }
@@ -531,17 +531,17 @@
             "longitude": 76.7667,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "183.30",
+                    "date": "19.11.2026",
+                    "waterLevel": "182.90",
                     "liveStorage": "-",
                     "storagePercentage": "-",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "2.02",
-                    "outflow": "2.02",
+                    "totalOutflow": "2.05",
+                    "outflow": "2.05",
                     "rainfall": "",
-                    "remarks": ""
+                    "remarks": "1/19 shutter opened @ 5 cm."
                 }
             ]
         },
@@ -563,10 +563,10 @@
             "longitude": 75.8242,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "37.97",
-                    "liveStorage": "64.13",
-                    "storagePercentage": "50%",
+                    "date": "19.11.2026",
+                    "waterLevel": "38.02",
+                    "liveStorage": "64.45",
+                    "storagePercentage": "51%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
@@ -595,15 +595,15 @@
             "longitude": 76.175,
             "data": [
                 {
-                    "date": "18.11.2026",
+                    "date": "19.11.2026",
                     "waterLevel": "757.05",
                     "liveStorage": "34.60",
                     "storagePercentage": "42%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "1.26",
-                    "outflow": "1.26",
+                    "totalOutflow": "3.30",
+                    "outflow": "3.30",
                     "rainfall": "",
                     "remarks": "3/3 spillway shutters opened @ 10 cm each, Outflow for drinking water"
                 }
@@ -627,20 +627,20 @@
             "longitude": 75.6275,
             "data": [
                 {
-                    "date": "18.11.2026",
-                    "waterLevel": "20.22",
-                    "liveStorage": "9.18",
-                    "storagePercentage": "18%",
+                    "date": "19.11.2026",
+                    "waterLevel": "20.67",
+                    "liveStorage": "10.84",
+                    "storagePercentage": "22%",
                     "inflow": "",
                     "powerHouseDischarge": "",
                     "spillwayRelease": "",
-                    "totalOutflow": "7.76",
-                    "outflow": "7.76",
+                    "totalOutflow": "0.00",
+                    "outflow": "0.00",
                     "rainfall": "",
-                    "remarks": "1/16 shutter opened @ 20 cm. Yellow മǰ Dams that currently release controlled amounts of water for irrigation purposes or as a precautionary measure"
+                    "remarks": "Yellow മǰ Dams that currently release controlled amounts of water for irrigation purposes or as a precautionary measure"
                 }
             ]
         }
     ],
-    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/11/IRRI-SITE.pdf"
+    "sourceUrl": "https://sdma.kerala.gov.in/wp-content/uploads/2026/11/IRR-SITE-18.pdf"
 }
