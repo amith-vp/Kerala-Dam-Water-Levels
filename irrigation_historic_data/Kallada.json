@@ -16,6 +16,19 @@
     "longitude": 77.0722,
     "data": [
         {
+            "date": "20.11.2026",
+            "waterLevel": "108.71",
+            "liveStorage": "354.20",
+            "storagePercentage": "69%",
+            "inflow": "",
+            "powerHouseDischarge": "",
+            "spillwayRelease": "",
+            "totalOutflow": "10.30",
+            "outflow": "10.30",
+            "rainfall": "",
+            "remarks": "outflow for power generation.URL 114.76 m"
+        },
+        {
             "date": "19.11.2026",
             "waterLevel": "108.74",
             "liveStorage": "354.80",
